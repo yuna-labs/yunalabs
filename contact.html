@@ -80,5 +80,34 @@
     <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.disabled = true; btn.textContent = 'Sending…';
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      const out = await res.json();
+      if (out.ok) {
+        form.reset();
+        alert('Thanks! Your message has been sent.');
+      } else {
+        alert('Sorry, something went wrong: ' + (out.error || 'Unknown error'));
+      }
+    } catch (err) {
+      alert('Network error. Please try again later.');
+    } finally {
+      btn.disabled = false; btn.textContent = 'Send Message';
+    }
+  });
+</script>
+
 </body>
 </html>
