@@ -1,57 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuna Labs | Graceful Data, Powerful Results</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuna Labs</title>
+  <meta name="description" content="Yuna Labs — technology consulting, data solutions, and product development." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs Logo" class="logo-img">
-        </a>
-        <span>Yuna Labs</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" />
+      <span>Yuna Labs</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="cta">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+<main>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Graceful Data, Powerful Results</h1>
-      <p>We help businesses unlock insights, streamline IT, and innovate with analytics-driven solutions.</p>
-      <a href="contact.html" class="btn-primary">Get in Touch</a>
+<section class="hero">
+  <div class="container">
+    <h1>Build better. Ship faster.</h1>
+    <p class="lead">Yuna Labs partners with you to design resilient systems, craft delightful products, and turn data into decisions.</p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="services.html">Explore Services</a>
+      <a class="btn" href="contact.html">Talk to Us</a>
     </div>
-  </section>
+    <div class="hero-badges">
+      <span>Technology Consulting</span>
+      <span>Data Solutions</span>
+      <span>Product Development</span>
+    </div>
+  </div>
+</section>
 
-  <section class="services-preview">
-    <h2>Our Expertise</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Data Analytics</h3>
-        <p>Turn raw data into actionable insights to drive smarter decisions.</p>
+<section class="strip container features">
+  <article>
+    <h3>Technology Consulting</h3>
+    <p>Architecture reviews, cloud migrations, security hardening, and platform operations — tailored to your roadmap.</p>
+    <a href="services.html#tech-consulting" class="more">Learn more →</a>
+  </article>
+  <article>
+    <h3>Data Solutions</h3>
+    <p>From pipelines to predictive models, we turn raw data into reliable, usable insights that scale with your business.</p>
+    <a href="services.html#data-solutions" class="more">Learn more →</a>
+  </article>
+  <article>
+    <h3>Product Development</h3>
+    <p>Cross‑functional teams to design, build, and evolve user‑centered web and mobile products — from MVP to enterprise.</p>
+    <a href="services.html#product-dev" class="more">Learn more →</a>
+  </article>
+</section>
+
+<section class="container cards">
+  <h2>Why Yuna Labs?</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h4>Outcome‑driven</h4>
+      <p>We start with goals, not tools — aligning technical work with measurable business impact.</p>
+    </div>
+    <div class="card">
+      <h4>Secure by default</h4>
+      <p>Security and compliance are built‑in across infrastructure, code, and data handling.</p>
+    </div>
+    <div class="card">
+      <h4>Operate at scale</h4>
+      <p>We design for reliability and cost efficiency using modern cloud‑native practices.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Have a project in mind?</h2>
+    <p>Share a few details and we’ll propose a clear plan of action.</p>
+    <a class="btn primary" href="contact.html">Get in touch</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>We help teams design, build, and operate modern software — from idea to production.</p>
       </div>
-      <div class="card">
-        <h3>Cloud Solutions</h3>
-        <p>Seamless migration, integration, and optimization on AWS, GCP, and Azure.</p>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795‑8340</a></p>
+        <p><a href="mailto:hello@yuna-labs.com">hello@yuna-labs.com</a></p>
       </div>
-      <div class="card">
-        <h3>Machine Learning</h3>
-        <p>Deploy AI-powered models to improve efficiency and predict outcomes.</p>
+      <div>
+        <h5>Links</h5>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Yuna Labs. All rights reserved.</p>
-  </footer>
+    <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
+  </div>
+</footer>
 </body>
 </html>

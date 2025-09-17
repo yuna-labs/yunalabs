@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Yuna Labs</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuna Labs</title>
+  <meta name="description" content="Yuna Labs — technology consulting, data solutions, and product development." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs Logo" class="logo-img">
-        </a>
-        <span>Yuna Labs</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" />
+      <span>Yuna Labs</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="cta">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+<main>
 
-  <section class="page-header">
-    <h1>Our Services</h1>
+<section class="container page">
+  <h1>Services</h1>
+  <p class="lead">Flexible engagement models — advisory, project delivery, or embedded teams.</p>
+
+  <section id="tech-consulting" class="service">
+    <h2>Technology Consulting</h2>
+    <p>We provide architecture guidance, platform modernization, cloud migration, and DevOps enablement. Typical outcomes include increased reliability, lower cloud spend, and faster release cycles.</p>
+    <ul class="ticks">
+      <li>Cloud architecture reviews (AWS, Azure, GCP)</li>
+      <li>Kubernetes & platform engineering</li>
+      <li>Security hardening & compliance readiness</li>
+      <li>Observability (logs, metrics, tracing)</li>
+    </ul>
   </section>
 
-  <section class="content">
-    <div class="cards">
-      <div class="card">
-        <h3>Data Analytics</h3>
-        <p>Transform data into insights with dashboards, KPIs, and predictive modeling.</p>
+  <section id="data-solutions" class="service">
+    <h2>Data Solutions</h2>
+    <p>Design and implement data platforms that turn information into action. From ingestion to analytics, we build reliable pipelines and models with strong governance.</p>
+    <ul class="ticks">
+      <li>ETL/ELT pipelines and lakehouse design</li>
+      <li>Data quality, lineage, and cataloging</li>
+      <li>Dashboards & self‑service analytics</li>
+      <li>Applied ML for forecasting & classification</li>
+    </ul>
+  </section>
+
+  <section id="product-dev" class="service">
+    <h2>Product Development</h2>
+    <p>We co‑create user‑centered products with iterative design, accessible UI, and strong engineering foundations.</p>
+    <ul class="ticks">
+      <li>Discovery, UX/UI, and prototyping</li>
+      <li>Web & mobile app engineering</li>
+      <li>API design and integrations</li>
+      <li>Automated testing and CI/CD</li>
+    </ul>
+  </section>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>We help teams design, build, and operate modern software — from idea to production.</p>
       </div>
-      <div class="card">
-        <h3>Cloud Architecture</h3>
-        <p>Cloud migration, infrastructure optimization, and cost-efficient scaling.</p>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795‑8340</a></p>
+        <p><a href="mailto:hello@yuna-labs.com">hello@yuna-labs.com</a></p>
       </div>
-      <div class="card">
-        <h3>Machine Learning</h3>
-        <p>Build intelligent systems that automate processes and predict outcomes.</p>
-      </div>
-      <div class="card">
-        <h3>Custom IT Projects</h3>
-        <p>From integration to automation, we tailor IT solutions to your business needs.</p>
+      <div>
+        <h5>Links</h5>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Yuna Labs. All rights reserved.</p>
-  </footer>
+    <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
+  </div>
+</footer>
 </body>
 </html>

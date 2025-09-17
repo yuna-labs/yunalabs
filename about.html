@@ -1,50 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Yuna Labs</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuna Labs</title>
+  <meta name="description" content="Yuna Labs — technology consulting, data solutions, and product development." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs Logo" class="logo-img">
-        </a>
-        <span>Yuna Labs</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" />
+      <span>Yuna Labs</span>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="cta">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+<main>
 
-  <section class="page-header">
-    <h1>About Yuna Labs</h1>
-  </section>
+<section class="container page">
+  <h1>About Yuna Labs</h1>
+  <p class="lead">We are a technology studio focused on practical innovation — helping organizations move from idea to impact.</p>
 
-  <section class="content">
-    <p>
-      Yuna Labs is a woman-owned technology and analytics company dedicated to delivering 
-      innovative IT solutions and powerful business insights. 
-    </p>
-    <p>
-      Our mission is to empower organizations with data-driven decision-making and 
-      scalable cloud solutions, ensuring efficiency and competitive advantage.
-    </p>
-    <p>
-      With expertise in analytics, cloud architecture, and machine learning, 
-      we partner with clients to transform challenges into opportunities.
-    </p>
-  </section>
+  <h2>Our Approach</h2>
+  <ul class="ticks">
+    <li>Discover real needs through collaborative workshops and rapid research.</li>
+    <li>Design robust architectures with clear diagrams, decision records, and security baselines.</li>
+    <li>Deliver in small, tested increments with CI/CD, observability, and feedback loops.</li>
+  </ul>
 
-  <footer>
-    <p>&copy; 2025 Yuna Labs. All rights reserved.</p>
-  </footer>
+  <h2>What we value</h2>
+  <p>Clarity, craftsmanship, and accountability. We care about the details that make software dependable and a joy to use.</p>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>We help teams design, build, and operate modern software — from idea to production.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795‑8340</a></p>
+        <p><a href="mailto:hello@yuna-labs.com">hello@yuna-labs.com</a></p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
+      </div>
+    </div>
+    <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
+  </div>
+</footer>
 </body>
 </html>
