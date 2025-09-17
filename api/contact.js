@@ -1,112 +1,49 @@
+// api/contact.js
+import nodemailer from 'nodemailer';
 
-const nodemailer = require('nodemailer');
-
-function parseBody(req) {
-  return new Promise((resolve, reject) => {
-    let data = '';
-    req.on('data', chunk => (data += chunk));
-    req.on('end', () => {
-      const ct = (req.headers['content-type'] || '').toLowerCase();
-      try {
-        if (ct.includes('application/json')) {
-          resolve(JSON.parse(data || '{}'));
-        } else if (ct.includes('application/x-www-form-urlencoded')) {
-          const params = new URLSearchParams(data);
-          const obj = {};
-          for (const [k, v] of params.entries()) obj[k] = v;
-          resolve(obj);
-        } else {
-          resolve({});
-        }
-      } catch (err) { reject(err); }
-    });
-    req.on('error', reject);
-  });
-}
-
-module.exports = async (req, res) => {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end(JSON.stringify({ ok: false, error: 'Method not allowed' }));
-    return;
-  }
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   try {
-    const body = await parseBody(req);
-    const { name = '', email = '', company = '', message = '', website = '' } = body;
+    const { name = '', email = '', message = '', hp = '' } = req.body || {};
 
-    // Honeypot (bots tend to fill this invisible field)
-    if (website) {
-      res.statusCode = 200;
-      res.end(JSON.stringify({ ok: true }));
-      return;
+    // simple validations + honeypot
+    if (hp) return res.status(200).json({ ok: true }); // bot silently ignored
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
-
-    if (!name || !email || !message) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ ok: false, error: 'Missing required fields.' }));
-      return;
-    }
-
-    const host = process.env.SMTP_HOST;
-    const port = Number(process.env.SMTP_PORT || '465');
-    const user = process.env.SMTP_USER;
-    const pass = process.env.SMTP_PASS;
-    const to   = process.env.CONTACT_TO || 'info@yuna-labs.com';
-    const from = process.env.CONTACT_FROM || `Yuna Labs <info@yuna-labs.com>`;
 
     const transporter = nodemailer.createTransport({
-      host,
-      port,
-      secure: port === 465, // true for 465, false for 587/25
-      auth: { user, pass }
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT || 587),
+      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
     });
 
-    const subject = `New contact form submission from ${name}`;
-    const text = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : '',
-      '',
-      'Message:',
-      message
-    ].join('\n');
-
-    const html = `
-      <div style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif">
-        <h2>New message from the website</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ''}
-        <p><strong>Message:</strong></p>
-        <pre style="white-space:pre-wrap">${escapeHtml(message)}</pre>
-      </div>`;
+    const from = process.env.SMTP_FROM || process.env.SMTP_USER;
+    const to = process.env.CONTACT_TO || process.env.SMTP_USER;
 
     await transporter.sendMail({
-      from,
+      from: `"Yuna Labs" <${from}>`,
       to,
       replyTo: email,
-      subject,
-      text,
-      html
+      subject: `Website contact from ${name}`,
+      text: message,
+      html: `
+        <h2>New Contact Message</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <pre style="white-space:pre-wrap">${message}</pre>
+      `,
     });
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ ok: true }));
+    return res.status(200).json({ ok: true });
   } catch (err) {
     console.error(err);
-    res.statusCode = 500;
-    res.end(JSON.stringify({ ok: false, error: 'Server error' }));
+    return res.status(500).json({ error: 'Email failed to send' });
   }
-};
-
-function escapeHtml(str) {
-  return String(str)
-    .replaceAll('&','&amp;')
-    .replaceAll('<','&lt;')
-    .replaceAll('>','&gt;')
-    .replaceAll('"','&quot;')
-    .replaceAll("'",'&#39;');
 }
