@@ -136,3 +136,17 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}

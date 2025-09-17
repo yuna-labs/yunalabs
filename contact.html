@@ -9,23 +9,27 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">Yuna Labs</div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs Logo" class="logo-img">
+        </a>
+        <span>Yuna Labs</span>
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active btn">Contact</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="page-header">
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you. Let’s discuss how we can work together.</p>
   </section>
 
-  <section class="content contact-form">
-    <form>
+  <section class="content">
+    <form class="contact-form">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -37,7 +41,11 @@
 
       <button type="submit" class="btn-primary">Send Message</button>
     </form>
-    <p>Email us directly: <a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      <p>Location: Remote / Global</p>
+    </div>
   </section>
 
   <footer>
