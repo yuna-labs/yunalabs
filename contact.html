@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Yuna Labs</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contact | Yuna Labs</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav>
-      <h1 class="logo">Yuna Labs</h1>
+    <nav class="navbar">
+      <div class="logo">Yuna Labs</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -19,28 +19,29 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-header">
-      <h2>Contact Us</h2>
-    </section>
-    <section class="content">
-      <form action="mailto:info@yuna-labs.com" method="post" enctype="text/plain" class="contact-form">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+  <section class="page-header">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Let’s discuss how we can work together.</p>
+  </section>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+  <section class="content contact-form">
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-        <button type="submit" class="btn">Send</button>
-      </form>
-    </section>
-  </main>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+    <p>Email us directly: <a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+  </section>
 
   <footer>
-    <p>© 2025 Yuna Labs. All rights reserved.</p>
+    <p>&copy; 2025 Yuna Labs. All rights reserved.</p>
   </footer>
 </body>
 </html>
