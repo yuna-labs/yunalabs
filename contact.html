@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Yuna Labs</title>
-  <link rel="stylesheet" href="/style.css" />
-  <style>
-    /* Minimal safe defaults in case style.css is different */
-    :root { --ok: #1b873f; --err: #b00020; }
-    .container { max-width: 840px; margin: 0 auto; padding: 24px; }
-    .contact-card { background:#fff; border:1px solid #eee; border-radius:12px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,.05); }
-    form .row { display:flex; gap:16px; flex-wrap:wrap; }
-    form .row > div { flex:1 1 260px; }
-    label { display:block; font-weight:600; margin-bottom:6px; }
-    input, textarea { width:100%; padding:12px; border:1px solid #ccc; border-radius:8px; font:inherit; }
-    textarea { min-height:160px; resize:vertical; }
-    button[type="submit"] { padding:12px 18px; border:0; border-radius:8px; font-weight:700; cursor:pointer; }
-    .btn-primary { background:#111; color:#fff; }
-    .status { margin-top:12px; font-size:.95rem; }
-    .status.ok { color: var(--ok); }
-    .status.err { color: var(--err); }
-    .visually-hidden { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
-    header, nav, footer { padding: 12px 0; }
-    nav a { margin-right:16px; text-decoration:none; }
-  </style>
+  <title>Contact | Yuna Labs — Get in touch</title>
+  <meta name="description" content="Contact Yuna Labs to start a conversation about your data platform, analytics engineering, or cloud development needs." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
-  <header class="container">
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <strong>Contact</strong>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async">
+<span>Yuna Labs</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="cta">Request a Platform Audit</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
+<main class="container page">
     <h1>Get in touch</h1>
+    <p class="lead">Tell us about your project, your team's challenges, or why you're ready for an audit.</p>
     <div class="contact-card">
-      <form id="contact-form" novalidate>
+      <form id="contact-form" class="contact-form" novalidate>
         <div class="row">
           <div>
             <label for="name">Your name</label>
@@ -57,18 +48,35 @@
           </div>
         </div>
 
-        <!-- Honeypot (should remain empty) -->
         <input class="visually-hidden" type="text" name="hp" tabindex="-1" autocomplete="off" />
 
-        <button class="btn-primary" id="submitBtn" type="submit">Send</button>
+        <button class="btn-primary" id="submitBtn" type="submit">Send Message</button>
         <p id="status" class="status" role="status" aria-live="polite"></p>
       </form>
     </div>
-  </main>
+</main>
 
-  <footer class="container">
-    <small>&copy; <span id="yr"></span> Yuna Labs</small>
-  </footer>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>Graceful data. Powerful results.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
+        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
+      </div>
+    </div>
+    <div class="tiny">© <span id="yr"></span> Yuna Labs. All rights reserved.</div>
+  </div>
+</footer>
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
@@ -76,6 +84,7 @@
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('status');
     const submitBtn = document.getElementById('submitBtn');
+    const formFields = form.querySelectorAll('input:not([type="submit"]), textarea');
 
     function setStatus(text, cls) {
       statusEl.textContent = text || '';
@@ -84,12 +93,15 @@
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
       setStatus('Sending…');
       submitBtn.disabled = true;
+      formFields.forEach(field => field.disabled = true); 
 
       const payload = Object.fromEntries(new FormData(form).entries());
 
       try {
+        // NOTE: The backend '/api/contact' must be created and handle the 'nodemailer' logic
         const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -102,13 +114,18 @@
           throw new Error(data.error || 'Failed to send');
         }
 
-        setStatus('Thanks! Your message was sent.', 'ok');
+        setStatus('Thanks! Your message was sent. We’ll be in touch soon.', 'ok');
         form.reset();
+        formFields.forEach(field => field.disabled = false); 
+
       } catch (err) {
         console.error(err);
         setStatus('Sorry, something went wrong. Please try again.', 'err');
       } finally {
         submitBtn.disabled = false;
+        if (statusEl.className.includes('err')) { 
+          formFields.forEach(field => field.disabled = false);
+        }
       }
     });
   </script>

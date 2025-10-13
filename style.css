@@ -1,12 +1,15 @@
-
 :root{
   --ink:#0b1b17;
   --muted:#3a5d56;
   --brand:#107a6d;
   --brand-2:#14a38f;
   --brand-3:#0a4e45;
+  --accent: #f8961e; /* New vibrant accent color for CTAs */
   --card:#ffffff;
   --bg:#f3fbf9;
+  --border-default:#e3efed;
+  --color-ok: #1b873f;
+  --color-err: #b00020;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -16,8 +19,9 @@ a{color:var(--brand);text-decoration:none}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink)}
 .logo{width:36px;height:36px;object-fit:contain}
-nav a{margin-left:18px;font-weight:600}
-nav a.cta{padding:8px 14px;border:1px solid var(--brand);border-radius:10px}
+.site-nav a{margin-left:18px;font-weight:600}
+/* Highlighted CTA in the nav using the accent color */
+.site-nav a.cta{padding:8px 14px;border:1px solid var(--accent);border-radius:10px; color: var(--accent); font-weight: 700;}
 .hero{padding:80px 0 48px}
 .hero-bg{background: radial-gradient(80% 80% at 50% 0%, #e7fbf6 0, #ffffff 70%)}
 .hero-grid{display:grid;gap:26px;grid-template-columns:1.1fr .9fr;align-items:center}
@@ -25,18 +29,20 @@ nav a.cta{padding:8px 14px;border:1px solid var(--brand);border-radius:10px}
 .lead{color:var(--muted);font-size:1.1rem;max-width:65ch}
 .hero-ctas{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid #bfe6de}
-.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border-color:transparent;box-shadow:0 6px 18px rgba(16,122,109,.24)}
+/* Primary CTA uses the accent color */
+.btn.primary{background:var(--accent);color:white;border-color:var(--accent);box-shadow:0 6px 18px rgba(248,150,30,.3); font-weight: 700;}
 .hero-badges{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
 .hero-badges span{background:#eaf8f5;border:1px solid #d1eee8;border-radius:999px;padding:6px 10px;font-size:.9rem}
 .hero-visual img{width:100%;border-radius:16px;box-shadow:0 10px 30px rgba(10,78,69,.15)}
 .strip.features{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));padding:40px 0}
-.strip.features article{background:var(--card);border:1px solid #e3efed;border-radius:14px;overflow:hidden}
+.strip.features article{background:var(--card);border:1px solid var(--border-default);border-radius:14px;overflow:hidden}
+.card-link{display:block;color:var(--ink)}
 .card-img{width:100%;height:160px;object-fit:cover;display:block}
 .strip.features article h3{padding:12px 16px 0;margin:0}
 .strip.features article p,.strip.features article a{padding:0 16px 14px 16px;display:block}
 .cards{padding:10px 0 40px}
 .card-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid #e3efed;border-radius:14px;padding:18px}
+.card{background:var(--card);border:1px solid var(--border-default);border-radius:14px;padding:18px}
 .page{padding:42px 0}
 .ticks{padding-left:18px}
 .ticks li{margin-bottom:8px}
@@ -50,8 +56,42 @@ nav a.cta{padding:8px 14px;border:1px solid var(--brand);border-radius:10px}
 .site-footer h4,.site-footer h5{color:white;margin:6px 0}
 .footer-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .tiny{margin-top:18px;font-size:.85rem;color:#a7d3cb;text-align:center}
+
+/* New: Social Proof / Trust Section */
+.trust-section { padding: 40px 0; text-align: center; }
+.trust-logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 24px;}
+.trust-logo { height: 30px; opacity: 0.6; filter: grayscale(100%); transition: opacity 0.3s; }
+.trust-logo:hover { opacity: 1; filter: grayscale(0%); }
+
+/* Contact Form Specific Styles (Harmonized) */
 .contact-grid{display:grid;gap:24px;grid-template-columns:1.2fr .8fr}
+.contact-card { background:var(--card); border:1px solid #e3efed; border-radius:14px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,.05); max-width: 840px; margin: 0 auto;}
+.contact-form .row { display:flex; gap:16px; flex-wrap:wrap; }
+.contact-form .row > div { flex:1 1 260px; }
 .contact-form label{display:block;font-weight:600;margin-bottom:8px}
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #bfe6de;margin-top:6px;margin-bottom:12px;font:inherit}
+.contact-form textarea { min-height:160px; resize:vertical; }
+.contact-form .btn-primary { 
+  background: var(--accent);
+  color:white;
+  border-color:transparent;
+  box-shadow:0 6px 18px rgba(248,150,30,.3);
+  padding:12px 18px; 
+  border:0; 
+  border-radius:10px; 
+  font-weight:700; 
+  cursor:pointer; 
+  transition: all .2s ease;
+}
+.contact-form .btn-primary:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.status { margin-top:12px; font-size:.95rem; }
+.status.ok { color: var(--color-ok); }
+.status.err { color: var(--color-err); }
+.visually-hidden { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
 @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
 .more{font-weight:600}
