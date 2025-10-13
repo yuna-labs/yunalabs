@@ -9,12 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+
+<style>
+.trusted-logos { display:flex; gap:22px; flex-wrap:wrap; align-items:center; justify-content:center; margin-top:14px; }
+.trusted-logo { height:44px; width:auto; filter: none; opacity:0.95 }
+@media (max-width:640px){ .trusted-logo { height:36px } }
+</style>
+
 </head>
 <body>
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async">
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" / loading="eager" decoding="async">
 <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
@@ -42,7 +49,7 @@
       </div>
     </div>
     <div class="hero-visual">
-      <img src="assets/abstract-dataviz.svg" alt="Abstract data visualization" loading="eager" decoding="async">
+      <img src="assets/abstract-dataviz.svg" alt="Abstract data visualization" / loading="eager" decoding="async">
 </div>
   </div>
 </section>
@@ -50,19 +57,19 @@
 <!-- Updated Section: Social Proof & Trust with specific client names -->
 <section class="container trust-section">
     <h2>Trusted by industry leaders in Tech, Retail, and Telecom</h2>
-    <div class="trust-logos">
-        <!-- NOTE: You need to supply SVGs or PNGs for these clients in the assets folder -->
-        <img class="trust-logo" src="assets/client-empower-logo.svg" alt="Empower logo" style="width: 120px;"/>
-        <img class="trust-logo" src="assets/client-luckys-market-logo.svg" alt="Lucky's Market logo" style="width: 100px;"/>
-        <img class="trust-logo" src="assets/client-spectrum-logo.svg" alt="Spectrum Charter Communications logo" style="width: 140px;"/>
-        <img class="trust-logo" src="assets/client-logrythm-logo.svg" alt="LogRhythm Inc. logo" style="width: 80px;"/>
+    <div class="trusted-logos">
+      <img src="assets/empower.svg" alt="Empower logo" class="trusted-logo">
+      <img src="assets/luckys-market.svg" alt="Lucky's Market logo" class="trusted-logo">
+      <img src="assets/spectrum-charter.svg" alt="Spectrum (Charter Communications) logo" class="trusted-logo">
+      <img src="assets/logrhythm.svg" alt="LogRhythm Inc. logo" class="trusted-logo">
+    </div>
     </div>
 </section>
 
 <section class="strip container features">
   <article>
     <a href="services.html#data-solutions" class="card-link">
-      <img class="card-img" src="assets/code.svg" alt="Software development" loading="eager" decoding="async">
+      <img class="card-img" src="assets/code.svg" alt="Software development" / loading="eager" decoding="async">
       <h3>Analytics you can **trust**</h3>
       <p>Composable data stacks with version control, testing, and CI/CD. **Never doubt a dashboard number again.**</p>
       <span class="more" style="padding: 0 16px 14px 16px; display: block;">See our data solutions →</span>
@@ -70,7 +77,7 @@
   </article>
   <article>
     <a href="services.html#tech-consulting" class="card-link">
-      <img class="card-img" src="assets/network.svg" alt="Cloud infrastructure" loading="eager" decoding="async">
+      <img class="card-img" src="assets/network.svg" alt="Cloud infrastructure" / loading="eager" decoding="async">
       <h3>Platforms built for **hyper-growth**</h3>
       <p>Secure, cost-aware architectures on AWS/Azure/GCP. Infrastructure that scales seamlessly, ready for any spike in demand.</p>
       <span class="more" style="padding: 0 16px 14px 16px; display: block;">Explore platform engineering →</span>
@@ -78,7 +85,7 @@
   </article>
   <article>
     <a href="services.html#product-dev" class="card-link">
-      <img class="card-img" src="assets/abstract-dataviz.svg" alt="Dashboards and insights" loading="eager" decoding="async">
+      <img class="card-img" src="assets/abstract-dataviz.svg" alt="Dashboards and insights" / loading="eager" decoding="async">
       <h3>Insights **without the drag**</h3>
       <p>Fast dashboards and semantic layers that make the right metric obvious to everyone, instantly accelerating business decisions.</p>
       <span class="more" style="padding: 0 16px 14px 16px; display: block;">Learn about our product work →</span>
