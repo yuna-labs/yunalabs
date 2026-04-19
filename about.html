@@ -3,49 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Yuna Labs — Graceful data, powerful results.</title>
-  <meta name="description" content="Yuna Labs is a software studio focused on data platforms and analytics engineering, dedicated to making data graceful to work with and powerful in its outcomes." />
+  <title>About | Yuna Labs</title>
+  <meta name="description" content="Yuna Labs is a small, senior studio focused on building data platforms that teams can actually trust — versioned, tested, and observable by default." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:title" content="About Yuna Labs" />
+  <meta property="og:description" content="A senior studio for modern data platforms. Versioned, tested, observable by default." />
+  <meta property="og:image" content="assets/about-lineage.svg" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" / loading="eager" decoding="async">
-<span>Yuna Labs</span>
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Request a Platform Audit</a>
+      <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
 </header>
+
 <main>
 
-<section class="container page">
-  <h1>About Yuna Labs</h1>
-  <p class="lead">We are a software studio focused on data platforms and analytics engineering. Our mission is simple: make data graceful to work with and powerful in its outcomes.</p>
+  <section class="container page">
+    <h1>About Yuna Labs</h1>
+    <p class="lead">We&rsquo;re a small, senior studio focused on one thing: building data platforms that teams can actually trust.</p>
 
-  <h2>Our Approach</h2>
-  <ul class="ticks">
-    <li>Discover: clarify goals with rapid workshops and architecture sketches.</li>
-    <li>Design: secure, observable systems with clear contracts and lineage.</li>
-    <li>Deliver: small, tested increments with CI/CD and real-time feedback.</li>
-  </ul>
+    <h2>Why we exist</h2>
+    <p>Too many analytics systems are held together by Slack threads, one-off queries, and faith. We think data platforms should be engineered with the same rigor as production software — versioned, tested, observable — so every dashboard number can be defended, and every pipeline change can be reviewed, tested, and rolled back like any other deploy.</p>
 
-  <div class="banner-img">
-    <img src="assets/network.svg" alt="Team collaboration" / loading="eager" decoding="async">
-</div>
+    <div class="banner-img">
+      <img src="assets/about-lineage.svg" alt="Data lineage diagram showing raw sources feeding staging models, marts, and exposed metrics" loading="lazy" decoding="async" />
+    </div>
 
-  <h2>What we value</h2>
-  <p>Clarity, craftsmanship, and accountability. We care about the details that make platforms dependable and delightful.</p>
-</section>
+    <h2>Our principles</h2>
+    <div class="principles-list">
+      <div class="principle-item">
+        <h3>Version everything</h3>
+        <p>Code, models, dashboards, and infrastructure live in git. If it isn&rsquo;t reviewable, it doesn&rsquo;t ship.</p>
+      </div>
+      <div class="principle-item">
+        <h3>Test before you ship</h3>
+        <p>Every model has contracts. Every pipeline has freshness and schema tests. Breakage is caught before a stakeholder sees it.</p>
+      </div>
+      <div class="principle-item">
+        <h3>Observable by default</h3>
+        <p>Lineage, cost, freshness, and data quality are first-class concerns — not afterthoughts bolted on during an incident.</p>
+      </div>
+      <div class="principle-item">
+        <h3>No dashboard without a contract</h3>
+        <p>Metrics have definitions, owners, and tests. A single source of truth is a daily practice, not a slogan.</p>
+      </div>
+    </div>
+
+    <h2>How we work</h2>
+    <ul class="ticks">
+      <li><strong>Discover.</strong> Clarify goals with rapid workshops and architecture sketches.</li>
+      <li><strong>Design.</strong> Secure, observable systems with clear data contracts and lineage.</li>
+      <li><strong>Deliver.</strong> Small, tested increments with CI/CD and honest weekly updates.</li>
+    </ul>
+
+    <h2>Where we&rsquo;re based</h2>
+    <p>Yuna Labs is headquartered in Sheridan, Wyoming, and works with engineering and data teams across North America. Remote-first, async-first, and built for the way modern teams actually operate.</p>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Want a second opinion on your data stack?</h2>
+      <p>A two-week audit, a written report, and a clear path forward. No pitch deck at the end.</p>
+      <a class="btn primary" href="contact.html">Request an audit</a>
+    </div>
+  </section>
 
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -55,17 +97,27 @@
       </div>
       <div>
         <h5>Contact</h5>
-        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
         <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
         <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
       </div>
       <div>
         <h5>Links</h5>
-        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
+        <p>
+          <a href="index.html">Home</a><br/>
+          <a href="about.html">About</a><br/>
+          <a href="services.html">Services</a><br/>
+          <a href="contact.html">Contact</a>
+        </p>
       </div>
     </div>
-    <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>

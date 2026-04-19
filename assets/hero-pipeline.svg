@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Abstract data pipeline with sources, transformations, and dashboards">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#edf5f5"/>
+      <stop offset="100%" stop-color="#e6f4f4"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4eabab"/>
+      <stop offset="100%" stop-color="#007F80"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#c4e4e4" stroke-width="1" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="440" fill="url(#bg)"/>
+  <rect width="640" height="440" fill="url(#grid)"/>
+
+  <!-- Connection lines (pipeline) -->
+  <g stroke="url(#flow)" stroke-width="1.6" fill="none" opacity="0.7">
+    <path d="M 110 120 C 180 120, 200 220, 270 220"/>
+    <path d="M 110 220 C 180 220, 200 220, 270 220"/>
+    <path d="M 110 320 C 180 320, 200 220, 270 220"/>
+    <path d="M 350 220 C 420 220, 440 140, 510 140"/>
+    <path d="M 350 220 C 420 220, 440 220, 510 220"/>
+    <path d="M 350 220 C 420 220, 440 300, 510 300"/>
+  </g>
+
+  <!-- Source nodes (left column) -->
+  <g font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="11" fill="#004242">
+    <g>
+      <rect x="40" y="100" width="72" height="40" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+      <circle cx="58" cy="120" r="5" fill="#007F80"/>
+      <text x="72" y="124" font-weight="600">Source</text>
+    </g>
+    <g>
+      <rect x="40" y="200" width="72" height="40" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+      <circle cx="58" cy="220" r="5" fill="#006C70"/>
+      <text x="72" y="224" font-weight="600">Source</text>
+    </g>
+    <g>
+      <rect x="40" y="300" width="72" height="40" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+      <circle cx="58" cy="320" r="5" fill="#4eabab"/>
+      <text x="72" y="324" font-weight="600">Source</text>
+    </g>
+  </g>
+
+  <!-- Transform node (center) -->
+  <g>
+    <rect x="270" y="185" width="80" height="70" rx="10" fill="#004242" stroke="#01282a" stroke-width="1"/>
+    <text x="310" y="214" font-family="'Space Grotesk', sans-serif" font-size="10" fill="#92cccc" text-anchor="middle" letter-spacing="1.2">TRANSFORM</text>
+    <line x1="285" y1="225" x2="335" y2="225" stroke="#4eabab" stroke-width="1"/>
+    <line x1="285" y1="234" x2="320" y2="234" stroke="#4eabab" stroke-width="1" opacity="0.6"/>
+    <line x1="285" y1="243" x2="325" y2="243" stroke="#4eabab" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Output nodes (right column) - dashboards / reports -->
+  <!-- Top: bar chart -->
+  <g>
+    <rect x="510" y="100" width="90" height="80" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+    <rect x="520" y="150" width="10" height="22" fill="#4eabab"/>
+    <rect x="535" y="135" width="10" height="37" fill="#007F80"/>
+    <rect x="550" y="142" width="10" height="30" fill="#006C70"/>
+    <rect x="565" y="120" width="10" height="52" fill="#004242"/>
+    <rect x="580" y="130" width="10" height="42" fill="#007F80"/>
+    <text x="555" y="118" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#004242" text-anchor="middle" font-weight="600">Revenue</text>
+  </g>
+  <!-- Middle: KPI card -->
+  <g>
+    <rect x="510" y="195" width="90" height="60" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+    <text x="555" y="222" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#004242" text-anchor="middle" font-weight="700">98.4%</text>
+    <text x="555" y="240" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#6a8080" text-anchor="middle" letter-spacing="1">TEST PASS</text>
+  </g>
+  <!-- Bottom: trend line -->
+  <g>
+    <rect x="510" y="270" width="90" height="60" rx="8" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+    <polyline points="520,315 535,308 548,312 562,295 575,298 590,285" fill="none" stroke="#007F80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="590" cy="285" r="3" fill="#007F80"/>
+    <text x="555" y="288" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#004242" text-anchor="middle" font-weight="600">Freshness</text>
+  </g>
+
+  <!-- Small floating labels -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="9" fill="#3d5a5a" letter-spacing="1">
+    <text x="70" y="78" text-anchor="middle">INGEST</text>
+    <text x="310" y="172" text-anchor="middle">MODEL · TEST</text>
+    <text x="555" y="360" text-anchor="middle">DELIVER</text>
+  </g>
+
+  <!-- Subtle perimeter -->
+  <rect x="0.5" y="0.5" width="639" height="439" fill="none" stroke="#c4e4e4" stroke-width="1"/>
+</svg>

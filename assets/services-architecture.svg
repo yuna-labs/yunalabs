@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Platform architecture overview">
+  <defs>
+    <linearGradient id="svcBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#edf5f5"/>
+      <stop offset="100%" stop-color="#e6f4f4"/>
+    </linearGradient>
+    <pattern id="svcGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#c4e4e4" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="320" fill="url(#svcBg)"/>
+  <rect width="720" height="320" fill="url(#svcGrid)"/>
+
+  <!-- INGEST layer -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
+    <text x="30" y="52">INGEST</text>
+  </g>
+  <g>
+    <rect x="30"  y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="78" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Fivetran</text>
+    <rect x="140" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="188" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Airbyte</text>
+    <rect x="250" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="298" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Kafka</text>
+    <rect x="360" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="408" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Dagster</text>
+    <rect x="470" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="518" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Airflow</text>
+    <rect x="580" y="60" width="110" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
+    <text x="635" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">APIs · Custom</text>
+  </g>
+
+  <!-- STORE layer -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
+    <text x="30" y="132">STORE &amp; TRANSFORM</text>
+  </g>
+  <g>
+    <rect x="30"  y="140" width="206" height="38" rx="8" fill="#007F80" stroke="#004242"/>
+    <text x="133" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">Snowflake · BigQuery · Redshift</text>
+    <rect x="250" y="140" width="206" height="38" rx="8" fill="#007F80" stroke="#004242"/>
+    <text x="353" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">Databricks · S3 Iceberg · Delta</text>
+    <rect x="470" y="140" width="220" height="38" rx="8" fill="#007F80" stroke="#004242"/>
+    <text x="580" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">dbt · Terraform · GitHub Actions</text>
+  </g>
+
+  <!-- SERVE layer -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
+    <text x="30" y="212">SERVE</text>
+  </g>
+  <g>
+    <rect x="30"  y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
+    <text x="95" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Looker</text>
+    <rect x="174" y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
+    <text x="239" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Tableau</text>
+    <rect x="318" y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
+    <text x="383" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Superset</text>
+    <rect x="462" y="220" width="228" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
+    <text x="576" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Semantic layer · Cube · APIs</text>
+  </g>
+
+  <!-- Connection hints between layers -->
+  <g stroke="#007F80" stroke-width="1" stroke-dasharray="3,3" opacity="0.4">
+    <line x1="360" y1="100" x2="360" y2="140"/>
+    <line x1="360" y1="180" x2="360" y2="220"/>
+  </g>
+
+  <!-- Caption -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#6a8080" letter-spacing="1.2">
+    <text x="360" y="295" text-anchor="middle">VENDOR-NEUTRAL · CLOUD-AGNOSTIC · VERSIONED END TO END</text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="719" height="319" fill="none" stroke="#c4e4e4" stroke-width="1"/>
+</svg>
