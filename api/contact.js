@@ -1,4 +1,3 @@
-
 const nodemailer = require('nodemailer');
 
 function parseBody(req) {
@@ -39,9 +38,9 @@ module.exports = async (req, res) => {
 
   try {
     const body = await parseBody(req);
-    const { name = '', email = '', message = '', hp = '' } = body;
+    const { name = '', email = '', company = '', message = '', hp = '' } = body;
 
-    // Honeypot
+    // Honeypot — silently succeed for bots.
     if (hp) { res.statusCode = 200; res.end(JSON.stringify({ ok: true })); return; }
 
     if (!name || !email || !message) {
@@ -55,20 +54,25 @@ module.exports = async (req, res) => {
     const user = process.env.SMTP_USER;
     const pass = process.env.SMTP_PASS;
     const to   = process.env.CONTACT_TO || 'info@yuna-labs.com';
-    const from = process.env.CONTACT_FROM || `Yuna Labs <info@yuna-labs.com>`;
+    const from = process.env.CONTACT_FROM || 'Yuna Labs <info@yuna-labs.com>';
 
     const transporter = nodemailer.createTransport({
       host, port, secure: port === 465, auth: { user, pass }
     });
 
     const subject = `New contact form submission from ${name}`;
+    const companyLine = company
+      ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>`
+      : '';
+
     const html = `
-      <div style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif">
-        <h2>New message from the website</h2>
+      <div style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif; max-width:600px; color:#0b1b17">
+        <h2 style="font-family:'Space Grotesk',system-ui,sans-serif;color:#0a4e45;margin-bottom:16px">New message from yuna-labs.com</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        ${companyLine}
         <p><strong>Message:</strong></p>
-        <pre style="white-space:pre-wrap">${escapeHtml(message)}</pre>
+        <pre style="white-space:pre-wrap;background:#f5faf8;border:1px solid #dce9e6;padding:12px;border-radius:8px;font-family:inherit">${escapeHtml(message)}</pre>
       </div>`;
 
     await transporter.sendMail({ from, to, replyTo: email, subject, html });

@@ -2,58 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Yuna Labs — Get in touch</title>
-  <meta name="description" content="Contact Yuna Labs to start a conversation about your data platform, analytics engineering, or cloud development needs." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Yuna Labs</title>
+  <meta name="description" content="Tell us about your project, your team, or what&rsquo;s not working. Yuna Labs replies within two business days." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:title" content="Contact Yuna Labs" />
+  <meta property="og:description" content="Start a conversation about your data platform. We reply within two business days." />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
 </head>
 <body>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" / loading="eager" decoding="async">
-<span>Yuna Labs</span>
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Request a Platform Audit</a>
+      <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
 </header>
 
 <main class="container page">
-    <h1>Get in touch</h1>
-    <p class="lead">Tell us about your project, your team's challenges, or why you're ready for an audit.</p>
+  <h1>Get in touch</h1>
+  <p class="lead">Tell us about your project, your team, or what&rsquo;s not working. We reply within two business days.</p>
+
+  <div class="contact-layout">
     <div class="contact-card">
       <form id="contact-form" class="contact-form" novalidate>
         <div class="row">
           <div>
             <label for="name">Your name</label>
-            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required />
           </div>
           <div>
             <label for="email">Your email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
           </div>
         </div>
 
         <div class="row">
           <div style="flex:1 1 100%">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+            <label for="company">Company <span style="color:var(--subtle); font-weight:400;">(optional)</span></label>
+            <input id="company" name="company" type="text" placeholder="Company name" autocomplete="organization" />
           </div>
         </div>
 
-        <input class="visually-hidden" type="text" name="hp" tabindex="-1" autocomplete="off" />
+        <div class="row">
+          <div style="flex:1 1 100%">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="A short description of your current stack, what&rsquo;s not working, or what you&rsquo;d like to build." required></textarea>
+          </div>
+        </div>
 
-        <button class="btn-primary" id="submitBtn" type="submit">Send Message</button>
+        <input class="visually-hidden" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <button class="btn primary" id="submitBtn" type="submit">Send message</button>
         <p id="status" class="status" role="status" aria-live="polite"></p>
       </form>
     </div>
+
+    <aside class="contact-side">
+      <h3>Prefer email?</h3>
+      <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
+
+      <h3 style="margin-top: 32px;">Where we&rsquo;re based</h3>
+      <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
+
+      <h3 style="margin-top: 32px;">What to expect</h3>
+      <p>A short reply within two business days with a few clarifying questions, followed by a 30-minute intro call if it looks like a fit.</p>
+    </aside>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -65,69 +95,70 @@
       </div>
       <div>
         <h5>Contact</h5>
-        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
         <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
         <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
       </div>
       <div>
         <h5>Links</h5>
-        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
+        <p>
+          <a href="index.html">Home</a><br/>
+          <a href="about.html">About</a><br/>
+          <a href="services.html">Services</a><br/>
+          <a href="contact.html">Contact</a>
+        </p>
       </div>
     </div>
-    <div class="tiny">© <span id="yr"></span> Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('status');
-    const submitBtn = document.getElementById('submitBtn');
-    const formFields = form.querySelectorAll('input:not([type="submit"]), textarea');
+  const form       = document.getElementById('contact-form');
+  const statusEl   = document.getElementById('status');
+  const submitBtn  = document.getElementById('submitBtn');
+  const formFields = form.querySelectorAll('input:not([type="submit"]), textarea');
 
-    function setStatus(text, cls) {
-      statusEl.textContent = text || '';
-      statusEl.className = 'status ' + (cls || '');
-    }
+  function setStatus(text, cls) {
+    statusEl.textContent = text || '';
+    statusEl.className   = 'status ' + (cls || '');
+  }
+  function setDisabled(state) {
+    submitBtn.disabled = state;
+    formFields.forEach(field => field.disabled = state);
+  }
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      setStatus('Sending…');
-      submitBtn.disabled = true;
-      formFields.forEach(field => field.disabled = true); 
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    setStatus('Sending…');
+    setDisabled(true);
 
-      const payload = Object.fromEntries(new FormData(form).entries());
+    const payload = Object.fromEntries(new FormData(form).entries());
 
-      try {
-        // NOTE: The backend '/api/contact' must be created and handle the 'nodemailer' logic
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+    try {
+      const res  = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json().catch(() => ({}));
 
-        const data = await res.json().catch(() => ({}));
-
-        if (!res.ok || !data.ok) {
-          throw new Error(data.error || 'Failed to send');
-        }
-
-        setStatus('Thanks! Your message was sent. We’ll be in touch soon.', 'ok');
-        form.reset();
-        formFields.forEach(field => field.disabled = false); 
-
-      } catch (err) {
-        console.error(err);
-        setStatus('Sorry, something went wrong. Please try again.', 'err');
-      } finally {
-        submitBtn.disabled = false;
-        if (statusEl.className.includes('err')) { 
-          formFields.forEach(field => field.disabled = false);
-        }
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to send');
       }
-    });
-  </script>
+
+      setStatus('Thanks — your message was sent. We&rsquo;ll be in touch within two business days.', 'ok');
+      form.reset();
+      setDisabled(false);
+    } catch (err) {
+      console.error(err);
+      setStatus('Sorry, something went wrong. Please try again, or email info@yuna-labs.com.', 'err');
+      setDisabled(false);
+    }
+  });
+</script>
+
 </body>
 </html>

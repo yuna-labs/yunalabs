@@ -3,129 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yuna Labs — Stop fighting data maintenance. Start making better decisions.</title>
-  <meta name="description" content="Yuna Labs builds software-driven analytics platforms that turn data into decisions and eliminate dashboard doubt. Request a Platform Audit today." />
+  <title>Yuna Labs — Data platforms built like software.</title>
+  <meta name="description" content="Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for decisions." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:title" content="Yuna Labs — Data platforms built like software." />
+  <meta property="og:description" content="Versioned, tested, observable analytics platforms. Request a free platform audit." />
+  <meta property="og:image" content="assets/hero-pipeline.svg" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
-
-<style>
-.trusted-logos { display:flex; gap:22px; flex-wrap:wrap; align-items:center; justify-content:center; margin-top:14px; }
-.trusted-logo { height:44px; width:auto; filter: none; opacity:0.95 }
-@media (max-width:640px){ .trusted-logo { height:36px } }
-</style>
-
 </head>
 <body>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" / loading="eager" decoding="async">
-<span>Yuna Labs</span>
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Request a Platform Audit</a>
+      <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
 </header>
+
 <main>
 
-<section class="hero hero-bg">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>Stop fighting data maintenance. Start making better decisions.</h1>
-      <p class="lead">We build **software-driven analytics platforms**—data pipelines, lakehouse architecture, and decision-ready dashboards—so your teams can move faster with **unquestionable confidence**.</p>
-      <div class="hero-ctas">
-        <a class="btn primary" href="contact.html">Request a Platform Audit</a>
-        <a class="btn" href="services.html">See our solutions</a>
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Data platforms built like software.</h1>
+        <p class="lead">Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for the decisions your teams need to make.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="contact.html">Book a platform audit</a>
+          <a class="btn" href="services.html">See our services</a>
+        </div>
+        <div class="hero-badges">
+          <span>Analytics Engineering</span>
+          <span>Data Platforms</span>
+          <span>Cloud &amp; DevOps</span>
+        </div>
       </div>
-      <div class="hero-badges">
-        <span>Analytics Engineering</span>
-        <span>Data Platforms</span>
-        <span>Cloud & DevOps</span>
+      <div class="hero-visual">
+        <img src="assets/hero-pipeline.svg" alt="Data pipeline illustration: sources flowing through a transform layer into tested dashboards" loading="eager" decoding="async" />
       </div>
     </div>
-    <div class="hero-visual">
-      <img src="assets/abstract-dataviz.svg" alt="Abstract data visualization" / loading="eager" decoding="async">
-</div>
-  </div>
-</section>
+  </section>
 
-<!-- Updated Section: Social Proof & Trust with specific client names -->
-<section class="container trust-section">
-    <h2>Trusted by industry leaders in Tech, Retail, and Telecom</h2>
-    <div class="trusted-logos">
-      <img src="assets/empower.svg" alt="Empower logo" class="trusted-logo">
-      <img src="assets/luckys-market.svg" alt="Lucky's Market logo" class="trusted-logo">
-      <img src="assets/spectrum-charter.svg" alt="Spectrum (Charter Communications) logo" class="trusted-logo">
-      <img src="assets/logrhythm.svg" alt="LogRhythm Inc. logo" class="trusted-logo">
+  <!-- ========== Principles band ========== -->
+  <section class="principles" aria-labelledby="principles-heading">
+    <div class="container">
+      <h2 id="principles-heading" class="visually-hidden">Our principles</h2>
+      <div class="principles-grid">
+        <div class="principle">
+          <span class="label">01 · Versioned</span>
+          <h3>Everything in git</h3>
+          <p>Models, pipelines, dashboards, and infrastructure live under version control with reviewable history.</p>
+        </div>
+        <div class="principle">
+          <span class="label">02 · Tested</span>
+          <h3>Checks before production</h3>
+          <p>Schema, freshness, and logic tests run on every change. Breakage is caught before stakeholders see it.</p>
+        </div>
+        <div class="principle">
+          <span class="label">03 · Observable</span>
+          <h3>Lineage by default</h3>
+          <p>Data lineage, freshness, cost, and quality are first-class — not instrumented after the fact.</p>
+        </div>
+        <div class="principle">
+          <span class="label">04 · Composable</span>
+          <h3>Warehouse-agnostic</h3>
+          <p>Modern, vendor-neutral stacks. You keep your data, your cloud, and your options.</p>
+        </div>
+      </div>
     </div>
-    </div>
-</section>
+  </section>
 
-<section class="strip container features">
-  <article>
-    <a href="services.html#data-solutions" class="card-link">
-      <img class="card-img" src="assets/code.svg" alt="Software development" / loading="eager" decoding="async">
-      <h3>Analytics you can **trust**</h3>
-      <p>Composable data stacks with version control, testing, and CI/CD. **Never doubt a dashboard number again.**</p>
-      <span class="more" style="padding: 0 16px 14px 16px; display: block;">See our data solutions →</span>
-    </a>
-  </article>
-  <article>
-    <a href="services.html#tech-consulting" class="card-link">
-      <img class="card-img" src="assets/network.svg" alt="Cloud infrastructure" / loading="eager" decoding="async">
-      <h3>Platforms built for **hyper-growth**</h3>
-      <p>Secure, cost-aware architectures on AWS/Azure/GCP. Infrastructure that scales seamlessly, ready for any spike in demand.</p>
-      <span class="more" style="padding: 0 16px 14px 16px; display: block;">Explore platform engineering →</span>
-    </a>
-  </article>
-  <article>
-    <a href="services.html#product-dev" class="card-link">
-      <img class="card-img" src="assets/abstract-dataviz.svg" alt="Dashboards and insights" / loading="eager" decoding="async">
-      <h3>Insights **without the drag**</h3>
-      <p>Fast dashboards and semantic layers that make the right metric obvious to everyone, instantly accelerating business decisions.</p>
-      <span class="more" style="padding: 0 16px 14px 16px; display: block;">Learn about our product work →</span>
-    </a>
-  </article>
-</section>
+  <!-- ========== What we build ========== -->
+  <section class="container">
+    <div class="features">
+      <article class="feature-card">
+        <a href="services.html#analytics-engineering" class="card-link">
+          <img class="card-icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Analytics you can trust</h3>
+          <p>Composable data stacks with dbt, CI/CD, and lineage. Never doubt a dashboard number again.</p>
+          <span class="more">See analytics engineering →</span>
+        </a>
+      </article>
+      <article class="feature-card">
+        <a href="services.html#cloud-platform" class="card-link">
+          <img class="card-icon" src="assets/icon-platform.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Platforms built for scale</h3>
+          <p>Secure, cost-aware architectures on AWS, Azure, and GCP. Infrastructure that grows with demand.</p>
+          <span class="more">Explore platform work →</span>
+        </a>
+      </article>
+      <article class="feature-card">
+        <a href="services.html#product-engineering" class="card-link">
+          <img class="card-icon" src="assets/icon-insights.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Insights without the drag</h3>
+          <p>Fast dashboards and semantic layers that make the right metric obvious across the organization.</p>
+          <span class="more">Learn about product work →</span>
+        </a>
+      </article>
+    </div>
+  </section>
 
-<section class="container cards">
-  <!-- Testimonial Section - Now dynamically updated by JavaScript -->
-  <h2>What our clients say</h2>
-  <div class="card-grid">
-    <div class="card" id="testimonial-card" style="grid-column: span 2 / auto; background: #fff8f2; border-color: var(--accent); transition: opacity 0.5s ease-in-out;">
-      <p id="testimonial-quote" style="font-size: 1.2rem; font-style: italic; color: var(--ink);"></p>
-      <p id="testimonial-source" style="font-weight: 600; margin-top: 10px;"></p>
+  <!-- ========== How we work ========== -->
+  <section class="how">
+    <div class="container">
+      <div class="how-header">
+        <h2>How we work</h2>
+        <p class="lead">Three phases, each with a concrete deliverable. No open-ended engagements.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step">
+          <h3>Audit</h3>
+          <p>We assess your current stack, data contracts, and reporting surface. You get a written assessment with prioritized recommendations within two weeks.</p>
+        </div>
+        <div class="how-step">
+          <h3>Design</h3>
+          <p>We map target architecture, data contracts, and delivery milestones. You sign off on scope and cost before a line of code is written.</p>
+        </div>
+        <div class="how-step">
+          <h3>Deliver</h3>
+          <p>We ship in small, tested increments with CI/CD and observability on from day one. You own the code and the documentation.</p>
+        </div>
+      </div>
     </div>
-    <!-- Standard Value Cards -->
-    <div class="card">
-      <h4>Analytics engineering</h4>
-      <p>dbt, lakehouse patterns, robust testing, and governance to keep data trustworthy.</p>
-    </div>
-    <div class="card">
-      <h4>Security & compliance</h4>
-      <p>Encryption, IAM, and auditability across pipelines, storage, and applications.</p>
-    </div>
-    <div class="card">
-      <h4>Velocity with quality</h4>
-      <p>Short iterations, CI/CD, and observability—so you ship features without surprises.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-banner pattern-bg">
-  <div class="container">
-    <h2>Ready to build a data platform with guaranteed quality?</h2>
-    <p>Tell us where you want to go—we’ll map the shortest, safest path.</p>
-    <a class="btn primary" href="contact.html">Request a Free Audit</a>
-  </div>
-</section>
+  <!-- ========== CTA banner ========== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Start with a free platform audit.</h2>
+      <p>You&rsquo;ll leave with a written assessment — not a pitch. Two weeks, no obligation.</p>
+      <a class="btn primary" href="contact.html">Request an audit</a>
+    </div>
+  </section>
 
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -135,71 +162,26 @@
       </div>
       <div>
         <h5>Contact</h5>
-        <p>30 N Gould St, Ste N<br>Sheridan, WY, 82801, USA</p>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
         <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
         <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
       </div>
       <div>
         <h5>Links</h5>
-        <p><a href="index.html">Home</a><br><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="contact.html">Contact</a></p>
+        <p>
+          <a href="index.html">Home</a><br/>
+          <a href="about.html">About</a><br/>
+          <a href="services.html">Services</a><br/>
+          <a href="contact.html">Contact</a>
+        </p>
       </div>
     </div>
-    <div class="tiny">© 2025 Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
 
 <script>
-  // Testimonial Data Array (using only job titles and companies for ethical reasons)
-  const testimonials = [
-    {
-      quote: "The complexity of our regulatory reporting meant zero tolerance for error. Yuna Labs designed and implemented a dbt-based analytics pipeline that enforced robust testing and data governance. The result wasn't just compliance—it was a significant reduction in the hours spent validating data, allowing our analysts to focus on forecasting, not fixing.",
-      source: "CFO, Empower (Financial Services)"
-    },
-    {
-      quote: "Our platform demands real-time data integrity and massive scale. Yuna Labs embedded with our DevOps team to architect a cloud platform that maximized our data throughput while dramatically reducing infrastructure costs. Their expertise in scaling observability and containerization was key to maintaining our competitive edge.",
-      source: "VP of Engineering, LogRhythm Inc. (Cybersecurity/Tech)"
-    },
-    {
-      quote: "Before Yuna Labs, reconciling inventory, point-of-sale, and supplier data was a manual nightmare that blocked our strategic decisions. They unified our siloed systems into a modern lakehouse architecture, giving us reliable, self-service dashboards. We can now identify purchasing and loss-prevention opportunities faster than ever before.",
-      source: "Director of Business Intelligence, Lucky's Market (Retail/Grocery)"
-    },
-    {
-      quote: "Yuna Labs was instrumental in migrating our core data processing to the cloud. They delivered a highly secure, cost-optimized platform that immediately improved our data latency, helping us serve our customers faster than ever before.",
-      source: "VP of Cloud Infrastructure, Spectrum (Charter Communications)"
-    }
-  ];
-
-  let currentTestimonialIndex = 0;
-  const quoteEl = document.getElementById('testimonial-quote');
-  const sourceEl = document.getElementById('testimonial-source');
-  const cardEl = document.getElementById('testimonial-card');
-
-  // Function to smoothly update the testimonial
-  function updateTestimonial() {
-    if (!quoteEl || !sourceEl || !cardEl) return;
-
-    // 1. Fade out (start transition)
-    cardEl.style.opacity = '0';
-
-    // 2. Wait for fade out, then change content
-    setTimeout(() => {
-      const nextTestimonial = testimonials[currentTestimonialIndex];
-      quoteEl.textContent = `"${nextTestimonial.quote}"`;
-      sourceEl.textContent = `— ${nextTestimonial.source}`;
-
-      // 3. Fade in (end transition)
-      cardEl.style.opacity = '1';
-
-      // 4. Move to the next testimonial in the array
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-    }, 500); // 500ms matches the transition duration in the inline style
-  }
-
-  // Set the first testimonial immediately on page load
-  updateTestimonial();
-
-  // Set up the interval for rotation every 10 seconds (10000ms)
-  setInterval(updateTestimonial, 10000);
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 
 </body>
