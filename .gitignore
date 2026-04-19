@@ -1,2 +1,8 @@
 # Local backups of binary assets
 *.backup.*
+
+# Vercel CLI project link state
+.vercel/
+
+# Claude Code per-project state
+.claude/
