@@ -132,10 +132,9 @@
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const payload = Object.fromEntries(new FormData(form).entries());
     setStatus('Sending…');
     setDisabled(true);
-
-    const payload = Object.fromEntries(new FormData(form).entries());
 
     try {
       const res  = await fetch('/api/contact', {
