@@ -1,74 +1,243 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Platform architecture overview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Platform architecture: ingest, store, transform, and serve layers with cross-cutting CI/CD, security, and observability">
   <defs>
-    <linearGradient id="svcBg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#edf5f5"/>
-      <stop offset="100%" stop-color="#e6f4f4"/>
+    <linearGradient id="sa-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5fafa"/>
     </linearGradient>
-    <pattern id="svcGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#c4e4e4" stroke-width="1" opacity="0.45"/>
+    <linearGradient id="sa-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#012a2a"/>
+      <stop offset="100%" stop-color="#011212"/>
+    </linearGradient>
+    <linearGradient id="sa-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#007F80"/>
+      <stop offset="100%" stop-color="#004242"/>
+    </linearGradient>
+    <pattern id="sa-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e6f4f4" stroke-width="1"/>
     </pattern>
+    <filter id="sa-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#011212" flood-opacity="0.07"/>
+    </filter>
   </defs>
 
-  <rect width="720" height="320" fill="url(#svcBg)"/>
-  <rect width="720" height="320" fill="url(#svcGrid)"/>
+  <!-- Frame -->
+  <rect x="0" y="0" width="800" height="480" rx="18" fill="url(#sa-bg)" stroke="#c4e4e4"/>
 
-  <!-- INGEST layer -->
-  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
-    <text x="30" y="52">INGEST</text>
+  <!-- Chrome -->
+  <rect x="0" y="0" width="800" height="42" rx="18" fill="url(#sa-chrome)"/>
+  <rect x="0" y="28" width="800" height="14" fill="#011212"/>
+  <circle cx="22" cy="21" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="21" r="5.5" fill="#ffbd2e"/>
+  <circle cx="62" cy="21" r="5.5" fill="#27c93f"/>
+  <rect x="280" y="11" width="240" height="22" rx="11" fill="#012a2a" stroke="#0a3838"/>
+  <text x="400" y="26" font-family="'Inter', system-ui, sans-serif" font-size="11" fill="#8ebaba" text-anchor="middle" letter-spacing="0.3">architecture · vendor-neutral · cloud-agnostic</text>
+
+  <!-- Grid in working area -->
+  <rect x="0" y="42" width="800" height="438" fill="url(#sa-grid)" opacity="0.6"/>
+
+  <!-- ==================== LAYER 1: INGEST ==================== -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" letter-spacing="2" font-weight="700">
+    <text x="36" y="78" fill="#3d5a5a">01 · INGEST</text>
   </g>
-  <g>
-    <rect x="30"  y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="78" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Fivetran</text>
-    <rect x="140" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="188" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Airbyte</text>
-    <rect x="250" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="298" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Kafka</text>
-    <rect x="360" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="408" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Dagster</text>
-    <rect x="470" y="60" width="96" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="518" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Airflow</text>
-    <rect x="580" y="60" width="110" height="38" rx="8" fill="#ffffff" stroke="#8ebcbc"/>
-    <text x="635" y="83" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">APIs · Custom</text>
+  <text x="36" y="92" font-family="'Inter', sans-serif" font-size="10.5" fill="#6a8080">Pull from sources, land raw, replay on demand.</text>
+
+  <g filter="url(#sa-shadow)">
+    <rect x="36"  y="100" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="186" y="100" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="336" y="100" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="486" y="100" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+  </g>
+  <g font-family="'Inter', sans-serif" font-size="12" fill="#011212">
+    <!-- Fivetran tile -->
+    <circle cx="52" cy="120" r="6" fill="#0089ff"/>
+    <text x="66" y="124" font-weight="700">Fivetran</text>
+    <text x="66" y="140" font-size="9.5" fill="#6a8080">managed ELT · 8 tables</text>
+    <!-- Airbyte tile -->
+    <rect x="196" y="114" width="12" height="12" rx="2" fill="#615eff"/>
+    <text x="216" y="124" font-weight="700">Airbyte</text>
+    <text x="216" y="140" font-size="9.5" fill="#6a8080">OSS connectors · custom</text>
+    <!-- Kafka tile -->
+    <g transform="translate(346,114)">
+      <circle cx="6" cy="6" r="6" fill="#231f20"/>
+      <circle cx="6" cy="6" r="3" fill="none" stroke="#ffffff" stroke-width="1"/>
+    </g>
+    <text x="366" y="124" font-weight="700">Kafka</text>
+    <text x="366" y="140" font-size="9.5" fill="#6a8080">streaming · real-time</text>
+    <!-- Dagster/Airflow tile -->
+    <rect x="496" y="114" width="12" height="12" rx="2" fill="#4eabab"/>
+    <path d="M 499 120 L 502 117 L 505 120 L 502 123 Z" fill="#ffffff"/>
+    <text x="516" y="124" font-weight="700">Orchestration</text>
+    <text x="516" y="140" font-size="9.5" fill="#6a8080">Dagster · Airflow</text>
   </g>
 
-  <!-- STORE layer -->
-  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
-    <text x="30" y="132">STORE &amp; TRANSFORM</text>
+  <!-- Down arrows -->
+  <g stroke="#8ebcbc" stroke-width="1.5" fill="none">
+    <path d="M 105 160 L 105 174" marker-end="url(#sa-arrow)"/>
+    <path d="M 255 160 L 255 174" marker-end="url(#sa-arrow)"/>
+    <path d="M 405 160 L 405 174" marker-end="url(#sa-arrow)"/>
+    <path d="M 555 160 L 555 174" marker-end="url(#sa-arrow)"/>
   </g>
-  <g>
-    <rect x="30"  y="140" width="206" height="38" rx="8" fill="#007F80" stroke="#004242"/>
-    <text x="133" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">Snowflake · BigQuery · Redshift</text>
-    <rect x="250" y="140" width="206" height="38" rx="8" fill="#007F80" stroke="#004242"/>
-    <text x="353" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">Databricks · S3 Iceberg · Delta</text>
-    <rect x="470" y="140" width="220" height="38" rx="8" fill="#007F80" stroke="#004242"/>
-    <text x="580" y="163" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#e6f4f4" text-anchor="middle" font-weight="600">dbt · Terraform · GitHub Actions</text>
+  <defs>
+    <marker id="sa-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8ebcbc"/>
+    </marker>
+  </defs>
+
+  <!-- ==================== LAYER 2: STORE & TRANSFORM ==================== -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" letter-spacing="2" font-weight="700">
+    <text x="36" y="200" fill="#3d5a5a">02 · STORE &amp; TRANSFORM</text>
+  </g>
+  <text x="36" y="214" font-family="'Inter', sans-serif" font-size="10.5" fill="#6a8080">Warehouse + lakehouse, modeled with dbt, tested before production.</text>
+
+  <!-- Big composite card -->
+  <g filter="url(#sa-shadow)">
+    <rect x="36" y="222" width="588" height="84" rx="10" fill="url(#sa-warm)"/>
+  </g>
+  <g font-family="'Inter', sans-serif" font-size="11" fill="#e6f4f4">
+    <!-- Snowflake -->
+    <g transform="translate(64,246)">
+      <circle cx="0" cy="0" r="8" fill="#29b5e8"/>
+      <line x1="0" y1="-7" x2="0" y2="7" stroke="#ffffff" stroke-width="1.4"/>
+      <line x1="-7" y1="0" x2="7" y2="0" stroke="#ffffff" stroke-width="1.4"/>
+      <line x1="-5" y1="-5" x2="5" y2="5" stroke="#ffffff" stroke-width="1.4"/>
+      <line x1="5" y1="-5" x2="-5" y2="5" stroke="#ffffff" stroke-width="1.4"/>
+    </g>
+    <text x="84" y="244" font-weight="700">Snowflake</text>
+    <text x="84" y="260" font-size="9.5" fill="#a8ccca">warehouse · auto-suspend</text>
+    <text x="84" y="280" font-size="9.5" fill="#a8ccca">+ BigQuery · Redshift</text>
+
+    <line x1="216" y1="234" x2="216" y2="294" stroke="#0a3838"/>
+
+    <!-- Databricks -->
+    <g transform="translate(244,246)">
+      <path d="M -6 -2 L 0 -6 L 6 -2 L 0 2 Z" fill="#ff3621"/>
+      <path d="M -6 4 L 0 0 L 6 4 L 0 8 Z" fill="#ff3621" opacity="0.7"/>
+    </g>
+    <text x="262" y="244" font-weight="700">Databricks</text>
+    <text x="262" y="260" font-size="9.5" fill="#a8ccca">lakehouse · Delta</text>
+    <text x="262" y="280" font-size="9.5" fill="#a8ccca">+ Iceberg · S3 · GCS</text>
+
+    <line x1="392" y1="234" x2="392" y2="294" stroke="#0a3838"/>
+
+    <!-- dbt -->
+    <g transform="translate(420,240)">
+      <rect x="0" y="0" width="14" height="14" rx="3" fill="#ff694a"/>
+      <text x="7" y="11" font-size="10" fill="#ffffff" font-weight="700" text-anchor="middle">d</text>
+    </g>
+    <text x="442" y="244" font-weight="700">dbt</text>
+    <text x="442" y="260" font-size="9.5" fill="#a8ccca">38 models · 248 tests ✓</text>
+    <text x="442" y="280" font-size="9.5" fill="#a8ccca">docs · contracts · exposures</text>
   </g>
 
-  <!-- SERVE layer -->
-  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#004242" letter-spacing="1.4" font-weight="600">
-    <text x="30" y="212">SERVE</text>
-  </g>
-  <g>
-    <rect x="30"  y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
-    <text x="95" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Looker</text>
-    <rect x="174" y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
-    <text x="239" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Tableau</text>
-    <rect x="318" y="220" width="130" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
-    <text x="383" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Superset</text>
-    <rect x="462" y="220" width="228" height="38" rx="8" fill="#c4e4e4" stroke="#4eabab"/>
-    <text x="576" y="243" font-family="'Space Grotesk', sans-serif" font-size="11" fill="#004242" text-anchor="middle" font-weight="600">Semantic layer · Cube · APIs</text>
+  <!-- Down arrow -->
+  <g stroke="#8ebcbc" stroke-width="1.5" fill="none">
+    <path d="M 330 308 L 330 322" marker-end="url(#sa-arrow)"/>
   </g>
 
-  <!-- Connection hints between layers -->
-  <g stroke="#007F80" stroke-width="1" stroke-dasharray="3,3" opacity="0.4">
-    <line x1="360" y1="100" x2="360" y2="140"/>
-    <line x1="360" y1="180" x2="360" y2="220"/>
+  <!-- ==================== LAYER 3: SERVE ==================== -->
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" letter-spacing="2" font-weight="700">
+    <text x="36" y="346" fill="#3d5a5a">03 · SERVE</text>
   </g>
+  <text x="36" y="360" font-family="'Inter', sans-serif" font-size="10.5" fill="#6a8080">Dashboards, semantic layer, APIs — one definition for every metric.</text>
+
+  <g filter="url(#sa-shadow)">
+    <rect x="36"  y="368" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="186" y="368" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="336" y="368" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+    <rect x="486" y="368" width="138" height="56" rx="10" fill="#ffffff" stroke="#c4e4e4"/>
+  </g>
+  <g font-family="'Inter', sans-serif" font-size="12" fill="#011212">
+    <!-- Looker -->
+    <g transform="translate(46,378)">
+      <rect x="0" y="0" width="20" height="14" rx="2" fill="#011212"/>
+      <rect x="3" y="8" width="3" height="4" fill="#4eabab"/>
+      <rect x="8" y="5" width="3" height="7" fill="#007F80"/>
+      <rect x="13" y="3" width="3" height="9" fill="#007F80"/>
+    </g>
+    <text x="74" y="392" font-weight="700">Looker</text>
+    <text x="74" y="408" font-size="9.5" fill="#6a8080">dashboards · LookML</text>
+    <!-- Tableau -->
+    <g transform="translate(196,378)">
+      <rect x="0" y="6" width="3" height="6" fill="#1f447e"/>
+      <rect x="5" y="3" width="3" height="9" fill="#e8762d"/>
+      <rect x="10" y="0" width="3" height="12" fill="#1f447e"/>
+      <rect x="15" y="5" width="3" height="7" fill="#e8762d"/>
+    </g>
+    <text x="222" y="392" font-weight="700">Tableau</text>
+    <text x="222" y="408" font-size="9.5" fill="#6a8080">analyst self-serve</text>
+    <!-- Superset / Metabase -->
+    <g transform="translate(346,380)">
+      <circle cx="6" cy="6" r="6" fill="#20a7c9"/>
+      <path d="M 2 6 q 4 -4 8 0" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+    </g>
+    <text x="372" y="392" font-weight="700">Superset</text>
+    <text x="372" y="408" font-size="9.5" fill="#6a8080">open source BI</text>
+    <!-- Semantic / Cube -->
+    <g transform="translate(496,378)">
+      <rect x="0" y="0" width="14" height="14" rx="2" fill="none" stroke="#7a77ff" stroke-width="1.6"/>
+      <line x1="0"  y1="7" x2="14" y2="7" stroke="#7a77ff" stroke-width="1"/>
+      <line x1="7"  y1="0" x2="7"  y2="14" stroke="#7a77ff" stroke-width="1"/>
+    </g>
+    <text x="522" y="392" font-weight="700">Semantic layer</text>
+    <text x="522" y="408" font-size="9.5" fill="#6a8080">Cube · APIs · embedded</text>
+  </g>
+
+  <!-- ==================== CROSS-CUTTING SIDEBAR ==================== -->
+  <g filter="url(#sa-shadow)">
+    <rect x="640" y="100" width="124" height="324" rx="10" fill="#011212"/>
+  </g>
+  <text x="652" y="124" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#8ebaba" letter-spacing="1.6" font-weight="700">CROSS-CUTTING</text>
+  <line x1="652" y1="132" x2="752" y2="132" stroke="#0a3838"/>
+
+  <!-- Item: CI/CD -->
+  <g transform="translate(652,150)">
+    <rect x="0" y="0" width="22" height="22" rx="5" fill="#012a2a"/>
+    <path d="M 7 9 L 10 12 L 15 7" fill="none" stroke="#4eabab" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="682" y="160" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" font-weight="700">CI / CD</text>
+  <text x="682" y="174" font-family="'Inter', sans-serif" font-size="9.5" fill="#8ebaba">GitHub Actions</text>
+
+  <!-- Item: IaC -->
+  <g transform="translate(652,196)">
+    <rect x="0" y="0" width="22" height="22" rx="5" fill="#012a2a"/>
+    <path d="M 5 11 L 9 7 L 9 15 Z M 17 11 L 13 7 L 13 15 Z" fill="#4eabab"/>
+  </g>
+  <text x="682" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" font-weight="700">IaC</text>
+  <text x="682" y="220" font-family="'Inter', sans-serif" font-size="9.5" fill="#8ebaba">Terraform</text>
+
+  <!-- Item: Security -->
+  <g transform="translate(652,242)">
+    <rect x="0" y="0" width="22" height="22" rx="5" fill="#012a2a"/>
+    <path d="M 11 5 L 16 8 L 16 12 Q 16 16 11 18 Q 6 16 6 12 L 6 8 Z" fill="none" stroke="#4eabab" stroke-width="1.6" stroke-linejoin="round"/>
+  </g>
+  <text x="682" y="252" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" font-weight="700">Security</text>
+  <text x="682" y="266" font-family="'Inter', sans-serif" font-size="9.5" fill="#8ebaba">IAM · SOC 2-ready</text>
+
+  <!-- Item: Observability -->
+  <g transform="translate(652,288)">
+    <rect x="0" y="0" width="22" height="22" rx="5" fill="#012a2a"/>
+    <polyline points="5,16 9,12 12,14 17,7" fill="none" stroke="#4eabab" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17" cy="7" r="1.6" fill="#4eabab"/>
+  </g>
+  <text x="682" y="298" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" font-weight="700">Observability</text>
+  <text x="682" y="312" font-family="'Inter', sans-serif" font-size="9.5" fill="#8ebaba">lineage · freshness</text>
+
+  <!-- Item: Cost -->
+  <g transform="translate(652,334)">
+    <rect x="0" y="0" width="22" height="22" rx="5" fill="#012a2a"/>
+    <text x="11" y="15" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#4eabab" text-anchor="middle">$</text>
+  </g>
+  <text x="682" y="344" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" font-weight="700">FinOps</text>
+  <text x="682" y="358" font-family="'Inter', sans-serif" font-size="9.5" fill="#8ebaba">credits · spend</text>
+
+  <line x1="652" y1="384" x2="752" y2="384" stroke="#0a3838"/>
+  <text x="652" y="402" font-family="'Inter', sans-serif" font-size="10" fill="#a8ccca" font-style="italic">
+    <tspan x="652" dy="0">Versioned. Tested.</tspan>
+    <tspan x="652" dy="13">Observable by default.</tspan>
+  </text>
 
   <!-- Caption -->
-  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#6a8080" letter-spacing="1.2">
-    <text x="360" y="295" text-anchor="middle">VENDOR-NEUTRAL · CLOUD-AGNOSTIC · VERSIONED END TO END</text>
+  <g font-family="'Space Grotesk', sans-serif" font-size="10" fill="#3d5a5a" letter-spacing="1.4">
+    <text x="36" y="456">VENDOR-NEUTRAL · CLOUD-AGNOSTIC · VERSIONED END TO END</text>
   </g>
-
-  <rect x="0.5" y="0.5" width="719" height="319" fill="none" stroke="#c4e4e4" stroke-width="1"/>
 </svg>

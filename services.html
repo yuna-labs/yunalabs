@@ -9,26 +9,28 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
-  <meta property="og:title" content="Yuna Labs — Services" />
+  <meta property="og:title" content="Yuna Labs, Services" />
   <meta property="og:description" content="Analytics engineering, cloud platforms, and product engineering for modern data teams." />
   <meta property="og:image" content="assets/services-architecture.svg" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="icon" type="image/svg+xml" href="assets/Yuna_Labs_BirdOnly.svg">
+  <link rel="icon" type="image/png" href="assets/Yuna_Labs_BirdOnly.png">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <img src="assets/Yuna_Labs_BirdOnly.svg" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="engagement-terms.html">Pricing</a>
       <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
@@ -40,48 +42,98 @@
     <h1>Services</h1>
     <p class="lead">Advisory, delivery, and embedded engineering for modern data platforms.</p>
 
-    <div class="banner-img">
+    <div class="banner-img reveal">
       <img src="assets/services-architecture.svg" alt="Platform architecture: ingest, store, and serve layers with modern tools" loading="lazy" decoding="async" />
     </div>
 
-    <section id="analytics-engineering" class="service">
-      <h2>Analytics Engineering</h2>
-      <p class="service-lead">Versioned analytics with dbt, modern warehouses, and lakehouse patterns. Expect tested models, lineage, and reproducible pipelines.</p>
-      <ul class="ticks">
-        <li>Ingestion and ELT with Fivetran, Airbyte, or custom connectors — orchestrated on Dagster or Airflow</li>
-        <li>dbt modeling with documentation, tests, exposures, and contracts</li>
-        <li>Semantic layers and metric definitions (dbt Semantic Layer, Cube, LookML)</li>
-        <li>Dashboards and self-serve analytics (Looker, Tableau, Superset, Metabase)</li>
-        <li>Data quality monitoring with Elementary, Monte Carlo, or open-source tooling</li>
-      </ul>
+    <section id="analytics-engineering" class="service reveal">
+      <span class="eyebrow">Analytics Engineering</span>
+      <h2>Stop debating whose number is right.</h2>
+      <p class="service-lead">Versioned analytics with <abbr class="term" tabindex="0" title="Data build tool. An open-source framework for transforming data in your warehouse using version-controlled SQL with tests and docs built in.">dbt</abbr>, modern warehouses, and <abbr class="term" tabindex="0" title="A hybrid architecture that combines the low-cost storage of a data lake with the SQL performance and governance of a data warehouse.">lakehouse</abbr> patterns. Every metric has a definition, an owner, and a test. The dashboard, the deck, and the boardroom report all agree.</p>
+
+      <div class="service-split">
+        <div class="service-col">
+          <h3 class="col-label business">What you get</h3>
+          <ul class="ticks">
+            <li>One source of truth: every metric has a definition and an owner</li>
+            <li>Dashboards your team trusts without double-checking in Excel</li>
+            <li>Numbers that match across the board deck, sales report, and marketing dashboard</li>
+            <li>Alerts <em>before</em> broken data reaches a dashboard, not after</li>
+            <li>Documentation so a new hire can find the right metric on day one</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <h3 class="col-label tech">How we build it</h3>
+          <ul class="ticks">
+            <li>Ingestion and <abbr class="term" tabindex="0" title="Extract, Load, Transform. The modern pattern of pulling raw data into your warehouse first, then transforming it there with SQL.">ELT</abbr> with Fivetran, Airbyte, or custom connectors, orchestrated on Dagster or Airflow</li>
+            <li>dbt modeling with documentation, tests, exposures, and <abbr class="term" tabindex="0" title="A written agreement on the shape, types, and quality of a dataset between the team that produces it and the teams that consume it, enforced automatically on every change.">contracts</abbr></li>
+            <li><abbr class="term" tabindex="0" title="A single, governed definition of every business metric, sitting between your warehouse and your dashboards, so revenue means the same thing everywhere.">Semantic layers</abbr> and metric definitions (dbt Semantic Layer, Cube, LookML)</li>
+            <li>Dashboards and self-serve analytics (Looker, Tableau, Superset, Metabase)</li>
+            <li>Data quality monitoring with Elementary, Monte Carlo, or open-source tooling</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="cloud-platform" class="service">
-      <h2>Cloud Platform &amp; DevOps</h2>
-      <p class="service-lead">Architecture reviews, migration plans, platform engineering, and observability. Secure by default, cost-aware by design.</p>
-      <ul class="ticks">
-        <li>AWS, Azure, and GCP architecture and migration planning</li>
-        <li>Terraform-based infrastructure as code with versioned environments</li>
-        <li>Container platforms and CI/CD (ECS, EKS, GKE, GitHub Actions, GitLab CI)</li>
-        <li>Security hardening: IAM, encryption, secrets, and SOC 2-ready patterns</li>
-        <li>Cost optimization, SRE practices, and incident response tooling</li>
-      </ul>
+    <section id="cloud-platform" class="service reveal">
+      <span class="eyebrow">Cloud Platform &amp; DevOps</span>
+      <h2>Cloud spend you can predict. Incidents you can investigate.</h2>
+      <p class="service-lead">Architecture reviews, migration plans, and platform engineering on AWS, Azure, or GCP. Secure by default, cost-aware by design, and documented well enough that you&rsquo;re not held hostage by the one engineer who knows where the bodies are buried.</p>
+
+      <div class="service-split">
+        <div class="service-col">
+          <h3 class="col-label business">What you get</h3>
+          <ul class="ticks">
+            <li>A cloud bill you can predict month over month</li>
+            <li>Infrastructure changes reviewed, tested, and rolled back like any other code change</li>
+            <li>Faster recovery: incidents have runbooks, not panic</li>
+            <li>A security posture you can show an auditor without a six-week scramble</li>
+            <li>Engineers freed from click-ops so they can ship features instead</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <h3 class="col-label tech">How we build it</h3>
+          <ul class="ticks">
+            <li>AWS, Azure, and GCP architecture and migration planning</li>
+            <li>Terraform-based <abbr class="term" tabindex="0" title="Infrastructure as Code. The practice of managing servers, databases, and networks through versioned, reviewable code files instead of clicks in a cloud console.">infrastructure as code</abbr> with versioned environments</li>
+            <li>Container platforms and <abbr class="term" tabindex="0" title="Continuous Integration / Continuous Deployment. The practice of automatically testing and shipping code changes through reviewable, repeatable pipelines.">CI/CD</abbr> (ECS, EKS, GKE, GitHub Actions, GitLab CI)</li>
+            <li>Security hardening: IAM, encryption, secrets, and SOC 2-ready patterns</li>
+            <li>Cost optimization, SRE practices, and incident response tooling</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="product-engineering" class="service">
-      <h2>Product Engineering</h2>
-      <p class="service-lead">Reliable, accessible products with modern stacks and measurable outcomes.</p>
-      <ul class="ticks">
-        <li>Discovery, UX/UI, and prototyping</li>
-        <li>Web apps in React, Next.js, and TypeScript with accessible design systems</li>
-        <li>API design (REST and GraphQL) and third-party integrations</li>
-        <li>Automated testing, observability, and performance budgets</li>
-      </ul>
+    <section id="product-engineering" class="service reveal">
+      <span class="eyebrow">Product Engineering</span>
+      <h2>Ship features that won&rsquo;t be a rewrite in eighteen months.</h2>
+      <p class="service-lead">Reliable, accessible products built with modern stacks (React, Next.js, TypeScript) and measurable outcomes. Code your own team can take over on day one, not a black box that locks you in.</p>
+
+      <div class="service-split">
+        <div class="service-col">
+          <h3 class="col-label business">What you get</h3>
+          <ul class="ticks">
+            <li>A product your team can take over on day one, no black-box handoff</li>
+            <li>Features that load fast and work on every device your customers use</li>
+            <li>Confidence to ship every week: tests catch regressions before users do</li>
+            <li>A roadmap shaped by what you learn from real users, not a year-old PRD</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <h3 class="col-label tech">How we build it</h3>
+          <ul class="ticks">
+            <li>Discovery, UX/UI, and prototyping</li>
+            <li>Web apps in React, Next.js, and TypeScript with accessible design systems</li>
+            <li>API design (REST and GraphQL) and third-party integrations</li>
+            <li>Automated testing, observability, and performance budgets</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <h2>Engagement models</h2>
     <p class="service-lead">Every engagement has a defined shape, cost, and deliverable. No open-ended retainers.</p>
-    <div class="engagements">
+    <div class="engagements reveal-stagger">
       <div class="engagement">
         <div class="meta">01 · Audit</div>
         <h3>1&ndash;2 weeks · fixed price</h3>
@@ -90,7 +142,7 @@
       <div class="engagement">
         <div class="meta">02 · Build</div>
         <h3>4&ndash;12 weeks · outcome-scoped</h3>
-        <p>A defined deliverable — migration, platform, pipeline, or product — shipped in tested increments.</p>
+        <p>A defined deliverable (migration, platform, pipeline, or product), shipped in tested increments.</p>
       </div>
       <div class="engagement">
         <div class="meta">03 · Embedded</div>
@@ -129,13 +181,16 @@
           <a href="index.html">Home</a><br/>
           <a href="about.html">About</a><br/>
           <a href="services.html">Services</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a><br/>
+          <a href="engagement-terms.html">Engagement terms</a>
         </p>
       </div>
     </div>
     <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
+
+<script src="assets/reveal.js" defer></script>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();

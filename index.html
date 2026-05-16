@@ -3,33 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yuna Labs — Data platforms built like software.</title>
-  <meta name="description" content="Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for decisions." />
+  <title>Yuna Labs: Data platforms built like software.</title>
+  <meta name="description" content="Yuna Labs designs and ships analytics platforms with the rigor of modern engineering, versioned, tested, observable, and ready for decisions." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
-  <meta property="og:title" content="Yuna Labs — Data platforms built like software." />
+  <meta property="og:title" content="Yuna Labs: Data platforms built like software." />
   <meta property="og:description" content="Versioned, tested, observable analytics platforms. Request a free platform audit." />
   <meta property="og:image" content="assets/hero-pipeline.svg" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="icon" type="image/svg+xml" href="assets/Yuna_Labs_BirdOnly.svg">
+  <link rel="icon" type="image/png" href="assets/Yuna_Labs_BirdOnly.png">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <img src="assets/Yuna_Labs_BirdOnly.svg" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="engagement-terms.html">Pricing</a>
       <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
@@ -41,8 +43,9 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
+        <span class="eyebrow">Data platforms · Analytics engineering</span>
         <h1>Data platforms built like software.</h1>
-        <p class="lead">Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for the decisions your teams need to make.</p>
+        <p class="lead">Yuna Labs designs and ships analytics platforms with the rigor of modern engineering, versioned, tested, observable, and ready for the decisions your teams need to make.</p>
         <div class="hero-ctas">
           <a class="btn primary" href="contact.html">Book a platform audit</a>
           <a class="btn" href="services.html">See our services</a>
@@ -54,7 +57,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="assets/hero-pipeline.svg" alt="Data pipeline illustration: sources flowing through a transform layer into tested dashboards" loading="eager" decoding="async" />
+        <img src="assets/hero-pipeline.svg" alt="Data pipeline: Postgres, Stripe, and Salesforce sources flowing through Fivetran ingestion, Snowflake storage, and dbt transformation into Looker dashboards and Slack alerts" loading="eager" decoding="async" />
       </div>
     </div>
   </section>
@@ -63,7 +66,7 @@
   <section class="principles" aria-labelledby="principles-heading">
     <div class="container">
       <h2 id="principles-heading" class="visually-hidden">Our principles</h2>
-      <div class="principles-grid">
+      <div class="principles-grid reveal-stagger">
         <div class="principle">
           <span class="label">01 · Versioned</span>
           <h3>Everything in git</h3>
@@ -72,12 +75,12 @@
         <div class="principle">
           <span class="label">02 · Tested</span>
           <h3>Checks before production</h3>
-          <p>Schema, freshness, and logic tests run on every change. Breakage is caught before stakeholders see it.</p>
+          <p>Schema, <abbr class="term" tabindex="0" title="How recently a dataset was updated. A freshness check fails when the data is older than its agreed SLA (e.g., 'should be no more than 4 hours stale').">freshness</abbr>, and logic tests run on every change. Breakage is caught before stakeholders see it.</p>
         </div>
         <div class="principle">
           <span class="label">03 · Observable</span>
           <h3>Lineage by default</h3>
-          <p>Data lineage, freshness, cost, and quality are first-class — not instrumented after the fact.</p>
+          <p>Data <abbr class="term" tabindex="0" title="A map showing how every dataset, dashboard, and metric was built. What feeds what, all the way back to the raw source.">lineage</abbr>, freshness, cost, and quality are first-class, not instrumented after the fact.</p>
         </div>
         <div class="principle">
           <span class="label">04 · Composable</span>
@@ -90,7 +93,7 @@
 
   <!-- ========== What we build ========== -->
   <section class="container">
-    <div class="features">
+    <div class="features reveal-stagger">
       <article class="feature-card">
         <a href="services.html#analytics-engineering" class="card-link">
           <img class="card-icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
@@ -118,14 +121,115 @@
     </div>
   </section>
 
+  <!-- ========== Showcase: dashboard preview ========== -->
+  <section class="showcase">
+    <div class="container showcase-grid reveal">
+      <div class="showcase-copy">
+        <span class="eyebrow">Dashboards · Reporting</span>
+        <h2>Numbers your team can actually defend.</h2>
+        <p>Every tile is wired to a tested model, with lineage from raw source to chart. No more &ldquo;why is this number different from the one in the deck?&rdquo; Every metric has an owner, a definition, and a freshness SLA.</p>
+        <ul class="ticks">
+          <li><abbr class="term" tabindex="0" title="A single, governed definition of every business metric, sitting between your warehouse and your dashboards, so revenue means the same thing everywhere.">Semantic layer</abbr> so the same metric resolves the same way everywhere</li>
+          <li>Tested freshness, schema, and uniqueness checks on every load</li>
+          <li>Cost and query observability. No $40k Snowflake surprises.</li>
+        </ul>
+      </div>
+      <div class="showcase-visual">
+        <img src="assets/dashboard-preview.svg" alt="Revenue operations dashboard with MRR, ARR, customer, and churn KPIs, a 90-day revenue trend, channel breakdown, and recent signups table" loading="lazy" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Manifesto / dark punctuation ========== -->
+  <section class="manifesto reveal">
+    <div class="container">
+      <p class="manifesto-eyebrow">Our position</p>
+      <blockquote class="manifesto-quote">
+        We don&rsquo;t ship dashboards. We ship <em>platforms</em>: versioned, tested, observable. Platforms your team can run long after we leave.
+      </blockquote>
+      <p class="manifesto-attribution">The working principle behind every Yuna Labs engagement.</p>
+    </div>
+  </section>
+
+  <!-- ========== Proof / case studies ==========
+       NOTE: numbers and case copy are PLACEHOLDERS. Replace with real
+       (or anonymized real) data before publishing. -->
+  <section class="proof">
+    <div class="container">
+      <div class="proof-header reveal">
+        <h2>Results we&rsquo;ve delivered for clients.</h2>
+        <p class="lead">Anonymized at the client&rsquo;s request. We&rsquo;re happy to walk through specifics under NDA.</p>
+      </div>
+
+      <div class="proof-stats reveal-stagger">
+        <div class="proof-stat">
+          <div class="stat-num">38<span>%</span></div>
+          <div class="stat-label">average reduction in warehouse spend after a platform rebuild</div>
+        </div>
+        <div class="proof-stat">
+          <div class="stat-num">24h <span>→</span> 15m</div>
+          <div class="stat-label">typical reporting-lag improvement, raw source to dashboard</div>
+        </div>
+        <div class="proof-stat">
+          <div class="stat-num">99.8<span>%</span></div>
+          <div class="stat-label">data freshness SLA we hold across active engagements</div>
+        </div>
+      </div>
+
+      <div class="proof-cards reveal-stagger">
+        <article class="proof-card">
+          <div class="proof-meta">
+            <span class="proof-tag">Series-B fintech</span>
+            <span class="proof-tag tag-quiet">12-week build</span>
+          </div>
+          <h3>From spreadsheet ops to a defendable revenue dataset.</h3>
+          <p class="proof-body">Finance owned a 14-tab spreadsheet that nobody fully trusted. We replaced it with a modeled revenue mart, four tested dashboards, and a Slack alerts channel for freshness misses.</p>
+          <div class="proof-results">
+            <div><strong>$11k → $4.2k</strong> monthly warehouse spend</div>
+            <div><strong>24h → 15m</strong> close-of-month reporting lag</div>
+            <div><strong>0 → 248</strong> automated data tests</div>
+          </div>
+        </article>
+
+        <article class="proof-card">
+          <div class="proof-meta">
+            <span class="proof-tag">Healthcare SaaS</span>
+            <span class="proof-tag tag-quiet">6-month migration</span>
+          </div>
+          <h3>From Redshift sprawl to a single, observable warehouse.</h3>
+          <p class="proof-body">Consolidated three legacy clusters into one Snowflake warehouse with dbt models, IAM-scoped schemas, and a HIPAA-aligned audit trail. Migration shipped in tested increments with zero unplanned downtime.</p>
+          <div class="proof-results">
+            <div><strong>42%</strong> infrastructure cost reduction</div>
+            <div><strong>3 → 1</strong> engineers needed on data on-call</div>
+            <div><strong>SOC 2 + HIPAA</strong> patterns shipped</div>
+          </div>
+        </article>
+
+        <article class="proof-card">
+          <div class="proof-meta">
+            <span class="proof-tag">B2B marketplace</span>
+            <span class="proof-tag tag-quiet">2-week audit</span>
+          </div>
+          <h3>Found a $40k/year query leak in a two-week audit.</h3>
+          <p class="proof-body">A short audit surfaced a runaway scheduled query consuming 60% of warehouse credits. We delivered a written assessment, a 30-day remediation plan, and a costed roadmap for a longer rebuild.</p>
+          <div class="proof-results">
+            <div><strong>$40k / yr</strong> spend leak identified</div>
+            <div><strong>11 critical</strong> findings, ranked by ROI</div>
+            <div><strong>2 weeks</strong> end to end, fixed price</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== How we work ========== -->
   <section class="how">
     <div class="container">
-      <div class="how-header">
+      <div class="how-header reveal">
         <h2>How we work</h2>
         <p class="lead">Three phases, each with a concrete deliverable. No open-ended engagements.</p>
       </div>
-      <div class="how-steps">
+      <div class="how-steps reveal-stagger">
         <div class="how-step">
           <h3>Audit</h3>
           <p>We assess your current stack, data contracts, and reporting surface. You get a written assessment with prioritized recommendations within two weeks.</p>
@@ -146,7 +250,7 @@
   <section class="cta-banner">
     <div class="container">
       <h2>Start with a free platform audit.</h2>
-      <p>You&rsquo;ll leave with a written assessment — not a pitch. Two weeks, no obligation.</p>
+      <p>You&rsquo;ll leave with a written assessment, not a pitch. Two weeks, no obligation.</p>
       <a class="btn primary" href="contact.html">Request an audit</a>
     </div>
   </section>
@@ -172,13 +276,16 @@
           <a href="index.html">Home</a><br/>
           <a href="about.html">About</a><br/>
           <a href="services.html">Services</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a><br/>
+          <a href="engagement-terms.html">Engagement terms</a>
         </p>
       </div>
     </div>
     <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
+
+<script src="assets/reveal.js" defer></script>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
