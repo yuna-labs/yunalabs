@@ -1,25 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cloud platform and DevOps">
-  <rect x="1" y="1" width="62" height="62" rx="12" fill="#e6f4f4" stroke="#c4e4e4" stroke-width="1"/>
-  <!-- Three stacked platform layers -->
+  <defs>
+    <linearGradient id="ip-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5fafa"/>
+      <stop offset="100%" stop-color="#e6f4f4"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="url(#ip-bg)" stroke="#c4e4e4" stroke-width="1"/>
+
+  <!-- Cloud silhouette at top -->
+  <path d="M 18 18
+           q 0 -6 6 -6
+           q 1 -4 6 -4
+           q 5 0 6 4
+           q 6 0 6 6
+           q 0 4 -4 4
+           L 22 22
+           q -4 0 -4 -4 Z"
+        fill="#ffffff" stroke="#8ebcbc" stroke-width="1.2"/>
+  <circle cx="30" cy="14" r="1.4" fill="#4eabab"/>
+
+  <!-- Stacked infrastructure layers -->
   <g>
-    <rect x="14" y="16" width="36" height="8" rx="2" fill="#004242"/>
-    <rect x="14" y="28" width="36" height="8" rx="2" fill="#007F80"/>
-    <rect x="14" y="40" width="36" height="8" rx="2" fill="#4eabab"/>
+    <rect x="14" y="28" width="36" height="9" rx="2" fill="#004242"/>
+    <circle cx="19" cy="32.5" r="1.4" fill="#4eabab"/>
+    <circle cx="24" cy="32.5" r="1.4" fill="#4eabab" opacity="0.6"/>
+    <text x="44" y="34" font-family="'Inter', sans-serif" font-size="4.5" fill="#8ebaba" text-anchor="end" letter-spacing="0.3">prod</text>
+
+    <rect x="14" y="39" width="36" height="9" rx="2" fill="#007F80"/>
+    <circle cx="19" cy="43.5" r="1.4" fill="#c4e4e4"/>
+    <circle cx="24" cy="43.5" r="1.4" fill="#c4e4e4" opacity="0.6"/>
+    <text x="44" y="45" font-family="'Inter', sans-serif" font-size="4.5" fill="#c4e4e4" text-anchor="end" letter-spacing="0.3">stg</text>
+
+    <rect x="14" y="50" width="36" height="9" rx="2" fill="#4eabab"/>
+    <circle cx="19" cy="54.5" r="1.4" fill="#ffffff"/>
+    <circle cx="24" cy="54.5" r="1.4" fill="#ffffff" opacity="0.6"/>
+    <text x="44" y="56" font-family="'Inter', sans-serif" font-size="4.5" fill="#ffffff" text-anchor="end" letter-spacing="0.3">dev</text>
   </g>
-  <!-- Connector dots on each layer -->
-  <g fill="#edf5f5">
-    <circle cx="20" cy="20" r="1.4"/>
-    <circle cx="26" cy="20" r="1.4"/>
-    <circle cx="20" cy="32" r="1.4"/>
-    <circle cx="26" cy="32" r="1.4"/>
-    <circle cx="20" cy="44" r="1.4"/>
-    <circle cx="26" cy="44" r="1.4"/>
+
+  <!-- IaC connection from cloud down -->
+  <g stroke="#004242" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <line x1="55" y1="22" x2="55" y2="54"/>
   </g>
-  <!-- Right-side vertical connector -->
-  <g stroke="#004242" stroke-width="1.4" fill="none">
-    <line x1="54" y1="20" x2="54" y2="44"/>
-    <circle cx="54" cy="20" r="2" fill="#004242"/>
-    <circle cx="54" cy="32" r="2" fill="#004242"/>
-    <circle cx="54" cy="44" r="2" fill="#004242"/>
+  <g fill="#004242">
+    <circle cx="55" cy="32" r="1.8"/>
+    <circle cx="55" cy="43" r="1.8"/>
+    <circle cx="55" cy="54" r="1.8"/>
+  </g>
+
+  <!-- Padlock badge (security) -->
+  <g>
+    <rect x="5" y="40" width="9" height="8" rx="1.5" fill="#ffffff" stroke="#004242" stroke-width="1.2"/>
+    <path d="M 7 40 v -2 q 0 -2 2.5 -2 q 2.5 0 2.5 2 v 2" fill="none" stroke="#004242" stroke-width="1.2"/>
+    <circle cx="9.5" cy="44" r="1" fill="#004242"/>
   </g>
 </svg>

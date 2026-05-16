@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Yuna Labs</title>
-  <meta name="description" content="Yuna Labs is a small, senior studio focused on building data platforms that teams can actually trust — versioned, tested, and observable by default." />
+  <meta name="description" content="Yuna Labs is a small, senior studio focused on building data platforms that teams can actually trust, versioned, tested, and observable by default." />
   <meta name="robots" content="index,follow" />
 
   <meta property="og:type" content="website" />
@@ -16,19 +16,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="icon" type="image/svg+xml" href="assets/Yuna_Labs_BirdOnly.svg">
+  <link rel="icon" type="image/png" href="assets/Yuna_Labs_BirdOnly.png">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <img src="assets/Yuna_Labs_BirdOnly.svg" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span>Yuna Labs</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="engagement-terms.html">Pricing</a>
       <a href="contact.html" class="cta">Book a platform audit</a>
     </nav>
   </div>
@@ -41,25 +43,25 @@
     <p class="lead">We&rsquo;re a small, senior studio focused on one thing: building data platforms that teams can actually trust.</p>
 
     <h2>Why we exist</h2>
-    <p>Too many analytics systems are held together by Slack threads, one-off queries, and faith. We think data platforms should be engineered with the same rigor as production software — versioned, tested, observable — so every dashboard number can be defended, and every pipeline change can be reviewed, tested, and rolled back like any other deploy.</p>
+    <p>Too many analytics systems are held together by Slack threads, one-off queries, and faith. We think data platforms should be engineered with the same rigor as production software: versioned, tested, and observable. Every dashboard number should be defendable, and every pipeline change should be reviewed, tested, and rolled back like any other deploy.</p>
 
-    <div class="banner-img">
+    <div class="banner-img reveal">
       <img src="assets/about-lineage.svg" alt="Data lineage diagram showing raw sources feeding staging models, marts, and exposed metrics" loading="lazy" decoding="async" />
     </div>
 
     <h2>Our principles</h2>
-    <div class="principles-list">
+    <div class="principles-list reveal-stagger">
       <div class="principle-item">
         <h3>Version everything</h3>
         <p>Code, models, dashboards, and infrastructure live in git. If it isn&rsquo;t reviewable, it doesn&rsquo;t ship.</p>
       </div>
       <div class="principle-item">
         <h3>Test before you ship</h3>
-        <p>Every model has contracts. Every pipeline has freshness and schema tests. Breakage is caught before a stakeholder sees it.</p>
+        <p>Every model has <abbr class="term" tabindex="0" title="A written agreement on the shape, types, and quality of a dataset between the team that produces it and the teams that consume it, enforced automatically on every change.">contracts</abbr>. Every pipeline has <abbr class="term" tabindex="0" title="How recently a dataset was updated. A freshness check fails when the data is older than its agreed SLA (e.g., 'should be no more than 4 hours stale').">freshness</abbr> and schema tests. Breakage is caught before a stakeholder sees it.</p>
       </div>
       <div class="principle-item">
         <h3>Observable by default</h3>
-        <p>Lineage, cost, freshness, and data quality are first-class concerns — not afterthoughts bolted on during an incident.</p>
+        <p><abbr class="term" tabindex="0" title="A map showing how every dataset, dashboard, and metric was built. What feeds what, all the way back to the raw source.">Lineage</abbr>, cost, freshness, and data quality are first-class concerns, not afterthoughts bolted on during an incident.</p>
       </div>
       <div class="principle-item">
         <h3>No dashboard without a contract</h3>
@@ -107,13 +109,16 @@
           <a href="index.html">Home</a><br/>
           <a href="about.html">About</a><br/>
           <a href="services.html">Services</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a><br/>
+          <a href="engagement-terms.html">Engagement terms</a>
         </p>
       </div>
     </div>
     <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
   </div>
 </footer>
+
+<script src="assets/reveal.js" defer></script>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();

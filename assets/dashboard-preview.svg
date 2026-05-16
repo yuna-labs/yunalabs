@@ -1,0 +1,424 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Revenue analytics dashboard with sidebar navigation, KPI tiles for MRR, ARR, active customers, and churn, an annotated 90-day revenue chart with forecast, top-channels breakdown, and a cohort retention heatmap">
+  <defs>
+    <linearGradient id="db-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5fafa"/>
+      <stop offset="100%" stop-color="#edf5f5"/>
+    </linearGradient>
+    <linearGradient id="db-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#012a2a"/>
+      <stop offset="100%" stop-color="#011212"/>
+    </linearGradient>
+    <linearGradient id="db-sidebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#011d1d"/>
+      <stop offset="100%" stop-color="#011212"/>
+    </linearGradient>
+    <linearGradient id="db-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#007F80" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#007F80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="db-area2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#8ebcbc" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8ebcbc" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="db-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#011212" flood-opacity="0.08"/>
+    </filter>
+    <style><![CDATA[
+      .db-pulse {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: db-pulse 1.8s ease-in-out infinite;
+      }
+      @keyframes db-pulse {
+        0%, 100% { opacity: 1;   transform: scale(1); }
+        50%      { opacity: 0.4; transform: scale(0.78); }
+      }
+      .db-pulse-soft {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: db-pulse-soft 2.2s ease-in-out infinite;
+      }
+      @keyframes db-pulse-soft {
+        0%, 100% { opacity: 1;   transform: scale(1); }
+        50%      { opacity: 0.55; transform: scale(0.9); }
+      }
+      .db-flow {
+        stroke-dasharray: 4 3;
+        animation: db-flow 2s linear infinite;
+      }
+      @keyframes db-flow { to { stroke-dashoffset: -14; } }
+      .db-blink {
+        animation: db-blink 2.4s ease-in-out infinite;
+      }
+      @keyframes db-blink {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0.55; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .db-pulse, .db-pulse-soft, .db-flow, .db-blink { animation: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0" y="0" width="800" height="600" rx="18" fill="url(#db-bg)" stroke="#c4e4e4"/>
+
+  <!-- ====== Browser chrome ====== -->
+  <rect x="0" y="0" width="800" height="42" rx="18" fill="url(#db-chrome)"/>
+  <rect x="0" y="28" width="800" height="14" fill="#011212"/>
+  <circle cx="22" cy="21" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="21" r="5.5" fill="#ffbd2e"/>
+  <circle cx="62" cy="21" r="5.5" fill="#27c93f"/>
+  <rect x="200" y="9" width="400" height="24" rx="12" fill="#012a2a" stroke="#0a3838"/>
+  <circle cx="216" cy="21" r="3" fill="#4eabab" class="db-pulse-soft"/>
+  <text x="400" y="26" font-family="'Inter', system-ui, sans-serif" font-size="11" fill="#a8ccca" text-anchor="middle">metrics.yunalabs.com / exec-overview</text>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <rect x="0" y="42" width="128" height="558" fill="url(#db-sidebar)"/>
+
+  <!-- Workspace switcher -->
+  <g transform="translate(16,60)">
+    <rect x="0" y="0" width="96" height="34" rx="8" fill="#012a2a" stroke="#0a3838"/>
+    <circle cx="14" cy="17" r="7" fill="#007F80"/>
+    <text x="14" y="21" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">Y</text>
+    <text x="28" y="15" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#ffffff">Yuna Labs</text>
+    <text x="28" y="26" font-family="'Inter', sans-serif" font-size="8.5" fill="#8ebaba">workspace ▾</text>
+  </g>
+
+  <line x1="16" y1="112" x2="112" y2="112" stroke="#0a3838"/>
+
+  <!-- Nav items -->
+  <g font-family="'Inter', sans-serif" font-size="10.5" fill="#a8ccca">
+    <!-- active item: Overview -->
+    <g transform="translate(12,128)">
+      <rect x="0" y="0" width="104" height="28" rx="6" fill="#004242"/>
+      <rect x="0" y="0" width="3" height="28" rx="2" fill="#4eabab"/>
+      <path d="M 14 10 L 22 10 L 22 18 L 14 18 Z M 14 12 L 22 12" stroke="#ffffff" stroke-width="1.3" fill="none"/>
+      <text x="30" y="19" fill="#ffffff" font-weight="600">Overview</text>
+    </g>
+    <g transform="translate(12,162)">
+      <path d="M 14 10 L 26 10 M 14 14 L 22 14 M 14 18 L 24 18" stroke="#8ebaba" stroke-width="1.3" stroke-linecap="round"/>
+      <text x="30" y="19" fill="#a8ccca">Revenue</text>
+    </g>
+    <g transform="translate(12,190)">
+      <rect x="14" y="10" width="3" height="8" fill="#8ebaba"/>
+      <rect x="19" y="6" width="3" height="12" fill="#8ebaba"/>
+      <rect x="24" y="12" width="3" height="6" fill="#8ebaba"/>
+      <text x="30" y="19" fill="#a8ccca">Funnels</text>
+    </g>
+    <g transform="translate(12,218)">
+      <circle cx="14" cy="14" r="4" fill="none" stroke="#8ebaba" stroke-width="1.3"/>
+      <circle cx="22" cy="14" r="4" fill="none" stroke="#8ebaba" stroke-width="1.3"/>
+      <text x="30" y="19" fill="#a8ccca">Cohorts</text>
+    </g>
+    <g transform="translate(12,246)">
+      <path d="M 14 10 q 4 -4 8 0 q 4 4 8 0" fill="none" stroke="#8ebaba" stroke-width="1.3"/>
+      <text x="30" y="19" fill="#a8ccca">Forecasts</text>
+    </g>
+    <g transform="translate(12,274)">
+      <rect x="14" y="10" width="10" height="8" rx="1" fill="none" stroke="#8ebaba" stroke-width="1.3"/>
+      <line x1="14" y1="13" x2="24" y2="13" stroke="#8ebaba" stroke-width="1.3"/>
+      <text x="30" y="19" fill="#a8ccca">Catalog</text>
+    </g>
+  </g>
+
+  <!-- Sidebar divider + label -->
+  <line x1="16" y1="316" x2="112" y2="316" stroke="#0a3838"/>
+  <text x="16" y="334" font-family="'Inter', sans-serif" font-size="9" fill="#6a8080" letter-spacing="1.4">SAVED VIEWS</text>
+
+  <g font-family="'Inter', sans-serif" font-size="10" fill="#a8ccca">
+    <text x="16" y="356">★ NRR by segment</text>
+    <text x="16" y="376">★ Q2 board pack</text>
+    <text x="16" y="396">★ Pipeline health</text>
+  </g>
+
+  <!-- Sidebar footer: user -->
+  <g transform="translate(16,556)">
+    <circle cx="12" cy="12" r="12" fill="#004242"/>
+    <text x="12" y="16" font-family="'Inter', sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">T</text>
+    <text x="32" y="11" font-family="'Inter', sans-serif" font-size="10" fill="#ffffff" font-weight="600">Tharun K.</text>
+    <text x="32" y="22" font-family="'Inter', sans-serif" font-size="9" fill="#8ebaba">admin · online</text>
+    <circle cx="86" cy="10" r="3" fill="#1b873f" class="db-pulse-soft"/>
+  </g>
+
+  <!-- ==================== MAIN PANEL ==================== -->
+  <!-- Header strip -->
+  <g font-family="'Inter', system-ui, sans-serif">
+    <text x="144" y="76" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#011212">Executive overview</text>
+    <text x="144" y="94" font-size="10.5" fill="#6a8080">Q2 2026 · updated 4 min ago · owner: rev-ops</text>
+
+    <!-- filter pills -->
+    <g transform="translate(560,68)">
+      <rect x="0"   y="0" width="92" height="26" rx="13" fill="#ffffff" stroke="#c4e4e4"/>
+      <text x="46"  y="17" font-size="11" fill="#011212" text-anchor="middle" font-weight="600">Last 90 days ▾</text>
+      <rect x="100" y="0" width="68" height="26" rx="13" fill="#ffffff" stroke="#c4e4e4"/>
+      <text x="134" y="17" font-size="11" fill="#011212" text-anchor="middle" font-weight="600">All plans ▾</text>
+      <rect x="176" y="0" width="36" height="26" rx="13" fill="#004242"/>
+      <text x="194" y="17" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">⟳</text>
+    </g>
+
+    <!-- live freshness badge -->
+    <g transform="translate(144,104)">
+      <rect x="0" y="0" width="118" height="20" rx="10" fill="#e6f4f4" stroke="#c4e4e4"/>
+      <circle cx="10" cy="10" r="3" fill="#1b873f" class="db-pulse-soft"/>
+      <text x="18" y="14" font-size="10" fill="#004242" font-weight="600">freshness · 1m 12s</text>
+    </g>
+  </g>
+
+  <!-- ==================== KPI TILES ==================== -->
+  <g font-family="'Inter', system-ui, sans-serif">
+    <!-- MRR -->
+    <g filter="url(#db-shadow)">
+      <rect x="144" y="138" width="156" height="84" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+    </g>
+    <text x="158" y="158" font-size="9.5" fill="#6a8080" letter-spacing="1.6">MRR</text>
+    <text x="158" y="184" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#011212">$284,210</text>
+    <g transform="translate(158,196)">
+      <path d="M 0 4 L 4 0 L 8 4" fill="none" stroke="#1b873f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="6" font-size="10.5" fill="#1b873f" font-weight="700">+12.4%</text>
+      <text x="66" y="6" font-size="9.5" fill="#6a8080">vs 30d</text>
+    </g>
+    <!-- ARR -->
+    <g filter="url(#db-shadow)">
+      <rect x="308" y="138" width="156" height="84" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+    </g>
+    <text x="322" y="158" font-size="9.5" fill="#6a8080" letter-spacing="1.6">ARR</text>
+    <text x="322" y="184" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#011212">$3.41M</text>
+    <g transform="translate(322,196)">
+      <path d="M 0 4 L 4 0 L 8 4" fill="none" stroke="#1b873f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="6" font-size="10.5" fill="#1b873f" font-weight="700">+8.1%</text>
+      <text x="58" y="6" font-size="9.5" fill="#6a8080">vs Q1</text>
+    </g>
+    <!-- Active customers -->
+    <g filter="url(#db-shadow)">
+      <rect x="472" y="138" width="156" height="84" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+    </g>
+    <text x="486" y="158" font-size="9.5" fill="#6a8080" letter-spacing="1.6">ACTIVE CUSTOMERS</text>
+    <text x="486" y="184" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#011212">1,284</text>
+    <g transform="translate(486,196)">
+      <path d="M 0 4 L 4 0 L 8 4" fill="none" stroke="#1b873f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="6" font-size="10.5" fill="#1b873f" font-weight="700">+47</text>
+      <text x="48" y="6" font-size="9.5" fill="#6a8080">net new · 30d</text>
+    </g>
+    <!-- Churn -->
+    <g filter="url(#db-shadow)">
+      <rect x="636" y="138" width="148" height="84" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+    </g>
+    <text x="650" y="158" font-size="9.5" fill="#6a8080" letter-spacing="1.6">LOGO CHURN</text>
+    <text x="650" y="184" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#011212">1.8%</text>
+    <g transform="translate(650,196)">
+      <path d="M 0 0 L 4 4 L 8 0" fill="none" stroke="#1b873f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="14" y="6" font-size="10.5" fill="#1b873f" font-weight="700">-0.4 pts</text>
+      <text x="66" y="6" font-size="9.5" fill="#6a8080">vs 30d</text>
+    </g>
+  </g>
+
+  <!-- ==================== MAIN CHART ==================== -->
+  <g filter="url(#db-shadow)">
+    <rect x="144" y="238" width="448" height="200" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+  </g>
+  <g font-family="'Inter', system-ui, sans-serif">
+    <text x="160" y="262" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#011212">Revenue · last 90 days</text>
+    <text x="160" y="276" font-size="10" fill="#6a8080">daily, USD · vs previous period</text>
+
+    <!-- Legend -->
+    <g transform="translate(420,258)">
+      <circle cx="0" cy="0" r="4" fill="#007F80"/>
+      <text x="8" y="3" font-size="10" fill="#3d5a5a">This period</text>
+      <line x1="76" y1="0" x2="86" y2="0" stroke="#8ebcbc" stroke-width="2"/>
+      <text x="92" y="3" font-size="10" fill="#3d5a5a">Previous</text>
+      <line x1="142" y1="-1" x2="152" y2="-1" stroke="#8ebcbc" stroke-width="1.4" stroke-dasharray="3 2"/>
+      <text x="158" y="3" font-size="10" fill="#3d5a5a">Forecast</text>
+    </g>
+
+    <!-- Y axis labels -->
+    <g font-size="9" fill="#6a8080" text-anchor="end">
+      <text x="178" y="298">$12k</text>
+      <text x="178" y="328">$9k</text>
+      <text x="178" y="358">$6k</text>
+      <text x="178" y="388">$3k</text>
+      <text x="178" y="416">$0</text>
+    </g>
+    <!-- Grid -->
+    <g stroke="#e6f4f4" stroke-width="1">
+      <line x1="184" y1="294" x2="576" y2="294"/>
+      <line x1="184" y1="324" x2="576" y2="324"/>
+      <line x1="184" y1="354" x2="576" y2="354"/>
+      <line x1="184" y1="384" x2="576" y2="384"/>
+      <line x1="184" y1="414" x2="576" y2="414" stroke="#c4e4e4"/>
+    </g>
+    <!-- X axis -->
+    <g font-size="9" fill="#6a8080" text-anchor="middle">
+      <text x="208" y="428">Feb 16</text>
+      <text x="300" y="428">Mar 16</text>
+      <text x="396" y="428">Apr 15</text>
+      <text x="490" y="428">May 1</text>
+      <text x="566" y="428">May 16</text>
+    </g>
+
+    <!-- Previous period line (lighter) -->
+    <path d="M 184,402
+             L 200,400 L 216,402 L 232,398 L 248,394 L 264,398 L 280,394 L 296,386 L 312,388
+             L 328,380 L 344,376 L 360,368 L 376,366 L 392,360 L 408,356 L 424,348 L 440,344
+             L 456,336 L 472,330 L 488,324 L 504,318 L 520,312 L 536,304 L 552,300 L 568,294
+             L 568,414 L 184,414 Z"
+          fill="url(#db-area2)"/>
+    <polyline points="184,402 200,400 216,402 232,398 248,394 264,398 280,394 296,386 312,388 328,380 344,376 360,368 376,366 392,360 408,356 424,348 440,344 456,336 472,330 488,324 504,318 520,312 536,304 552,300 568,294"
+              fill="none" stroke="#8ebcbc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Forecast (dashed, flowing) -->
+    <polyline points="184,402 200,398 216,394 232,390 248,386 264,382 280,378 296,374 312,370 328,366 344,360 360,354 376,348 392,342 408,336 424,330 440,324 456,318 472,312 488,308 504,306 520,304 536,302 552,300 568,300"
+              fill="none" stroke="#8ebcbc" stroke-width="1.4" stroke-dasharray="4 3" class="db-flow"/>
+
+    <!-- This-period area -->
+    <path d="M 184,406
+             L 200,400 L 216,404 L 232,396 L 248,390 L 264,394 L 280,386 L 296,376 L 312,380
+             L 328,372 L 344,366 L 360,358 L 376,356 L 392,350 L 408,342 L 424,338 L 440,330
+             L 456,324 L 472,318 L 488,316 L 504,304 L 520,302 L 536,292 L 552,286 L 568,276
+             L 568,414 L 184,414 Z"
+          fill="url(#db-area)"/>
+    <!-- This-period line -->
+    <polyline points="184,406 200,400 216,404 232,396 248,390 264,394 280,386 296,376 312,380 328,372 344,366 360,358 376,356 392,350 408,342 424,338 440,330 456,324 472,318 488,316 504,304 520,302 536,292 552,286 568,276"
+              fill="none" stroke="#007F80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Annotation pin at peak (May 1 launch) -->
+    <line x1="488" y1="316" x2="488" y2="282" stroke="#011212" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+    <circle cx="488" cy="316" r="3.5" fill="#ffffff" stroke="#011212" stroke-width="1.4"/>
+    <g transform="translate(440,260)">
+      <rect x="0" y="0" width="96" height="20" rx="4" fill="#011212"/>
+      <text x="48" y="13.5" font-size="9.5" fill="#ffffff" text-anchor="middle">v2 launch · May 1</text>
+    </g>
+
+    <!-- Latest dot (live) -->
+    <circle cx="568" cy="276" r="4" fill="#ffffff" stroke="#007F80" stroke-width="2" class="db-pulse"/>
+  </g>
+
+  <!-- ==================== SIDE: TOP CHANNELS ==================== -->
+  <g filter="url(#db-shadow)">
+    <rect x="608" y="238" width="176" height="200" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+  </g>
+  <g font-family="'Inter', system-ui, sans-serif">
+    <text x="622" y="262" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#011212">Top channels</text>
+    <text x="622" y="276" font-size="10" fill="#6a8080">attributed · 30 days</text>
+
+    <!-- 5 bars with growth deltas -->
+    <g font-size="10">
+      <text x="622" y="298" fill="#011212" font-weight="500">Direct</text>
+      <text x="770" y="298" fill="#011212" font-weight="700" text-anchor="end">$98k</text>
+      <rect x="622" y="304" width="148" height="6" rx="3" fill="#e6f4f4"/>
+      <rect x="622" y="304" width="142" height="6" rx="3" fill="#004242"/>
+      <text x="622" y="320" font-size="9" fill="#1b873f">▲ 14%</text>
+
+      <text x="622" y="338" fill="#011212" font-weight="500">Partner</text>
+      <text x="770" y="338" fill="#011212" font-weight="700" text-anchor="end">$65k</text>
+      <rect x="622" y="344" width="148" height="6" rx="3" fill="#e6f4f4"/>
+      <rect x="622" y="344" width="96" height="6" rx="3" fill="#006C70"/>
+      <text x="622" y="360" font-size="9" fill="#1b873f">▲ 22%</text>
+
+      <text x="622" y="378" fill="#011212" font-weight="500">Paid search</text>
+      <text x="770" y="378" fill="#011212" font-weight="700" text-anchor="end">$52k</text>
+      <rect x="622" y="384" width="148" height="6" rx="3" fill="#e6f4f4"/>
+      <rect x="622" y="384" width="76" height="6" rx="3" fill="#007F80"/>
+      <text x="622" y="400" font-size="9" fill="#b00020">▼ 3%</text>
+
+      <text x="622" y="418" fill="#011212" font-weight="500">Organic</text>
+      <text x="770" y="418" fill="#011212" font-weight="700" text-anchor="end">$42k</text>
+      <rect x="622" y="424" width="148" height="6" rx="3" fill="#e6f4f4"/>
+      <rect x="622" y="424" width="62" height="6" rx="3" fill="#4eabab"/>
+    </g>
+  </g>
+
+  <!-- ==================== COHORT RETENTION HEATMAP ==================== -->
+  <g filter="url(#db-shadow)">
+    <rect x="144" y="454" width="640" height="130" rx="12" fill="#ffffff" stroke="#c4e4e4"/>
+  </g>
+  <g font-family="'Inter', system-ui, sans-serif">
+    <text x="160" y="476" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#011212">Cohort retention</text>
+    <text x="160" y="488" font-size="10" fill="#6a8080">% of customers still active by signup month</text>
+
+    <!-- Header row: week labels -->
+    <g font-size="9" fill="#6a8080" text-anchor="middle">
+      <text x="218" y="506">W1</text>
+      <text x="262" y="506">W2</text>
+      <text x="306" y="506">W3</text>
+      <text x="350" y="506">W4</text>
+      <text x="394" y="506">W5</text>
+      <text x="438" y="506">W6</text>
+      <text x="482" y="506">W7</text>
+      <text x="526" y="506">W8</text>
+      <text x="570" y="506">W9</text>
+      <text x="614" y="506">W10</text>
+      <text x="658" y="506">W11</text>
+      <text x="702" y="506">W12</text>
+      <text x="752" y="506" font-weight="700" fill="#011212">avg</text>
+    </g>
+
+    <!-- Cohort rows -->
+    <g font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">
+      <!-- Cohort: Feb -->
+      <text x="184" y="525" fill="#011212" font-weight="600" text-anchor="end">Feb</text>
+      <rect x="200" y="514" width="36" height="16" rx="2" fill="#004242"/><text x="218" y="526">100</text>
+      <rect x="244" y="514" width="36" height="16" rx="2" fill="#006C70"/><text x="262" y="526">82</text>
+      <rect x="288" y="514" width="36" height="16" rx="2" fill="#007F80"/><text x="306" y="526">71</text>
+      <rect x="332" y="514" width="36" height="16" rx="2" fill="#4eabab"/><text x="350" y="526" fill="#011212">65</text>
+      <rect x="376" y="514" width="36" height="16" rx="2" fill="#4eabab"/><text x="394" y="526" fill="#011212">61</text>
+      <rect x="420" y="514" width="36" height="16" rx="2" fill="#8ebcbc"/><text x="438" y="526" fill="#011212">58</text>
+      <rect x="464" y="514" width="36" height="16" rx="2" fill="#8ebcbc"/><text x="482" y="526" fill="#011212">56</text>
+      <rect x="508" y="514" width="36" height="16" rx="2" fill="#8ebcbc"/><text x="526" y="526" fill="#011212">54</text>
+      <rect x="552" y="514" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="570" y="526" fill="#011212">52</text>
+      <rect x="596" y="514" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="614" y="526" fill="#011212">51</text>
+      <rect x="640" y="514" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="658" y="526" fill="#011212">50</text>
+      <rect x="684" y="514" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="702" y="526" fill="#011212">49</text>
+      <text x="752" y="526" fill="#011212" font-weight="700">62%</text>
+
+      <!-- Cohort: Mar -->
+      <text x="184" y="543" fill="#011212" font-weight="600" text-anchor="end">Mar</text>
+      <rect x="200" y="532" width="36" height="16" rx="2" fill="#004242"/><text x="218" y="544">100</text>
+      <rect x="244" y="532" width="36" height="16" rx="2" fill="#006C70"/><text x="262" y="544">85</text>
+      <rect x="288" y="532" width="36" height="16" rx="2" fill="#007F80"/><text x="306" y="544">74</text>
+      <rect x="332" y="532" width="36" height="16" rx="2" fill="#007F80"/><text x="350" y="544">68</text>
+      <rect x="376" y="532" width="36" height="16" rx="2" fill="#4eabab"/><text x="394" y="544" fill="#011212">64</text>
+      <rect x="420" y="532" width="36" height="16" rx="2" fill="#4eabab"/><text x="438" y="544" fill="#011212">61</text>
+      <rect x="464" y="532" width="36" height="16" rx="2" fill="#4eabab"/><text x="482" y="544" fill="#011212">59</text>
+      <rect x="508" y="532" width="36" height="16" rx="2" fill="#8ebcbc"/><text x="526" y="544" fill="#011212">57</text>
+      <rect x="552" y="532" width="36" height="16" rx="2" fill="#8ebcbc"/><text x="570" y="544" fill="#011212">55</text>
+      <rect x="596" y="532" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="614" y="544" fill="#011212">53</text>
+      <rect x="640" y="532" width="36" height="16" rx="2" fill="#c4e4e4"/><text x="658" y="544" fill="#011212">52</text>
+      <rect x="684" y="532" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="702" y="544" fill="#6a8080">·</text>
+      <text x="752" y="544" fill="#011212" font-weight="700">66%</text>
+
+      <!-- Cohort: Apr -->
+      <text x="184" y="561" fill="#011212" font-weight="600" text-anchor="end">Apr</text>
+      <rect x="200" y="550" width="36" height="16" rx="2" fill="#004242"/><text x="218" y="562">100</text>
+      <rect x="244" y="550" width="36" height="16" rx="2" fill="#004242"/><text x="262" y="562">88</text>
+      <rect x="288" y="550" width="36" height="16" rx="2" fill="#006C70"/><text x="306" y="562">78</text>
+      <rect x="332" y="550" width="36" height="16" rx="2" fill="#007F80"/><text x="350" y="562">72</text>
+      <rect x="376" y="550" width="36" height="16" rx="2" fill="#007F80"/><text x="394" y="562">68</text>
+      <rect x="420" y="550" width="36" height="16" rx="2" fill="#4eabab"/><text x="438" y="562" fill="#011212">65</text>
+      <rect x="464" y="550" width="36" height="16" rx="2" fill="#4eabab"/><text x="482" y="562" fill="#011212">62</text>
+      <rect x="508" y="550" width="36" height="16" rx="2" fill="#4eabab"/><text x="526" y="562" fill="#011212">60</text>
+      <rect x="552" y="550" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="570" y="562" fill="#6a8080">·</text>
+      <rect x="596" y="550" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="614" y="562" fill="#6a8080">·</text>
+      <rect x="640" y="550" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="658" y="562" fill="#6a8080">·</text>
+      <rect x="684" y="550" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="702" y="562" fill="#6a8080">·</text>
+      <text x="752" y="562" fill="#011212" font-weight="700">74%</text>
+
+      <!-- Cohort: May -->
+      <text x="184" y="579" fill="#011212" font-weight="600" text-anchor="end">May</text>
+      <rect x="200" y="568" width="36" height="16" rx="2" fill="#004242"/><text x="218" y="580">100</text>
+      <rect x="244" y="568" width="36" height="16" rx="2" fill="#004242"/><text x="262" y="580">91</text>
+      <rect x="288" y="568" width="36" height="16" rx="2" fill="#006C70"/><text x="306" y="580">82</text>
+      <rect x="332" y="568" width="36" height="16" rx="2" fill="#007F80"/><text x="350" y="580">76</text>
+      <rect x="376" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="394" y="580" fill="#6a8080">·</text>
+      <rect x="420" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="438" y="580" fill="#6a8080">·</text>
+      <rect x="464" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="482" y="580" fill="#6a8080">·</text>
+      <rect x="508" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="526" y="580" fill="#6a8080">·</text>
+      <rect x="552" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="570" y="580" fill="#6a8080">·</text>
+      <rect x="596" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="614" y="580" fill="#6a8080">·</text>
+      <rect x="640" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="658" y="580" fill="#6a8080">·</text>
+      <rect x="684" y="568" width="36" height="16" rx="2" fill="#f5fafa" stroke="#e6f4f4"/><text x="702" y="580" fill="#6a8080">·</text>
+      <text x="752" y="580" fill="#011212" font-weight="700">87%</text>
+    </g>
+  </g>
+
+</svg>
