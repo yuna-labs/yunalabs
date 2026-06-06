@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found | Yuna Labs</title>
+  <meta name="description" content="The page you were looking for couldn't be found. Head back home or get in touch with Yuna Labs." />
+  <meta name="robots" content="noindex,follow" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="engagement.html">How we work</a>
+      <a href="contact.html" class="cta">Free consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <section class="container page" style="text-align:center; min-height:48vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <span class="kicker">Error 404</span>
+    <h1 style="max-width:18ch;">This page wandered off.</h1>
+    <p class="lead" style="margin-left:auto; margin-right:auto;">The page you&rsquo;re looking for doesn&rsquo;t exist or may have moved. Let&rsquo;s get you back on track.</p>
+    <div class="hero-ctas" style="justify-content:center; margin-top:var(--s-4);">
+      <a class="btn primary" href="index.html">Back to home</a>
+      <a class="btn" href="contact.html">Contact us</a>
+    </div>
+    <p style="margin-top:var(--s-10); color:var(--muted);">Or jump to
+      <a href="services.html">Services</a> ·
+      <a href="engagement.html">How we work</a> ·
+      <a href="about.html">About</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>Graceful data. Powerful results.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
+        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p>
+          <a href="index.html">Home</a><br/>
+          <a href="about.html">About</a><br/>
+          <a href="services.html">Services</a><br/>
+          <a href="engagement.html">How we work</a><br/>
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+
+</body>
+</html>

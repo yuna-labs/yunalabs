@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Analytics and insights">
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="#e6f4f4" stroke="#c4e4e4" stroke-width="1"/>
+  <!-- Magnifier lens examining a trend -->
+  <circle cx="28" cy="28" r="15" fill="#ffffff" stroke="#8ebcbc" stroke-width="1.4"/>
+  <!-- Mini bars + trend inside lens -->
+  <g fill="#4eabab">
+    <rect x="21" y="30" width="3.4" height="6"/>
+    <rect x="27" y="26" width="3.4" height="10"/>
+  </g>
+  <rect x="33" y="22" width="3.4" height="14" fill="#007F80"/>
+  <polyline points="22,30 28,25 35,20" fill="none" stroke="#004242" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="35" cy="20" r="2" fill="#004242"/>
+  <!-- Handle -->
+  <line x1="39" y1="39" x2="50" y2="50" stroke="#004242" stroke-width="4" stroke-linecap="round"/>
+</svg>

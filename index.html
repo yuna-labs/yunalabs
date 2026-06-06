@@ -3,118 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yuna Labs — Data platforms built like software.</title>
-  <meta name="description" content="Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for decisions." />
+  <title>Yuna Labs: Data engineering, analytics &amp; AI for growing teams.</title>
+  <meta name="description" content="Yuna Labs is a data and AI engineering studio. We build the pipelines, databases, dashboards, and AI that turn scattered data into clear, trustworthy answers, explained in plain language." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
-  <meta property="og:title" content="Yuna Labs — Data platforms built like software." />
-  <meta property="og:description" content="Versioned, tested, observable analytics platforms. Request a free platform audit." />
-  <meta property="og:image" content="assets/hero-pipeline.svg" />
+  <meta property="og:title" content="Yuna Labs: Data engineering, analytics & AI." />
+  <meta property="og:description" content="Pipelines, databases, dashboards, and AI that turn scattered data into decisions. Book a free consultation." />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Yuna Labs",
+    "description": "Data and AI engineering studio. We build the pipelines, databases, dashboards, and AI that turn scattered data into clear, trustworthy answers.",
+    "url": "https://yuna-labs.com/",
+    "logo": "https://yuna-labs.com/assets/Yuna_Labs_BirdOnly.png",
+    "image": "https://yuna-labs.com/assets/og-cover.png",
+    "email": "info@yuna-labs.com",
+    "telephone": "+1-970-795-8340",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30 N Gould St, Ste N",
+      "addressLocality": "Sheridan",
+      "addressRegion": "WY",
+      "postalCode": "82801",
+      "addressCountry": "US"
+    },
+    "areaServed": "North America",
+    "knowsAbout": ["Data Engineering", "Data Analytics", "Business Intelligence Dashboards", "Database Design", "Artificial Intelligence"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Engineering", "description": "Connect your apps, files, and systems into one reliable, automatically refreshed source of truth." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics", "description": "Define key metrics once, the right way, so every report agrees and every number is traceable." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dashboards & Reporting", "description": "Fast, clear dashboards and automated reports that put the right number in front of the right person." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Database Design & Architecture", "description": "Databases designed to stay fast, organized, and secure as you scale." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data & AI", "description": "Practical AI on trustworthy data: forecasting, automation, and assistants you can rely on." } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
       <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
-      <span>Yuna Labs</span>
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Book a platform audit</a>
+      <a href="engagement.html">How we work</a>
+      <a href="contact.html" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
   <!-- ========== Hero ========== -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1>Data platforms built like software.</h1>
-        <p class="lead">Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for the decisions your teams need to make.</p>
+        <span class="eyebrow">Data &amp; AI engineering studio</span>
+        <h1>Turn your data into decisions.</h1>
+        <p class="lead">Most companies collect more data than they can use. Yuna Labs builds the pipelines, databases, dashboards, and AI that turn that scattered data into clear, trustworthy answers, engineered to last and explained in plain language your whole team can follow.</p>
         <div class="hero-ctas">
-          <a class="btn primary" href="contact.html">Book a platform audit</a>
-          <a class="btn" href="services.html">See our services</a>
+          <a class="btn primary" href="contact.html">Book a free consultation</a>
+          <a class="btn" href="services.html">See what we do</a>
         </div>
-        <div class="hero-badges">
-          <span>Analytics Engineering</span>
-          <span>Data Platforms</span>
-          <span>Cloud &amp; DevOps</span>
-        </div>
+        <!-- Describes who the service is FOR (not past clients). Edit to match your target. -->
+        <p class="hero-icp">We help growing teams, from funded startups to mid-market companies, who&rsquo;ve outgrown spreadsheets but don&rsquo;t want to build a big data team of their own.</p>
       </div>
       <div class="hero-visual">
-        <img src="assets/hero-pipeline.svg" alt="Data pipeline illustration: sources flowing through a transform layer into tested dashboards" loading="eager" decoding="async" />
+        <img src="assets/hero-dashboard.svg" alt="A clean analytics dashboard showing revenue and delivery KPIs with a 12-month revenue trend" loading="eager" decoding="async" />
       </div>
     </div>
   </section>
 
-  <!-- ========== Principles band ========== -->
-  <section class="principles" aria-labelledby="principles-heading">
+  <!-- ========== Value band ========== -->
+  <section class="principles" aria-labelledby="value-heading">
     <div class="container">
-      <h2 id="principles-heading" class="visually-hidden">Our principles</h2>
+      <h2 id="value-heading" class="visually-hidden">Why teams work with us</h2>
       <div class="principles-grid">
         <div class="principle">
-          <span class="label">01 · Versioned</span>
-          <h3>Everything in git</h3>
-          <p>Models, pipelines, dashboards, and infrastructure live under version control with reviewable history.</p>
+          <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><line x1="8" y1="9.5" x2="16" y2="9.5"/><line x1="8" y1="12.5" x2="13" y2="12.5"/></svg>
+          <span class="label">Clarity</span>
+          <h3>No jargon, ever</h3>
+          <p>We explain what we&rsquo;re building and why, so technical and non-technical stakeholders are always on the same page.</p>
         </div>
         <div class="principle">
-          <span class="label">02 · Tested</span>
-          <h3>Checks before production</h3>
-          <p>Schema, freshness, and logic tests run on every change. Breakage is caught before stakeholders see it.</p>
+          <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <span class="label">Trust</span>
+          <h3>Numbers you can defend</h3>
+          <p>Every metric is tested and traceable back to its source. No more arguing about whose spreadsheet is right.</p>
         </div>
         <div class="principle">
-          <span class="label">03 · Observable</span>
-          <h3>Lineage by default</h3>
-          <p>Data lineage, freshness, cost, and quality are first-class — not instrumented after the fact.</p>
+          <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 15 10 9 13 12 20 5"/><polyline points="15 5 20 5 20 10"/></svg>
+          <span class="label">Built to last</span>
+          <h3>Scales as you grow</h3>
+          <p>Secure, cost-aware systems on the cloud you already use. They handle ten times the data without a rebuild.</p>
         </div>
         <div class="principle">
-          <span class="label">04 · Composable</span>
-          <h3>Warehouse-agnostic</h3>
-          <p>Modern, vendor-neutral stacks. You keep your data, your cloud, and your options.</p>
+          <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="4.2"/><path d="M11 11l8.5 8.5"/><path d="M16.5 16.5l2-2"/><path d="M19 19l2-2"/></svg>
+          <span class="label">Yours</span>
+          <h3>You own everything</h3>
+          <p>Code, documentation, and infrastructure live in your accounts. No lock-in, no black boxes. You keep your options.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== What we build ========== -->
+  <!-- ========== What we do (5 services) ========== -->
   <section class="container">
-    <div class="features">
+    <div class="section-head">
+      <h2>What we do</h2>
+      <p class="lead">Five services that take you from raw, messy data to confident decisions. Pick one, or let us connect them end to end.</p>
+    </div>
+    <div class="features features-5">
       <article class="feature-card">
-        <a href="services.html#analytics-engineering" class="card-link">
+        <a href="services.html#data-engineering" class="card-link">
           <img class="card-icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <h3>Analytics you can trust</h3>
-          <p>Composable data stacks with dbt, CI/CD, and lineage. Never doubt a dashboard number again.</p>
-          <span class="more">See analytics engineering →</span>
+          <h3>Data Engineering</h3>
+          <p>Get all your data into one reliable place. We connect your apps, files, and systems and keep the flow clean and on time.</p>
+          <span class="more">Data engineering &rarr;</span>
         </a>
       </article>
       <article class="feature-card">
-        <a href="services.html#cloud-platform" class="card-link">
-          <img class="card-icon" src="assets/icon-platform.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <h3>Platforms built for scale</h3>
-          <p>Secure, cost-aware architectures on AWS, Azure, and GCP. Infrastructure that grows with demand.</p>
-          <span class="more">Explore platform work →</span>
+        <a href="services.html#analytics" class="card-link">
+          <img class="card-icon" src="assets/icon-analytics-insight.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Analytics</h3>
+          <p>Turn data into clear answers. We define your key metrics once, the right way, so everyone measures the same thing.</p>
+          <span class="more">Analytics &rarr;</span>
         </a>
       </article>
       <article class="feature-card">
-        <a href="services.html#product-engineering" class="card-link">
+        <a href="services.html#dashboards" class="card-link">
           <img class="card-icon" src="assets/icon-insights.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-          <h3>Insights without the drag</h3>
-          <p>Fast dashboards and semantic layers that make the right metric obvious across the organization.</p>
-          <span class="more">Learn about product work →</span>
+          <h3>Dashboards &amp; Reporting</h3>
+          <p>See your business at a glance. Fast, clear dashboards that put the right number in front of the right people.</p>
+          <span class="more">Dashboards &amp; reporting &rarr;</span>
         </a>
       </article>
+      <article class="feature-card">
+        <a href="services.html#database" class="card-link">
+          <img class="card-icon" src="assets/icon-database.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Database Design &amp; Architecture</h3>
+          <p>A strong foundation for everything else. We design databases that stay fast, organized, and secure as you scale.</p>
+          <span class="more">Database design &rarr;</span>
+        </a>
+      </article>
+      <article class="feature-card">
+        <a href="services.html#ai" class="card-link">
+          <img class="card-icon" src="assets/icon-ai.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <h3>Data &amp; AI</h3>
+          <p>Put your data to work with AI. Practical predictions, automation, and assistants built on data you can trust.</p>
+          <span class="more">Data &amp; AI &rarr;</span>
+        </a>
+      </article>
+      <article class="feature-card feature-cta">
+        <a href="contact.html" class="card-link">
+          <h3>Not sure where to start?</h3>
+          <p>Tell us what&rsquo;s slow, manual, or unclear. We&rsquo;ll point you to the shortest path. Free, no pressure.</p>
+          <span class="more">Book a free consultation &rarr;</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== Guarantee (our core trust signal) ========== -->
+  <section class="guarantee" aria-labelledby="home-guarantee">
+    <div class="container guarantee-grid">
+      <div class="guarantee-num">50%
+        <small>Money-back<br/>guarantee</small>
+      </div>
+      <div>
+        <h2 id="home-guarantee">Confident enough to guarantee it</h2>
+        <p>You shouldn&rsquo;t have to take a promise on faith. We back every project with a 50% money-back guarantee: if we don&rsquo;t deliver what we agreed before the halfway milestone, and can&rsquo;t fix it within 10 business days, you get half of everything you&rsquo;ve paid back. No arguments, no drawn-out process.</p>
+        <p>Fixed price, agreed upfront. Paid in milestones as we deliver. You own all the code and documentation, with no lock-in.</p>
+        <p style="margin-top: var(--s-6); margin-bottom: 0;"><a class="btn primary" href="engagement.html">See exactly how we work &rarr;</a></p>
+      </div>
     </div>
   </section>
 
@@ -123,31 +212,32 @@
     <div class="container">
       <div class="how-header">
         <h2>How we work</h2>
-        <p class="lead">Three phases, each with a concrete deliverable. No open-ended engagements.</p>
+        <p class="lead">Three simple steps, each with something concrete to show for it. No open-ended projects, no surprise invoices.</p>
       </div>
       <div class="how-steps">
         <div class="how-step">
-          <h3>Audit</h3>
-          <p>We assess your current stack, data contracts, and reporting surface. You get a written assessment with prioritized recommendations within two weeks.</p>
+          <h3>Talk</h3>
+          <p>A free consultation to understand your goals, your data, and what&rsquo;s slowing you down. You leave with clear next steps, whether or not you work with us.</p>
         </div>
         <div class="how-step">
-          <h3>Design</h3>
-          <p>We map target architecture, data contracts, and delivery milestones. You sign off on scope and cost before a line of code is written.</p>
+          <h3>Plan</h3>
+          <p>We map out what to build, what it costs, and when you&rsquo;ll see results. You approve the scope and price before any work begins.</p>
         </div>
         <div class="how-step">
-          <h3>Deliver</h3>
-          <p>We ship in small, tested increments with CI/CD and observability on from day one. You own the code and the documentation.</p>
+          <h3>Build &amp; deliver</h3>
+          <p>We ship in small, tested steps so you see progress every week, and you own the code and documentation at the end.</p>
         </div>
       </div>
+      <p style="margin-top: var(--s-8); font-weight: 600;"><a href="engagement.html">See the full engagement terms: fixed pricing, milestones &amp; our 50% money-back guarantee &rarr;</a></p>
     </div>
   </section>
 
   <!-- ========== CTA banner ========== -->
   <section class="cta-banner">
     <div class="container">
-      <h2>Start with a free platform audit.</h2>
-      <p>You&rsquo;ll leave with a written assessment — not a pitch. Two weeks, no obligation.</p>
-      <a class="btn primary" href="contact.html">Request an audit</a>
+      <h2>Let&rsquo;s find the quickest win in your data.</h2>
+      <p>Book a free 30-minute consultation. We&rsquo;ll talk through your goals and where data can help most, and you&rsquo;ll leave with a clear, honest recommendation.</p>
+      <a class="btn primary" href="contact.html">Book a free consultation</a>
     </div>
   </section>
 
@@ -172,16 +262,28 @@
           <a href="index.html">Home</a><br/>
           <a href="about.html">About</a><br/>
           <a href="services.html">Services</a><br/>
+          <a href="engagement.html">How we work</a><br/>
           <a href="contact.html">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
 </script>
 
 </body>

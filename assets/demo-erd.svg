@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Sample entity relationship diagram for a supplement contract manufacturer: clients, products, orders, production runs, batches, and QC results">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .ttl{fill:#5e7474;font-size:12px;font-weight:700;letter-spacing:.1em;}
+      .th{fill:#ffffff;font-size:13px;font-weight:700;letter-spacing:.02em;}
+      .col{fill:#0a2424;font-size:12px;}
+      .pkcol{fill:#0a2424;font-size:12px;font-weight:700;}
+      .tag{font-size:10px;font-weight:700;letter-spacing:.04em;}
+      .type{fill:#90a6a6;font-size:10.5px;}
+      .pk{fill:#b07900;}
+      .fk{fill:#007F80;}
+    </style>
+  </defs>
+
+  <rect width="1200" height="600" fill="#eef6f6"/>
+  <text x="40" y="44" class="ttl">SCHEMA &#183; SUPPLEMENT CONTRACT MANUFACTURER</text>
+
+  <!-- ===== relationships (drawn under boxes) ===== -->
+  <g fill="none" stroke="#8aa6a6" stroke-width="1.4">
+    <!-- products.client_id -> clients -->
+    <path d="M320 144 L250 269"/>
+    <!-- orders.client_id -> clients -->
+    <path d="M320 454 L250 300"/>
+    <!-- orders.sku_id -> products (vertical) -->
+    <path d="M430 380 L430 210"/>
+    <!-- production_runs.order_id -> orders -->
+    <path d="M620 284 L540 454"/>
+    <!-- batches.run_id -> production_runs -->
+    <path d="M930 144 L860 280"/>
+    <!-- qc_results.batch_id -> batches (vertical) -->
+    <path d="M1045 380 L1045 210"/>
+  </g>
+  <!-- crow's feet (many side) + one-ticks (parent side) -->
+  <g stroke="#007F80" stroke-width="1.4" fill="none">
+    <!-- products left -->
+    <path d="M320 137 L308 144 M320 144 L308 144 M320 151 L308 144"/>
+    <!-- orders left (client_id) -->
+    <path d="M320 447 L308 454 M320 454 L308 454 M320 461 L308 454"/>
+    <!-- orders top (sku_id) -->
+    <path d="M423 380 L430 368 M430 380 L430 368 M437 380 L430 368"/>
+    <!-- production_runs left -->
+    <path d="M620 277 L608 284 M620 284 L608 284 M620 291 L608 284"/>
+    <!-- batches left -->
+    <path d="M930 137 L918 144 M930 144 L918 144 M930 151 L918 144"/>
+    <!-- qc_results top -->
+    <path d="M1038 380 L1045 368 M1045 380 L1045 368 M1052 380 L1045 368"/>
+  </g>
+  <g stroke="#8aa6a6" stroke-width="1.4">
+    <!-- one-end ticks near parent boxes -->
+    <line x1="256" y1="263" x2="244" y2="269"/>
+    <line x1="256" y1="306" x2="244" y2="300"/>
+    <line x1="424" y1="216" x2="436" y2="216"/>
+    <line x1="546" y1="448" x2="534" y2="454"/>
+    <line x1="866" y1="274" x2="854" y2="280"/>
+    <line x1="1039" y1="216" x2="1051" y2="216"/>
+  </g>
+
+  <!-- ===== clients ===== -->
+  <g>
+    <rect x="40" y="210" width="210" height="140" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M50 210 h190 a10 10 0 0 1 10 10 v20 h-210 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="58" y="231" class="th">clients</text>
+    <g>
+      <text x="58" y="276" class="pkcol">client_id</text><text x="240" y="276" class="tag pk" text-anchor="end">PK</text>
+      <text x="58" y="298" class="col">name</text><text x="240" y="298" class="type" text-anchor="end">varchar</text>
+      <text x="58" y="320" class="col">segment</text><text x="240" y="320" class="type" text-anchor="end">enum</text>
+      <text x="58" y="342" class="col">account_owner</text><text x="240" y="342" class="type" text-anchor="end">varchar</text>
+    </g>
+  </g>
+
+  <!-- ===== products (SKU) ===== -->
+  <g>
+    <rect x="320" y="70" width="220" height="140" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M330 70 h200 a10 10 0 0 1 10 10 v20 h-220 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="338" y="91" class="th">products</text>
+    <text x="532" y="91" class="th" text-anchor="end" style="fill:#9fd6d6;font-weight:500;font-size:11px;">SKU</text>
+    <g>
+      <text x="338" y="136" class="pkcol">sku_id</text><text x="522" y="136" class="tag pk" text-anchor="end">PK</text>
+      <text x="338" y="158" class="col">client_id</text><text x="522" y="158" class="tag fk" text-anchor="end">FK</text>
+      <text x="338" y="180" class="col">name</text><text x="522" y="180" class="type" text-anchor="end">varchar</text>
+      <text x="338" y="202" class="col">form</text><text x="522" y="202" class="type" text-anchor="end">enum</text>
+    </g>
+  </g>
+
+  <!-- ===== orders ===== -->
+  <g>
+    <rect x="320" y="380" width="220" height="162" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M330 380 h200 a10 10 0 0 1 10 10 v20 h-220 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="338" y="401" class="th">orders</text>
+    <g>
+      <text x="338" y="446" class="pkcol">order_id</text><text x="522" y="446" class="tag pk" text-anchor="end">PK</text>
+      <text x="338" y="468" class="col">client_id</text><text x="522" y="468" class="tag fk" text-anchor="end">FK</text>
+      <text x="338" y="490" class="col">sku_id</text><text x="522" y="490" class="tag fk" text-anchor="end">FK</text>
+      <text x="338" y="512" class="col">qty</text><text x="522" y="512" class="type" text-anchor="end">int</text>
+      <text x="338" y="534" class="col">due_date</text><text x="522" y="534" class="type" text-anchor="end">date</text>
+    </g>
+  </g>
+
+  <!-- ===== production_runs ===== -->
+  <g>
+    <rect x="620" y="210" width="240" height="140" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M630 210 h220 a10 10 0 0 1 10 10 v20 h-240 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="638" y="231" class="th">production_runs</text>
+    <g>
+      <text x="638" y="276" class="pkcol">run_id</text><text x="842" y="276" class="tag pk" text-anchor="end">PK</text>
+      <text x="638" y="298" class="col">order_id</text><text x="842" y="298" class="tag fk" text-anchor="end">FK</text>
+      <text x="638" y="320" class="col">output_units</text><text x="842" y="320" class="type" text-anchor="end">int</text>
+      <text x="638" y="342" class="col">scrap_units</text><text x="842" y="342" class="type" text-anchor="end">int</text>
+    </g>
+  </g>
+
+  <!-- ===== batches ===== -->
+  <g>
+    <rect x="930" y="70" width="230" height="140" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M940 70 h210 a10 10 0 0 1 10 10 v20 h-230 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="948" y="91" class="th">batches</text>
+    <g>
+      <text x="948" y="136" class="pkcol">batch_id</text><text x="1142" y="136" class="tag pk" text-anchor="end">PK</text>
+      <text x="948" y="158" class="col">run_id</text><text x="1142" y="158" class="tag fk" text-anchor="end">FK</text>
+      <text x="948" y="180" class="col">lot_number</text><text x="1142" y="180" class="type" text-anchor="end">varchar</text>
+      <text x="948" y="202" class="col">mfg_date</text><text x="1142" y="202" class="type" text-anchor="end">date</text>
+    </g>
+  </g>
+
+  <!-- ===== qc_results ===== -->
+  <g>
+    <rect x="930" y="380" width="230" height="140" rx="10" fill="#fff" stroke="#c4d8d8"/>
+    <path d="M940 380 h210 a10 10 0 0 1 10 10 v20 h-230 v-20 a10 10 0 0 1 10 -10 z" fill="#004242"/>
+    <text x="948" y="401" class="th">qc_results</text>
+    <g>
+      <text x="948" y="446" class="pkcol">qc_id</text><text x="1142" y="446" class="tag pk" text-anchor="end">PK</text>
+      <text x="948" y="468" class="col">batch_id</text><text x="1142" y="468" class="tag fk" text-anchor="end">FK</text>
+      <text x="948" y="490" class="col">test_name</text><text x="1142" y="490" class="type" text-anchor="end">varchar</text>
+      <text x="948" y="512" class="col">pass</text><text x="1142" y="512" class="type" text-anchor="end">bool</text>
+    </g>
+  </g>
+</svg>

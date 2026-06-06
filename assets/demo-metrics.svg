@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-label="Diagram showing conflicting revenue numbers from different sources resolved into one defined metric used everywhere">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .colhd{fill:#5e7474;font-size:11px;font-weight:700;letter-spacing:.1em;}
+      .src{fill:#5e7474;font-size:10.5px;font-weight:600;letter-spacing:.04em;}
+      .num{fill:#0a2424;font-size:22px;font-weight:700;}
+      .ok{fill:#1b873f;font-size:22px;font-weight:700;}
+      .sub{fill:#6a8080;font-size:11px;}
+    </style>
+    <marker id="am" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9bb0b0"/></marker>
+  </defs>
+
+  <rect width="1200" height="440" fill="#eef6f6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#d4e6e6"/>
+  <circle cx="34" cy="32" r="9" fill="#004242"/>
+  <path d="M29 32 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="28" style="fill:#011212;font-size:19px;font-weight:700;">Metrics Layer</text>
+  <text x="54" y="48" class="sub">Define each metric once, the right way</text>
+  <rect x="1006" y="18" width="170" height="28" rx="14" fill="#e8f6ee" stroke="#bfe3cd"/>
+  <circle cx="1024" cy="32" r="4" fill="#1b873f"/><text x="1036" y="36" style="fill:#1b873f;font-size:12px;font-weight:600;">1 definition, every report</text>
+
+  <!-- column headers -->
+  <text x="40" y="100" class="colhd">EVERYONE&#8217;S OWN NUMBER</text>
+  <text x="820" y="100" class="colhd">ONE NUMBER, EVERYWHERE</text>
+
+  <!-- connectors left -> center -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.4" marker-end="url(#am)">
+    <path d="M320 153 C 360 153, 360 250, 396 250"/>
+    <path d="M320 239 L 396 250"/>
+    <path d="M320 325 C 360 325, 360 250, 396 250"/>
+  </g>
+  <!-- connectors center -> right -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.4" marker-end="url(#am)">
+    <path d="M764 250 C 800 250, 800 153, 816 153"/>
+    <path d="M764 250 L 816 239"/>
+    <path d="M764 250 C 800 250, 800 325, 816 325"/>
+  </g>
+
+  <!-- LEFT cards (conflicting) -->
+  <g>
+    <g><rect x="40" y="120" width="280" height="66" rx="9" fill="#fff" stroke="#e4cf9a"/><rect x="40" y="120" width="4" height="66" rx="2" fill="#d39a3a"/><text x="60" y="146" class="src">FINANCE EXPORT</text><text x="300" y="162" class="num" text-anchor="end">$4.21M</text><text x="60" y="170" class="sub">&#8220;Revenue&#8221;</text></g>
+    <g><rect x="40" y="206" width="280" height="66" rx="9" fill="#fff" stroke="#e4cf9a"/><rect x="40" y="206" width="4" height="66" rx="2" fill="#d39a3a"/><text x="60" y="232" class="src">SALES CRM</text><text x="300" y="248" class="num" text-anchor="end">$4.55M</text><text x="60" y="256" class="sub">&#8220;Revenue&#8221;</text></g>
+    <g><rect x="40" y="292" width="280" height="66" rx="9" fill="#fff" stroke="#e4cf9a"/><rect x="40" y="292" width="4" height="66" rx="2" fill="#d39a3a"/><text x="60" y="318" class="src">MARKETING SHEET</text><text x="300" y="334" class="num" text-anchor="end">$3.98M</text><text x="60" y="342" class="sub">&#8220;Revenue&#8221;</text></g>
+    <text x="40" y="384" class="sub" style="fill:#c5851a;font-weight:600;">Same question, three answers.</text>
+  </g>
+
+  <!-- CENTER metrics box -->
+  <g>
+    <rect x="396" y="150" width="368" height="200" rx="12" fill="#e6f4f4" stroke="#8ebcbc"/>
+    <text x="416" y="184" class="colhd" style="fill:#004242;">DEFINED ONCE</text>
+    <text x="416" y="222" style="fill:#011212;font-size:30px;font-weight:700;">Revenue</text>
+    <text x="416" y="252" class="sub" style="fill:#3d5a5a;">= booked invoices &#8722; refunds,</text>
+    <text x="416" y="270" class="sub" style="fill:#3d5a5a;">recognized in the month earned</text>
+    <g>
+      <rect x="416" y="296" width="74" height="26" rx="13" fill="#fff" stroke="#bcdcdc"/><text x="453" y="313" class="src" text-anchor="middle">tested</text>
+      <rect x="498" y="296" width="92" height="26" rx="13" fill="#fff" stroke="#bcdcdc"/><text x="544" y="313" class="src" text-anchor="middle">versioned</text>
+      <rect x="598" y="296" width="68" height="26" rx="13" fill="#fff" stroke="#bcdcdc"/><text x="632" y="313" class="src" text-anchor="middle">owned</text>
+    </g>
+  </g>
+
+  <!-- RIGHT cards (consistent) -->
+  <g>
+    <g><rect x="816" y="120" width="344" height="66" rx="9" fill="#fff" stroke="#d4e6e6"/><rect x="816" y="120" width="4" height="66" rx="2" fill="#1b873f"/><text x="836" y="146" class="src">BOARD DECK</text><text x="836" y="170" class="sub">Revenue</text><text x="1140" y="162" class="ok" text-anchor="end">$4.21M</text><circle cx="1030" cy="156" r="9" fill="#1b873f"/><path d="M1025156 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g><rect x="816" y="206" width="344" height="66" rx="9" fill="#fff" stroke="#d4e6e6"/><rect x="816" y="206" width="4" height="66" rx="2" fill="#1b873f"/><text x="836" y="232" class="src">SALES DASHBOARD</text><text x="836" y="256" class="sub">Revenue</text><text x="1140" y="248" class="ok" text-anchor="end">$4.21M</text><circle cx="1030" cy="242" r="9" fill="#1b873f"/><path d="M1025242 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g><rect x="816" y="292" width="344" height="66" rx="9" fill="#fff" stroke="#d4e6e6"/><rect x="816" y="292" width="4" height="66" rx="2" fill="#1b873f"/><text x="836" y="318" class="src">FINANCE REPORT</text><text x="836" y="342" class="sub">Revenue</text><text x="1140" y="334" class="ok" text-anchor="end">$4.21M</text><circle cx="1030" cy="328" r="9" fill="#1b873f"/><path d="M1025328 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="816" y="384" class="sub" style="fill:#1b873f;font-weight:600;">One agreed number, everywhere.</text>
+  </g>
+</svg>

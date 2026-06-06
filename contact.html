@@ -11,6 +11,10 @@
   <meta property="og:site_name" content="Yuna Labs" />
   <meta property="og:title" content="Contact Yuna Labs" />
   <meta property="og:description" content="Start a conversation about your data platform. We reply within two business days." />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -19,23 +23,30 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
       <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
-      <span>Yuna Labs</span>
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Book a platform audit</a>
+      <a href="engagement.html">How we work</a>
+      <a href="contact.html" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
 
-<main class="container page">
-  <h1>Get in touch</h1>
-  <p class="lead">Tell us about your project, your team, or what&rsquo;s not working. We reply within two business days.</p>
+<main id="main-content" class="container page">
+  <h1>Book a free consultation</h1>
+  <p class="lead">Tell us about your goals, your team, or what&rsquo;s slow, manual, or unclear in your data today. We reply within two business days, and the first conversation is always free.</p>
 
   <div class="contact-layout">
     <div class="contact-card">
@@ -61,13 +72,14 @@
         <div class="row">
           <div style="flex:1 1 100%">
             <label for="message">How can we help?</label>
-            <textarea id="message" name="message" placeholder="A short description of your current stack, what&rsquo;s not working, or what you&rsquo;d like to build." required></textarea>
+            <textarea id="message" name="message" placeholder="A few lines about what you&rsquo;re trying to do, what&rsquo;s slow or unclear today, or what you&rsquo;d like to build. No technical detail required." required></textarea>
           </div>
         </div>
 
         <input class="visually-hidden" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <button class="btn primary" id="submitBtn" type="submit">Send message</button>
+        <p style="margin-top: var(--s-3); font-size: .88rem; color: var(--subtle);">We reply within two business days &middot; no spam, ever.</p>
         <p id="status" class="status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -81,7 +93,7 @@
       <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
 
       <h3 style="margin-top: 32px;">What to expect</h3>
-      <p>A short reply within two business days with a few clarifying questions, followed by a 30-minute intro call if it looks like a fit.</p>
+      <p>A short reply within two business days with a couple of clarifying questions, then a free 30-minute call to talk through your goals and where data can help most. No pressure, no sales deck.</p>
     </aside>
   </div>
 </main>
@@ -105,16 +117,28 @@
           <a href="index.html">Home</a><br/>
           <a href="about.html">About</a><br/>
           <a href="services.html">Services</a><br/>
+          <a href="engagement.html">How we work</a><br/>
           <a href="contact.html">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
 
   const form       = document.getElementById('contact-form');
   const statusEl   = document.getElementById('status');
@@ -148,7 +172,7 @@
         throw new Error(data.error || 'Failed to send');
       }
 
-      setStatus('Thanks — your message was sent. We&rsquo;ll be in touch within two business days.', 'ok');
+      setStatus('Thanks! Your message was sent. We&rsquo;ll be in touch within two business days.', 'ok');
       form.reset();
       setDisabled(false);
     } catch (err) {

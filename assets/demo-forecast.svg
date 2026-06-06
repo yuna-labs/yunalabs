@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="Sample demand forecast showing actual versus predicted weekly demand with a confidence band and a reorder recommendation">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .lbl{fill:#5e7474;font-size:11px;font-weight:600;letter-spacing:.06em;}
+      .val{fill:#011212;font-size:30px;font-weight:700;}
+      .sub{fill:#5e7474;font-size:12px;}
+      .hd{fill:#011212;font-size:13px;font-weight:600;letter-spacing:.04em;}
+      .tick{fill:#90a6a6;font-size:11px;}
+      .pill{fill:#eef6f6;stroke:#cfe3e3;}
+    </style>
+  </defs>
+
+  <rect width="1200" height="620" fill="#eef6f6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="68" fill="#ffffff"/>
+  <line x1="0" y1="68" x2="1200" y2="68" stroke="#d4e6e6"/>
+  <circle cx="36" cy="34" r="9" fill="#004242"/>
+  <path d="M30 38 l4 -5 3 3 5 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="30" style="fill:#011212;font-size:20px;font-weight:700;">Demand Forecast</text>
+  <text x="56" y="50" class="sub">Whey Protein 2lb &#183; units per week</text>
+  <g>
+    <rect class="pill" x="812" y="20" width="168" height="28" rx="14"/>
+    <text x="826" y="38" class="sub">Model: gradient-boosted</text>
+    <rect class="pill" x="990" y="20" width="120" height="28" rx="14"/>
+    <text x="1004" y="38" class="sub">Horizon: 8 wks</text>
+    <circle cx="1124" cy="34" r="4" fill="#1b873f"/>
+  </g>
+
+  <!-- Chart panel -->
+  <g>
+    <rect x="24" y="88" width="788" height="508" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="44" y="118" class="hd">WEEKLY DEMAND: ACTUAL vs FORECAST</text>
+    <!-- legend -->
+    <line x1="540" y1="114" x2="566" y2="114" stroke="#006c70" stroke-width="3"/><text x="572" y="118" class="tick">Actual</text>
+    <line x1="630" y1="114" x2="656" y2="114" stroke="#006c70" stroke-width="3" stroke-dasharray="5 4"/><text x="662" y="118" class="tick">Forecast</text>
+    <rect x="720" y="108" width="20" height="12" fill="#006c70" opacity="0.14"/><text x="746" y="118" class="tick">Confidence</text>
+
+    <!-- gridlines + y labels  (3k..8k -> y 540..150, 78px/1k) -->
+    <g stroke="#eef3f3">
+      <line x1="72" y1="150" x2="800" y2="150"/><line x1="72" y1="228" x2="800" y2="228"/><line x1="72" y1="306" x2="800" y2="306"/>
+      <line x1="72" y1="384" x2="800" y2="384"/><line x1="72" y1="462" x2="800" y2="462"/><line x1="72" y1="540" x2="800" y2="540"/>
+    </g>
+    <g class="tick" text-anchor="end">
+      <text x="64" y="154">8k</text><text x="64" y="232">7k</text><text x="64" y="310">6k</text><text x="64" y="388">5k</text><text x="64" y="466">4k</text><text x="64" y="544">3k</text>
+    </g>
+
+    <!-- confidence band (forecast region) -->
+    <polygon fill="#006c70" opacity="0.12" points="578.4,274.8 610.05,255.3 641.7,259.2 673.35,223.3 705,195.2 736.65,204.6 768.3,168.7 799.95,148.4 799.95,245.2 768.3,256.1 736.65,282.6 705,260.8 673.35,279.5 641.7,306 610.05,294.3 578.4,306"/>
+
+    <!-- 'now' divider -->
+    <line x1="562.6" y1="150" x2="562.6" y2="540" stroke="#b9cccc" stroke-width="1" stroke-dasharray="4 4"/>
+    <rect x="535" y="132" width="56" height="18" rx="9" fill="#eef6f6" stroke="#cfe3e3"/>
+    <text x="563" y="145" class="tick" text-anchor="middle">Now</text>
+
+    <!-- actual line -->
+    <polyline fill="none" stroke="#006c70" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"
+      points="72,469.8 103.65,446.4 135.3,458.1 166.95,430.8 198.6,415.2 230.25,438.6 261.9,399.6 293.55,384 325.2,407.4 356.85,368.4 388.5,352.8 420.15,376.2 451.8,337.2 483.45,321.6 515.1,345 546.75,306"/>
+    <!-- forecast line (dashed) -->
+    <polyline fill="none" stroke="#006c70" stroke-width="2.8" stroke-dasharray="6 5" stroke-linejoin="round" stroke-linecap="round"
+      points="546.75,306 578.4,290.4 610.05,274.8 641.7,282.6 673.35,251.4 705,228 736.65,243.6 768.3,212.4 799.95,196.8"/>
+    <circle cx="546.75" cy="306" r="4" fill="#006c70"/>
+    <circle cx="799.95" cy="196.8" r="4.5" fill="#006c70"/>
+
+    <!-- x labels -->
+    <g class="tick"><text x="72" y="560">W1</text><text x="293" y="560" text-anchor="middle">W8</text><text x="563" y="560" text-anchor="middle">W16</text><text x="800" y="560" text-anchor="end">W24</text></g>
+    <text x="412" y="582" class="tick" text-anchor="middle">Past 16 weeks (actual)</text>
+    <text x="681" y="582" class="tick" text-anchor="middle">Next 8 weeks (forecast)</text>
+  </g>
+
+  <!-- Right column cards -->
+  <g>
+    <rect x="836" y="88" width="340" height="100" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="856" y="116" class="lbl">8-WEEK FORECAST</text>
+    <text x="856" y="152" class="val">42,300</text>
+    <text x="978" y="152" class="sub">units</text>
+    <text x="856" y="174" class="sub" style="fill:#1b873f;font-weight:600;">&#9650; 18% vs prior 8 weeks</text>
+
+    <rect x="836" y="200" width="340" height="100" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="856" y="228" class="lbl">FORECAST ACCURACY (MAPE)</text>
+    <text x="856" y="264" class="val">6.8%</text>
+    <text x="856" y="286" class="sub">Mean error vs actuals, last 13 weeks</text>
+
+    <rect x="836" y="312" width="340" height="100" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="856" y="340" class="lbl">PROJECTED STOCKOUT</text>
+    <text x="856" y="376" class="val" style="fill:#c5851a;">Week 23</text>
+    <text x="856" y="398" class="sub">Raw whey concentrate, at current cadence</text>
+
+    <!-- recommendation -->
+    <rect x="836" y="424" width="340" height="172" rx="12" fill="#e6f4f4" stroke="#8ebcbc"/>
+    <circle cx="858" cy="450" r="7" fill="#006c70"/>
+    <path d="M854.5 450 l2.5 2.5 4.5 -5" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="874" y="454" class="hd" style="fill:#004242;">RECOMMENDED ACTION</text>
+    <text x="856" y="486" style="fill:#0a2424;font-size:15px;font-weight:600;">Reorder raw whey by Week 21</text>
+    <text x="856" y="512" class="sub" style="fill:#3d5a5a;">to cover the forecasted +18% spike before</text>
+    <text x="856" y="530" class="sub" style="fill:#3d5a5a;">the Week 23 stockout risk.</text>
+    <text x="856" y="562" class="lbl" style="fill:#5e7474;">SUGGESTED QUANTITY</text>
+    <text x="856" y="582" style="fill:#004242;font-size:16px;font-weight:700;">9.5 t</text>
+    <text x="906" y="582" class="sub">(&#8776; 4 weeks of cover)</text>
+  </g>
+</svg>
