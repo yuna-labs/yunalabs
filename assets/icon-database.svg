@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Database design and architecture">
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="#e6f4f4" stroke="#c4e4e4" stroke-width="1"/>
+  <!-- Stacked database cylinder -->
+  <g stroke="#004242" stroke-width="1.6" fill="none" stroke-linejoin="round">
+    <!-- Body -->
+    <path d="M18 20 v24 a14 6 0 0 0 28 0 v-24" fill="#ffffff"/>
+    <!-- Mid divider -->
+    <path d="M18 32 a14 6 0 0 0 28 0" fill="none" stroke="#8ebcbc"/>
+    <!-- Top ellipse -->
+    <ellipse cx="32" cy="20" rx="14" ry="6" fill="#007F80"/>
+  </g>
+  <!-- Layer tints -->
+  <path d="M18 20 v12 a14 6 0 0 0 28 0 v-12 a14 6 0 0 1 -28 0 z" fill="#4eabab" opacity="0.18"/>
+</svg>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="Sample data platform diagram: manufacturing sources flowing through automated ingestion into a tested warehouse that powers dashboards">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .colhd{fill:#5e7474;font-size:11px;font-weight:700;letter-spacing:.12em;}
+      .name{fill:#011212;font-size:13px;font-weight:600;}
+      .sub{fill:#6a8080;font-size:10.5px;}
+      .tick{fill:#90a6a6;font-size:11px;}
+      .metric{fill:#0a2424;font-size:12.5px;font-weight:600;}
+    </style>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9bb0b0"/></marker>
+    <linearGradient id="wh" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#006c70"/><stop offset="100%" stop-color="#013a3a"/></linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="#eef6f6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="68" fill="#ffffff"/>
+  <line x1="0" y1="68" x2="1200" y2="68" stroke="#d4e6e6"/>
+  <circle cx="36" cy="34" r="9" fill="#004242"/>
+  <path d="M31 34 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="30" style="fill:#011212;font-size:20px;font-weight:700;">Unified Data Platform</text>
+  <text x="56" y="50" style="fill:#5e7474;font-size:12px;">One source of truth &#183; refreshed nightly</text>
+  <g>
+    <rect x="900" y="20" width="150" height="28" rx="14" fill="#e8f6ee" stroke="#bfe3cd"/>
+    <circle cx="918" cy="34" r="4" fill="#1b873f"/><text x="930" y="38" style="fill:#1b873f;font-size:12px;font-weight:600;">312 tests passing</text>
+    <rect x="1058" y="20" width="118" height="28" rx="14" fill="#eef6f6" stroke="#cfe3e3"/>
+    <text x="1072" y="38" style="fill:#5e7474;font-size:12px;">Refresh 06:00</text>
+  </g>
+
+  <!-- Column headers -->
+  <text x="40" y="100" class="colhd">SOURCES</text>
+  <text x="486" y="100" class="colhd">AUTOMATED PIPELINE</text>
+  <text x="880" y="100" class="colhd">DELIVERED TO</text>
+
+  <!-- connectors: sources -> ingestion -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.4" marker-end="url(#arr)">
+    <path d="M252 145 C 278 145, 274 312, 294 312"/>
+    <path d="M252 207 C 278 207, 276 312, 294 312"/>
+    <path d="M252 269 C 280 269, 280 312, 294 312"/>
+    <path d="M252 331 C 280 331, 282 312, 294 312"/>
+    <path d="M252 393 C 280 393, 278 312, 294 312"/>
+    <path d="M252 455 C 278 455, 274 312, 294 312"/>
+  </g>
+  <!-- ingestion -> warehouse -> models -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.6" marker-end="url(#arr)">
+    <path d="M424 312 L462 312"/>
+    <path d="M610 312 L644 312"/>
+  </g>
+  <!-- models -> outputs -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.4" marker-end="url(#arr)">
+    <path d="M824 312 C 852 312, 852 162, 876 162"/>
+    <path d="M824 312 C 852 312, 852 254, 876 254"/>
+    <path d="M824 312 C 852 312, 852 346, 876 346"/>
+    <path d="M824 312 C 852 312, 852 438, 876 438"/>
+  </g>
+
+  <!-- SOURCES cards -->
+  <g>
+    <g><rect x="40" y="120" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="145" r="5" fill="#007F80"/><text x="74" y="142" class="name">NetSuite ERP</text><text x="74" y="159" class="sub">Orders, BOM, costs</text></g>
+    <g><rect x="40" y="182" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="207" r="5" fill="#006C70"/><text x="74" y="204" class="name">MES &#183; Production</text><text x="74" y="221" class="sub">Runs, OEE, downtime</text></g>
+    <g><rect x="40" y="244" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="269" r="5" fill="#4eabab"/><text x="74" y="266" class="name">LIMS &#183; Quality</text><text x="74" y="283" class="sub">QC tests, deviations</text></g>
+    <g><rect x="40" y="306" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="331" r="5" fill="#c5851a"/><text x="74" y="328" class="name">Inventory</text><text x="74" y="345" class="sub">Spreadsheets &#8594; automated</text></g>
+    <g><rect x="40" y="368" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="393" r="5" fill="#007F80"/><text x="74" y="390" class="name">Shopify &#183; D2C</text><text x="74" y="407" class="sub">Online sales, customers</text></g>
+    <g><rect x="40" y="430" width="212" height="50" rx="9" fill="#fff" stroke="#d4e6e6"/><circle cx="58" cy="455" r="5" fill="#006C70"/><text x="74" y="452" class="name">Suppliers</text><text x="74" y="469" class="sub">Specs &amp; CoAs (PDF)</text></g>
+  </g>
+
+  <!-- INGESTION -->
+  <g>
+    <rect x="296" y="276" width="128" height="72" rx="10" fill="#f0f7f7" stroke="#bcdcdc"/>
+    <text x="360" y="306" text-anchor="middle" style="fill:#004242;font-size:12px;font-weight:700;letter-spacing:.04em;">INGESTION</text>
+    <text x="360" y="324" text-anchor="middle" class="sub">ELT &#183; scheduled</text>
+    <text x="360" y="339" text-anchor="middle" class="sub">de-duped &#183; typed</text>
+  </g>
+
+  <!-- WAREHOUSE cylinder -->
+  <g>
+    <path d="M464 270 a76 16 0 0 1 152 0 v84 a76 16 0 0 1 -152 0 z" fill="url(#wh)"/>
+    <ellipse cx="540" cy="270" rx="76" ry="16" fill="#0a5557"/>
+    <text x="540" y="312" text-anchor="middle" style="fill:#ffffff;font-size:13px;font-weight:700;letter-spacing:.04em;">WAREHOUSE</text>
+    <text x="540" y="330" text-anchor="middle" style="fill:#9fd6d6;font-size:11px;">BigQuery</text>
+  </g>
+
+  <!-- MODELS -->
+  <g>
+    <rect x="648" y="268" width="176" height="88" rx="10" fill="#f0f7f7" stroke="#bcdcdc"/>
+    <text x="736" y="296" text-anchor="middle" style="fill:#004242;font-size:12px;font-weight:700;letter-spacing:.04em;">dbt MODELS</text>
+    <text x="736" y="316" text-anchor="middle" class="sub">staging &#8594; marts</text>
+    <text x="736" y="334" text-anchor="middle" class="sub">tested &#183; documented</text>
+    <text x="736" y="350" text-anchor="middle" class="sub">one agreed metric layer</text>
+  </g>
+
+  <!-- OUTPUTS -->
+  <g>
+    <g><rect x="876" y="132" width="284" height="60" rx="10" fill="#fff" stroke="#d4e6e6"/><rect x="876" y="132" width="4" height="60" rx="2" fill="#007F80"/><text x="900" y="158" class="name">Production &amp; OEE</text><text x="900" y="177" class="sub">Live line performance</text></g>
+    <g><rect x="876" y="224" width="284" height="60" rx="10" fill="#fff" stroke="#d4e6e6"/><rect x="876" y="224" width="4" height="60" rx="2" fill="#006C70"/><text x="900" y="250" class="name">Client &amp; SKU profitability</text><text x="900" y="269" class="sub">True margin after scrap &amp; QC</text></g>
+    <g><rect x="876" y="316" width="284" height="60" rx="10" fill="#fff" stroke="#d4e6e6"/><rect x="876" y="316" width="4" height="60" rx="2" fill="#4eabab"/><text x="900" y="342" class="name">Inventory &amp; reorder</text><text x="900" y="361" class="sub">Stock, expiry, alerts</text></g>
+    <g><rect x="876" y="408" width="284" height="60" rx="10" fill="#fff" stroke="#d4e6e6"/><rect x="876" y="408" width="4" height="60" rx="2" fill="#c5851a"/><text x="900" y="434" class="name">Demand forecast</text><text x="900" y="453" class="sub">AI &#183; 8-week horizon</text></g>
+  </g>
+
+  <!-- Health / trust bar -->
+  <g>
+    <rect x="40" y="520" width="1120" height="64" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <g><circle cx="74" cy="552" r="5" fill="#1b873f"/><text x="88" y="549" class="metric">12 sources</text><text x="88" y="566" class="tick">connected &amp; monitored</text></g>
+    <line x1="270" y1="536" x2="270" y2="568" stroke="#e0ecec"/>
+    <g><circle cx="300" cy="552" r="5" fill="#1b873f"/><text x="314" y="549" class="metric">48 models</text><text x="314" y="566" class="tick">version-controlled</text></g>
+    <line x1="500" y1="536" x2="500" y2="568" stroke="#e0ecec"/>
+    <g><circle cx="530" cy="552" r="5" fill="#1b873f"/><text x="544" y="549" class="metric">312 data tests</text><text x="544" y="566" class="tick">run on every refresh</text></g>
+    <line x1="760" y1="536" x2="760" y2="568" stroke="#e0ecec"/>
+    <g><circle cx="790" cy="552" r="5" fill="#1b873f"/><text x="804" y="549" class="metric">99.8% freshness</text><text x="804" y="566" class="tick">against SLA</text></g>
+    <line x1="1000" y1="536" x2="1000" y2="568" stroke="#e0ecec"/>
+    <g><circle cx="1024" cy="552" r="5" fill="#1b873f"/><text x="1038" y="549" class="metric">100% owned</text><text x="1038" y="566" class="tick">fully documented</text></g>
+  </g>
+</svg>
