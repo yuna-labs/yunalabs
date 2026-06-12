@@ -1,0 +1,4 @@
+Contact: mailto:info@yuna-labs.com
+Expires: 2027-06-12T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://yuna-labs.com/.well-known/security.txt

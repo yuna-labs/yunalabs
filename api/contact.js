@@ -80,7 +80,11 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim()
+  // Prefer x-real-ip: Vercel sets it from the actual connection, so it can't
+  // be spoofed by a client-supplied X-Forwarded-For prefix (which would let an
+  // attacker rotate fake IPs past the rate limit).
+  const ip = (req.headers['x-real-ip'] || '').trim()
+    || (req.headers['x-forwarded-for'] || '').split(',')[0].trim()
     || req.socket?.remoteAddress || 'unknown';
   if (rateLimited(ip)) {
     send(res, 429, { ok: false, error: 'Too many requests. Please try again later.' });
