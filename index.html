@@ -6,31 +6,71 @@
   <title>Yuna Labs — Data platforms built like software.</title>
   <meta name="description" content="Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for decisions." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/" />
   <meta property="og:title" content="Yuna Labs — Data platforms built like software." />
   <meta property="og:description" content="Versioned, tested, observable analytics platforms. Request a free platform audit." />
-  <meta property="og:image" content="assets/hero-pipeline.svg" />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yuna Labs — Data platforms built like software." />
+  <meta name="twitter:description" content="Versioned, tested, observable analytics platforms. Request a free platform audit." />
+  <meta name="twitter:image" content="https://yuna-labs.com/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Yuna Labs",
+    "url": "https://yuna-labs.com/",
+    "logo": "https://yuna-labs.com/assets/Yuna_Labs_BirdOnly.png",
+    "image": "https://yuna-labs.com/assets/og-image.png",
+    "description": "Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, and observable.",
+    "email": "info@yuna-labs.com",
+    "telephone": "+1-970-795-8340",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30 N Gould St, Ste N",
+      "addressLocality": "Sheridan",
+      "addressRegion": "WY",
+      "postalCode": "82801",
+      "addressCountry": "US"
+    },
+    "areaServed": "North America",
+    "slogan": "Graceful data. Powerful results."
+  }
+  </script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" width="399" height="375" loading="eager" decoding="async" />
       <span>Yuna Labs</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Book a platform audit</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact" class="cta">Book a platform audit</a>
     </nav>
   </div>
 </header>
@@ -44,8 +84,8 @@
         <h1>Data platforms built like software.</h1>
         <p class="lead">Yuna Labs designs and ships analytics platforms with the rigor of modern engineering — versioned, tested, observable, and ready for the decisions your teams need to make.</p>
         <div class="hero-ctas">
-          <a class="btn primary" href="contact.html">Book a platform audit</a>
-          <a class="btn" href="services.html">See our services</a>
+          <a class="btn primary" href="/contact">Book a platform audit</a>
+          <a class="btn" href="/services">See our services</a>
         </div>
         <div class="hero-badges">
           <span>Analytics Engineering</span>
@@ -54,7 +94,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="assets/hero-pipeline.svg" alt="Data pipeline illustration: sources flowing through a transform layer into tested dashboards" loading="eager" decoding="async" />
+        <img src="/assets/hero-pipeline.svg" alt="Data pipeline illustration: sources flowing through a transform layer into tested dashboards" width="640" height="440" loading="eager" decoding="async" />
       </div>
     </div>
   </section>
@@ -92,24 +132,24 @@
   <section class="container">
     <div class="features">
       <article class="feature-card">
-        <a href="services.html#analytics-engineering" class="card-link">
-          <img class="card-icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <a href="/services#analytics-engineering" class="card-link">
+          <img class="card-icon" src="/assets/icon-analytics.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy" decoding="async" />
           <h3>Analytics you can trust</h3>
           <p>Composable data stacks with dbt, CI/CD, and lineage. Never doubt a dashboard number again.</p>
           <span class="more">See analytics engineering →</span>
         </a>
       </article>
       <article class="feature-card">
-        <a href="services.html#cloud-platform" class="card-link">
-          <img class="card-icon" src="assets/icon-platform.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <a href="/services#cloud-platform" class="card-link">
+          <img class="card-icon" src="/assets/icon-platform.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy" decoding="async" />
           <h3>Platforms built for scale</h3>
           <p>Secure, cost-aware architectures on AWS, Azure, and GCP. Infrastructure that grows with demand.</p>
           <span class="more">Explore platform work →</span>
         </a>
       </article>
       <article class="feature-card">
-        <a href="services.html#product-engineering" class="card-link">
-          <img class="card-icon" src="assets/icon-insights.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <a href="/services#product-engineering" class="card-link">
+          <img class="card-icon" src="/assets/icon-insights.svg" alt="" aria-hidden="true" width="64" height="64" loading="lazy" decoding="async" />
           <h3>Insights without the drag</h3>
           <p>Fast dashboards and semantic layers that make the right metric obvious across the organization.</p>
           <span class="more">Learn about product work →</span>
@@ -128,61 +168,4 @@
       <div class="how-steps">
         <div class="how-step">
           <h3>Audit</h3>
-          <p>We assess your current stack, data contracts, and reporting surface. You get a written assessment with prioritized recommendations within two weeks.</p>
-        </div>
-        <div class="how-step">
-          <h3>Design</h3>
-          <p>We map target architecture, data contracts, and delivery milestones. You sign off on scope and cost before a line of code is written.</p>
-        </div>
-        <div class="how-step">
-          <h3>Deliver</h3>
-          <p>We ship in small, tested increments with CI/CD and observability on from day one. You own the code and the documentation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA banner ========== -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Start with a free platform audit.</h2>
-      <p>You&rsquo;ll leave with a written assessment — not a pitch. Two weeks, no obligation.</p>
-      <a class="btn primary" href="contact.html">Request an audit</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>Yuna Labs</h4>
-        <p>Graceful data. Powerful results.</p>
-      </div>
-      <div>
-        <h5>Contact</h5>
-        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
-        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
-        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
-      </div>
-      <div>
-        <h5>Links</h5>
-        <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="contact.html">Contact</a>
-        </p>
-      </div>
-    </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+          <p>We assess your current stack, data contracts, and reporting surface. You get a written assessment with prioritized recommendations wit

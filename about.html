@@ -6,30 +6,45 @@
   <title>About | Yuna Labs</title>
   <meta name="description" content="Yuna Labs is a small, senior studio focused on building data platforms that teams can actually trust — versioned, tested, and observable by default." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/about" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/about" />
   <meta property="og:title" content="About Yuna Labs" />
   <meta property="og:description" content="A senior studio for modern data platforms. Versioned, tested, observable by default." />
-  <meta property="og:image" content="assets/about-lineage.svg" />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Yuna Labs" />
+  <meta name="twitter:description" content="A senior studio for modern data platforms. Versioned, tested, observable by default." />
+  <meta name="twitter:image" content="https://yuna-labs.com/assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" width="399" height="375" loading="eager" decoding="async" />
       <span>Yuna Labs</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="cta">Book a platform audit</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/about" aria-current="page">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact" class="cta">Book a platform audit</a>
     </nav>
   </div>
 </header>
@@ -44,7 +59,7 @@
     <p>Too many analytics systems are held together by Slack threads, one-off queries, and faith. We think data platforms should be engineered with the same rigor as production software — versioned, tested, observable — so every dashboard number can be defended, and every pipeline change can be reviewed, tested, and rolled back like any other deploy.</p>
 
     <div class="banner-img">
-      <img src="assets/about-lineage.svg" alt="Data lineage diagram showing raw sources feeding staging models, marts, and exposed metrics" loading="lazy" decoding="async" />
+      <img src="/assets/about-lineage.svg" alt="Data lineage diagram showing raw sources feeding staging models, marts, and exposed metrics" width="720" height="320" loading="lazy" decoding="async" />
     </div>
 
     <h2>Our principles</h2>
@@ -82,42 +97,8 @@
     <div class="container">
       <h2>Want a second opinion on your data stack?</h2>
       <p>A two-week audit, a written report, and a clear path forward. No pitch deck at the end.</p>
-      <a class="btn primary" href="contact.html">Request an audit</a>
+      <a class="btn primary" href="/contact">Request an audit</a>
     </div>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>Yuna Labs</h4>
-        <p>Graceful data. Powerful results.</p>
-      </div>
-      <div>
-        <h5>Contact</h5>
-        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
-        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
-        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
-      </div>
-      <div>
-        <h5>Links</h5>
-        <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="contact.html">Contact</a>
-        </p>
-      </div>
-    </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+</ma
