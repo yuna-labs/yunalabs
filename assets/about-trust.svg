@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 460" role="img" aria-label="Before and after: scattered, conflicting data across tools becomes one connected, tested source of truth">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .colhd{font-size:11px;font-weight:700;letter-spacing:.12em;}
+      .tool{fill:#6a8080;font-size:11px;font-weight:600;letter-spacing:.02em;}
+      .qn{fill:#b07900;font-size:17px;font-weight:700;}
+      .row{fill:#0a2424;font-size:14px;}
+      .rowv{fill:#004242;font-size:14px;font-weight:700;}
+      .note{font-size:13px;font-weight:600;}
+      .tag{fill:#5e7474;font-size:11px;font-weight:600;letter-spacing:.04em;}
+    </style>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#7fa0a0"/></marker>
+  </defs>
+
+  <rect width="1160" height="460" fill="#eef6f6"/>
+
+  <!-- ===== LEFT: scattered / before ===== -->
+  <text x="48" y="54" class="colhd" style="fill:#5e7474;">WITHOUT A DATA PLATFORM</text>
+
+  <g transform="rotate(-4 145 122)">
+    <rect x="60" y="94" width="170" height="58" rx="9" fill="#fff" stroke="#e0c187" stroke-dasharray="5 4"/>
+    <text x="76" y="118" class="tool">sales.xlsx</text>
+    <text x="76" y="140" class="qn">$4.2M?</text>
+  </g>
+  <g transform="rotate(3 365 140)">
+    <rect x="280" y="112" width="170" height="58" rx="9" fill="#fff" stroke="#e0c187" stroke-dasharray="5 4"/>
+    <text x="296" y="136" class="tool">CRM export</text>
+    <text x="296" y="158" class="qn">$4.5M?</text>
+  </g>
+  <g transform="rotate(3 160 240)">
+    <rect x="75" y="212" width="170" height="58" rx="9" fill="#fff" stroke="#e0c187" stroke-dasharray="5 4"/>
+    <text x="91" y="236" class="tool">ops_dashboard</text>
+    <text x="91" y="258" class="qn">1,204?</text>
+  </g>
+  <g transform="rotate(-3 375 262)">
+    <rect x="290" y="234" width="170" height="58" rx="9" fill="#fff" stroke="#e0c187" stroke-dasharray="5 4"/>
+    <text x="306" y="258" class="tool">finance.csv</text>
+    <text x="306" y="280" class="qn">$3.98M?</text>
+  </g>
+
+  <text x="60" y="340" class="note" style="fill:#c5851a;">Same question, different answers.</text>
+
+  <!-- ===== CENTER: arrow ===== -->
+  <text x="580" y="206" style="fill:#5e7474;font-size:11px;font-weight:600;letter-spacing:.04em;" text-anchor="middle">engineered like</text>
+  <text x="580" y="222" style="fill:#5e7474;font-size:11px;font-weight:600;letter-spacing:.04em;" text-anchor="middle">software</text>
+  <line x1="510" y1="250" x2="650" y2="250" stroke="#7fa0a0" stroke-width="2.4" marker-end="url(#ar)"/>
+
+  <!-- ===== RIGHT: single source of truth / after ===== -->
+  <text x="688" y="54" class="colhd" style="fill:#004242;">WITH YUNA LABS</text>
+
+  <rect x="688" y="84" width="432" height="290" rx="14" fill="#fff" stroke="#8ebcbc"/>
+  <rect x="688" y="84" width="432" height="48" rx="14" fill="#004242"/>
+  <rect x="688" y="110" width="432" height="22" fill="#004242"/>
+  <text x="712" y="114" style="fill:#fff;font-size:15px;font-weight:700;">Single source of truth</text>
+
+  <!-- rows -->
+  <g>
+    <g transform="translate(0,0)">
+      <circle cx="724" cy="170" r="9" fill="#1b873f"/><path d="M719 170 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="744" y="175" class="row">Revenue</text><text x="1096" y="175" class="rowv" text-anchor="end">$4.21M</text>
+    </g>
+    <line x1="712" y1="196" x2="1096" y2="196" stroke="#eef3f3"/>
+    <g>
+      <circle cx="724" cy="222" r="9" fill="#1b873f"/><path d="M719 222 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="744" y="227" class="row">Orders</text><text x="1096" y="227" class="rowv" text-anchor="end">1,204</text>
+    </g>
+    <line x1="712" y1="248" x2="1096" y2="248" stroke="#eef3f3"/>
+    <g>
+      <circle cx="724" cy="274" r="9" fill="#1b873f"/><path d="M719 274 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="744" y="279" class="row">Customers</text><text x="1096" y="279" class="rowv" text-anchor="end">3,480</text>
+    </g>
+  </g>
+
+  <!-- tags -->
+  <g>
+    <rect x="712" y="308" width="92" height="28" rx="14" fill="#e6f4f4" stroke="#bcdcdc"/><text x="758" y="326" class="tag" text-anchor="middle">connected</text>
+    <rect x="812" y="308" width="68" height="28" rx="14" fill="#e6f4f4" stroke="#bcdcdc"/><text x="846" y="326" class="tag" text-anchor="middle">tested</text>
+    <rect x="888" y="308" width="92" height="28" rx="14" fill="#e6f4f4" stroke="#bcdcdc"/><text x="934" y="326" class="tag" text-anchor="middle">versioned</text>
+    <rect x="988" y="308" width="92" height="28" rx="14" fill="#e6f4f4" stroke="#bcdcdc"/><text x="1034" y="326" class="tag" text-anchor="middle">observed</text>
+  </g>
+
+  <text x="688" y="404" class="note" style="fill:#1b873f;">One number everyone trusts.</text>
+</svg>

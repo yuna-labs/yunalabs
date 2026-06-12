@@ -29,7 +29,7 @@
     }
 
     var payload = Object.fromEntries(new FormData(form).entries());
-    setStatus('Sending…');
+    setStatus('Sending\u2026');
     setDisabled(true);
 
     fetch('/api/contact', {
@@ -43,7 +43,7 @@
         });
       })
       .then(function () {
-        setStatus('Thanks — your message was sent. We’ll be in touch within two business days.', 'ok');
+        setStatus('Thanks! Your message was sent. We\u2019ll be in touch within two business days.', 'ok');
         form.reset();
         setDisabled(false);
       })

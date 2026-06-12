@@ -5,13 +5,12 @@
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  var toggle = document.getElementById('navToggle');
-  var nav = document.getElementById('siteNav');
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('site-nav');
   if (!toggle || !nav) return;
 
   function setOpen(open) {
     nav.classList.toggle('open', open);
-    toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
 
@@ -19,7 +18,7 @@
     setOpen(!nav.classList.contains('open'));
   });
 
-  // Close the menu when a link is chosen or when focus leaves via Escape.
+  // Close the menu when a link is chosen or on Escape.
   nav.addEventListener('click', function (e) {
     if (e.target.closest('a')) setOpen(false);
   });

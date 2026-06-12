@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="Illustration of a clean analytics dashboard with KPIs and a revenue trend chart">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .lbl{fill:#5e7474;font-size:11px;font-weight:700;letter-spacing:.06em;}
+      .val{fill:#011212;font-size:30px;font-weight:700;}
+      .up{fill:#1b873f;font-size:12px;font-weight:600;}
+      .hd{fill:#011212;font-size:12px;font-weight:600;letter-spacing:.05em;}
+      .sub{fill:#5e7474;font-size:11px;}
+      .tick{fill:#9bb0b0;font-size:10px;}
+    </style>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f9b9b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#1f9b9b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="460" fill="#f3fafa"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="720" height="52" fill="#ffffff"/>
+  <line x1="0" y1="52" x2="720" y2="52" stroke="#d4e6e6"/>
+  <circle cx="26" cy="26" r="8" fill="#004242"/>
+  <path d="M21 26 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="24" style="fill:#011212;font-size:16px;font-weight:700;">Operations overview</text>
+  <text x="44" y="41" class="sub">All metrics in one place</text>
+  <circle cx="640" cy="26" r="4" fill="#1b873f"/>
+  <text x="652" y="30" class="tick">Live</text>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="16" y="64" width="220" height="104" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="34" y="92" class="lbl">REVENUE</text>
+    <text x="34" y="126" class="val">$1.24M</text>
+    <text x="34" y="150" class="up">&#9650; 12% MoM</text>
+
+    <rect x="250" y="64" width="220" height="104" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="268" y="92" class="lbl">ACTIVE CLIENTS</text>
+    <text x="268" y="126" class="val">3,480</text>
+    <text x="268" y="150" class="up">&#9650; 6%</text>
+
+    <rect x="484" y="64" width="220" height="104" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="502" y="92" class="lbl">ON-TIME DELIVERY</text>
+    <text x="502" y="126" class="val">96.3%</text>
+    <text x="502" y="150" class="up">&#9650; 1.4 pts</text>
+  </g>
+
+  <!-- Trend chart -->
+  <g>
+    <rect x="16" y="184" width="688" height="256" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="34" y="214" class="hd">REVENUE &#183; LAST 12 MONTHS</text>
+    <text x="688" y="214" class="up" text-anchor="end" style="font-size:13px;">&#9650; 38% YoY</text>
+
+    <!-- gridlines + y labels -->
+    <g stroke="#eef3f3"><line x1="56" y1="247" x2="690" y2="247"/><line x1="56" y1="329" x2="690" y2="329"/><line x1="56" y1="410" x2="690" y2="410"/></g>
+    <g class="tick" text-anchor="end"><text x="50" y="251">$120k</text><text x="50" y="333">$90k</text><text x="50" y="414">$60k</text></g>
+
+    <!-- area + line -->
+    <polygon fill="url(#area)" points="56,377.4 113.6,361.1 171.2,369.3 228.8,344.9 286.4,334 344,350.3 401.6,315 459.2,304.2 516.8,323.2 574.4,279.7 632,260.7 689.6,236.3 689.6,410 56,410"/>
+    <polyline fill="none" stroke="#006c70" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"
+      points="56,377.4 113.6,361.1 171.2,369.3 228.8,344.9 286.4,334 344,350.3 401.6,315 459.2,304.2 516.8,323.2 574.4,279.7 632,260.7 689.6,236.3"/>
+    <circle cx="689.6" cy="236.3" r="4.5" fill="#006c70"/>
+
+    <!-- x labels -->
+    <g class="tick"><text x="56" y="430">Jan</text><text x="228" y="430" text-anchor="middle">Apr</text><text x="401" y="430" text-anchor="middle">Jul</text><text x="574" y="430" text-anchor="middle">Oct</text><text x="690" y="430" text-anchor="end">Dec</text></g>
+  </g>
+</svg>

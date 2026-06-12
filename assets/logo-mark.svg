@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Yuna Labs origami dove mark">
+  <defs>
+    <linearGradient id="wingGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#5bc2ae"/>
+      <stop offset="55%" stop-color="#1f9b9b"/>
+      <stop offset="100%" stop-color="#007F80"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#006C70"/>
+      <stop offset="100%" stop-color="#013a3a"/>
+    </linearGradient>
+    <linearGradient id="tailGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#008586"/>
+      <stop offset="100%" stop-color="#004848"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Origami dove ascending: head left, wing sweeping up, tail down -->
+  <g stroke="#ffffff" stroke-width="2.4" stroke-linejoin="round">
+    <!-- Wing -dominant upward sweep -->
+    <polygon points="40,34 102,16 60,64" fill="url(#wingGrad)"/>
+    <!-- Head + beak -pointing left -->
+    <polygon points="14,50 40,34 40,58" fill="url(#bodyGrad)"/>
+    <!-- Breast -central fold connecting head, wing, tail -->
+    <polygon points="40,34 60,64 40,58" fill="url(#tailGrad)"/>
+    <!-- Tail -streaming down -->
+    <polygon points="40,58 60,64 50,106" fill="url(#bodyGrad)"/>
+  </g>
+
+  <!-- Eye -->
+  <circle cx="31" cy="47" r="2.5" fill="#eafafa"/>
+</svg>

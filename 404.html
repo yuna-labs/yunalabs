@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Page not found | Yuna Labs</title>
-  <meta name="robots" content="noindex" />
+  <meta name="description" content="The page you were looking for couldn't be found. Head back home or get in touch with Yuna Labs." />
+  <meta name="robots" content="noindex,follow" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +17,44 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="/">
-      <img src="/assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" width="399" height="375" loading="eager" decoding="async" />
-      <span>Yuna Labs</span>
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/services">Services</a>
-      <a href="/contact" class="cta">Book a platform audit</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
 
-<main class="container page" style="min-height: 50vh;">
-  <h1>Page not found</h1>
-  <p class="lead">The page you&rsquo;re looking for doesn&rsquo;t exist or has moved. Maybe one of these will help:</p>
-  <div class="hero-ctas" style="margin-top: 24px;">
-    <a class="btn primary" href="/">Back to home</a>
-    <a class="btn" href="/services">See our services</a>
-    <a class="btn" href="/contact">Contact us</a>
-  </div>
+<main id="main-content">
+
+  <section class="container page" style="text-align:center; min-height:48vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <span class="kicker">Error 404</span>
+    <h1 style="max-width:18ch;">This page wandered off.</h1>
+    <p class="lead" style="margin-left:auto; margin-right:auto;">The page you&rsquo;re looking for doesn&rsquo;t exist or may have moved. Let&rsquo;s get you back on track.</p>
+    <div class="hero-ctas" style="justify-content:center; margin-top:var(--s-4);">
+      <a class="btn primary" href="/">Back to home</a>
+      <a class="btn" href="/contact">Contact us</a>
+    </div>
+    <p style="margin-top:var(--s-10); color:var(--muted);">Or jump to
+      <a href="/services">Services</a> ·
+      <a href="/engagement">How we work</a> ·
+      <a href="/about">About</a>
+    </p>
+  </section>
+
 </main>
 
 <footer class="site-footer">
@@ -62,11 +76,12 @@
           <a href="/">Home</a><br/>
           <a href="/about">About</a><br/>
           <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
           <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved.</div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 

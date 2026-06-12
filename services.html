@@ -4,23 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Yuna Labs</title>
-  <meta name="description" content="Advisory, delivery, and embedded engineering for modern data platforms. Analytics engineering, cloud platform, and product engineering services." />
+  <meta name="description" content="Data engineering, analytics, dashboards, database design, and AI. Plain-language services that turn scattered data into decisions, with the engineering rigor to back them up." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://yuna-labs.com/services" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
   <meta property="og:url" content="https://yuna-labs.com/services" />
-  <meta property="og:title" content="Yuna Labs — Services" />
-  <meta property="og:description" content="Analytics engineering, cloud platforms, and product engineering for modern data teams." />
-  <meta property="og:image" content="https://yuna-labs.com/assets/og-image.png" />
+  <meta property="og:title" content="Yuna Labs: Services" />
+  <meta property="og:description" content="Data engineering, analytics, dashboards, database design, and AI for modern teams." />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yuna Labs — Services" />
-  <meta name="twitter:description" content="Analytics engineering, cloud platforms, and product engineering for modern data teams." />
-  <meta name="twitter:image" content="https://yuna-labs.com/assets/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,100 +25,327 @@
   <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a project cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on scope, but you'll never be surprised. Most work is quoted as a fixed price for a defined deliverable, agreed before anything starts. The first conversation is free, and we'll give you a clear estimate and the smallest version worth doing." }
+      },
+      {
+        "@type": "Question",
+        "name": "We don't really have a data setup yet. Can you still help?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, and that's often the best time to start. We can build your foundation from scratch and keep it simple, so you're not paying for complexity you don't need. No existing pipelines, warehouse, or data team required." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with the tools we already use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Almost always. We're vendor-neutral and build on the cloud and tools you already have where it makes sense, rather than forcing a migration. If a change would genuinely save you money or effort, we'll show you the trade-offs and let you decide." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until we see results?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Weeks, not months. We ship in small, tested increments, so you see something working early and give feedback as we go, instead of waiting for one big reveal at the end." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the code and data when we're done?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You do, completely. Code, documentation, and infrastructure live in your own accounts. There's no lock-in and no black box: another team could pick up where we left off at any time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is our data kept secure?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Security is built in from day one, not bolted on later: least-privilege access, encryption, secrets management, and audit-friendly patterns. Your data stays in your environment, under your control." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="/">
-      <img src="/assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" width="399" height="375" loading="eager" decoding="async" />
-      <span>Yuna Labs</span>
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/services" aria-current="page">Services</a>
-      <a href="/contact" class="cta">Book a platform audit</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
   <section class="container page">
-    <h1>Services</h1>
-    <p class="lead">Advisory, delivery, and embedded engineering for modern data platforms.</p>
+    <span class="kicker">Services</span>
+    <h1>From scattered data to confident decisions.</h1>
+    <p class="lead">Five services that work on their own or connect end to end. Each one explains the plain-English benefit first, then the engineering behind it for the technical folks on your team. Not sure which you need? <a href="/contact">Book a free consultation</a> and we&rsquo;ll point you to the shortest path.</p>
+
+    <nav class="service-chips" aria-label="Jump to a service">
+      <a href="#data-engineering">Data Engineering</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#dashboards">Dashboards &amp; Reporting</a>
+      <a href="#database">Database Design</a>
+      <a href="#ai">Data &amp; AI</a>
+    </nav>
 
     <div class="banner-img">
-      <img src="/assets/services-architecture.svg" alt="Platform architecture: ingest, store, and serve layers with modern tools" width="720" height="320" loading="lazy" decoding="async" />
+      <img src="/assets/services-architecture.svg" width="720" height="320" alt="Platform architecture: ingest, store, and serve layers with modern tools" loading="lazy" decoding="async" />
     </div>
 
-    <section id="analytics-engineering" class="service">
-      <h2>Analytics Engineering</h2>
-      <p class="service-lead">Versioned analytics with dbt, modern warehouses, and lakehouse patterns. Expect tested models, lineage, and reproducible pipelines.</p>
+    <!-- 1. Data Engineering -->
+    <section id="data-engineering" class="service">
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-analytics.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>Data Engineering</h2>
+      </div>
+      <p class="service-lead"><strong>Get all your data into one reliable place.</strong> Your information probably lives in a dozen tools: your CRM, your billing system, spreadsheets, ad platforms. We connect them so the data flows automatically into a single source of truth, clean and up to date, without anyone copying and pasting.</p>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Data platform &#183; overview</span></div>
+        <img src="/assets/demo-data-platform.svg" width="1200" height="620" alt="Sample data platform diagram consolidating ERP, production, QC, inventory, and D2C sources into a tested warehouse that powers dashboards" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What you get</h4>
       <ul class="ticks">
-        <li>Ingestion and ELT with Fivetran, Airbyte, or custom connectors — orchestrated on Dagster or Airflow</li>
-        <li>dbt modeling with documentation, tests, exposures, and contracts</li>
-        <li>Semantic layers and metric definitions (dbt Semantic Layer, Cube, LookML)</li>
-        <li>Dashboards and self-serve analytics (Looker, Tableau, Superset, Metabase)</li>
-        <li>Data quality monitoring with Elementary, Monte Carlo, or open-source tooling</li>
+        <li>One trustworthy home for all your data, refreshed automatically</li>
+        <li>An end to manual exports, broken spreadsheets, and &ldquo;which file is current?&rdquo;</li>
+        <li>Clear ownership and alerts when something upstream breaks</li>
       </ul>
+      <p class="tech-note"><span>Under the hood</span> ELT/ETL pipelines with Fivetran, Airbyte, or custom connectors · orchestration on Dagster or Airflow · modern warehouses and lakehouses (Snowflake, BigQuery, Databricks, Redshift) · freshness, schema, and volume tests on every run.</p>
+      <p class="service-cta"><a href="/contact">Talk to us about data engineering &rarr;</a></p>
     </section>
 
-    <section id="cloud-platform" class="service">
-      <h2>Cloud Platform &amp; DevOps</h2>
-      <p class="service-lead">Architecture reviews, migration plans, platform engineering, and observability. Secure by default, cost-aware by design.</p>
+    <!-- 2. Analytics -->
+    <section id="analytics" class="service">
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-analytics-insight.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>Analytics</h2>
+      </div>
+      <p class="service-lead"><strong>Turn raw data into clear answers.</strong> &ldquo;Revenue,&rdquo; &ldquo;active customer,&rdquo; &ldquo;churn&rdquo; should each mean one thing across your whole company. We define your key metrics once, the right way, and document them so every report agrees and every number can be traced back to where it came from.</p>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Metrics layer &#183; single source of truth</span></div>
+        <img src="/assets/demo-metrics.svg" width="1200" height="440" alt="Diagram: conflicting revenue numbers from finance, sales, and marketing resolved into one defined metric used across every report" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What you get</h4>
       <ul class="ticks">
-        <li>AWS, Azure, and GCP architecture and migration planning</li>
-        <li>Terraform-based infrastructure as code with versioned environments</li>
-        <li>Container platforms and CI/CD (ECS, EKS, GKE, GitHub Actions, GitLab CI)</li>
-        <li>Security hardening: IAM, encryption, secrets, and SOC 2-ready patterns</li>
-        <li>Cost optimization, SRE practices, and incident response tooling</li>
+        <li>A single, agreed definition for every important metric</li>
+        <li>Reports that match, with no more reconciling competing spreadsheets</li>
+        <li>Confidence to make decisions on numbers you can defend</li>
       </ul>
+      <p class="tech-note"><span>Under the hood</span> dbt modeling with tests, documentation, and contracts · semantic / metrics layers (dbt Semantic Layer, Cube, LookML) · reproducible, version-controlled transformations · data-quality monitoring with Elementary, Monte Carlo, or open-source tooling.</p>
+      <p class="service-cta"><a href="/contact">Talk to us about analytics &rarr;</a></p>
     </section>
 
-    <section id="product-engineering" class="service">
-      <h2>Product Engineering</h2>
-      <p class="service-lead">Reliable, accessible products with modern stacks and measurable outcomes.</p>
+    <!-- 3. Dashboards & Reporting -->
+    <section id="dashboards" class="service">
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-insights.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>Dashboards &amp; Reporting</h2>
+      </div>
+      <p class="service-lead"><strong>See your business at a glance.</strong> We build clean, fast dashboards that put the right number in front of the right person, on the web, on mobile, or straight to their inbox. No training course required; if you can read a chart, you can use it.</p>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Production Performance &#183; dashboard</span></div>
+        <div class="dash" id="oeeDash">
+          <div class="dash-bar">
+            <div>
+              <div class="dash-title">Production Performance</div>
+              <div class="dash-sub">OEE &#183; Sheridan plant &#183; last 14 days</div>
+            </div>
+            <div class="dash-tabs" role="group" aria-label="Filter by shift">
+              <button type="button" class="dash-tab is-active" data-shift="all">All shifts</button>
+              <button type="button" class="dash-tab" data-shift="s1">1st</button>
+              <button type="button" class="dash-tab" data-shift="s2">2nd</button>
+              <button type="button" class="dash-tab" data-shift="s3">3rd</button>
+            </div>
+          </div>
+          <div class="dash-kpis">
+            <div class="dash-kpi"><span class="k-l">OEE</span><span class="k-v" data-kpi="oee">78.4%</span><span class="k-d" data-kpi="delta">&#9650; 2.1 pts vs prior</span></div>
+            <div class="dash-kpi"><span class="k-l">AVAILABILITY</span><span class="k-v" data-kpi="avail">88.2%</span><span class="k-d" style="color:var(--subtle);font-weight:500;">Uptime &#247; planned</span></div>
+            <div class="dash-kpi"><span class="k-l">PERFORMANCE</span><span class="k-v" data-kpi="perf">90.6%</span><span class="k-d" style="color:var(--subtle);font-weight:500;">Speed vs ideal</span></div>
+            <div class="dash-kpi"><span class="k-l">QUALITY (FPY)</span><span class="k-v" data-kpi="qual">98.1%</span><span class="k-d" style="color:var(--subtle);font-weight:500;">First-pass yield</span></div>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-panel">
+              <div class="dash-ph">OEE BY LINE <span>Target 80%</span></div>
+              <div class="dash-bars" id="dashBars"></div>
+            </div>
+            <div class="dash-panel">
+              <div class="dash-ph">LINE PERFORMANCE</div>
+              <table class="dash-table">
+                <thead><tr><th>Line</th><th class="num">OEE</th><th class="num">FPY</th><th class="num">DT&#8201;min</th><th>Status</th></tr></thead>
+                <tbody id="dashRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </figure>
+
+      <h4 class="ticks-label">What you get</h4>
       <ul class="ticks">
-        <li>Discovery, UX/UI, and prototyping</li>
-        <li>Web apps in React, Next.js, and TypeScript with accessible design systems</li>
-        <li>API design (REST and GraphQL) and third-party integrations</li>
-        <li>Automated testing, observability, and performance budgets</li>
+        <li>Dashboards your team actually opens, designed around real decisions</li>
+        <li>Automated reports delivered on schedule, so no one chases updates</li>
+        <li>Self-serve answers, so fewer &ldquo;can you pull this number?&rdquo; requests</li>
       </ul>
+      <p class="tech-note"><span>Under the hood</span> Looker, Power BI, Tableau, Metabase, or Superset · embedded analytics in your own product · KPI design and visualization best practices · row-level security and access controls.</p>
+      <p class="service-cta"><a href="/contact">Talk to us about dashboards &rarr;</a></p>
     </section>
 
-    <h2>Engagement models</h2>
-    <p class="service-lead">Every engagement has a defined shape, cost, and deliverable. No open-ended retainers.</p>
+    <!-- 4. Database Design & Architecture -->
+    <section id="database" class="service">
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-database.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>Database Design &amp; Architecture</h2>
+      </div>
+      <p class="service-lead"><strong>A strong foundation for everything else.</strong> A well-designed database keeps your apps fast and your data organized as you grow; a poorly designed one quietly becomes the thing that breaks at the worst time. We design (or rescue) databases that stay quick, secure, and easy to build on.</p>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Database schema &#183; entity relationships</span></div>
+        <img src="/assets/demo-erd.svg" width="1200" height="600" alt="Entity relationship diagram with clients, products, orders, production runs, batches, and QC results tables linked by primary and foreign keys" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What you get</h4>
+      <ul class="ticks">
+        <li>Faster apps and reports, even as your data multiplies</li>
+        <li>A structure that&rsquo;s easy to extend instead of fighting against</li>
+        <li>Security and reliability built in, not bolted on later</li>
+      </ul>
+      <p class="tech-note"><span>Under the hood</span> relational and analytical data modeling (3NF, dimensional / star schema, data vault) · PostgreSQL, MySQL, SQL Server, and cloud-native stores · indexing, partitioning, and query tuning · migrations, scaling strategy, and infrastructure-as-code with Terraform.</p>
+      <p class="service-cta"><a href="/contact">Talk to us about database design &rarr;</a></p>
+    </section>
+
+    <!-- 5. Data & AI -->
+    <section id="ai" class="service">
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-ai.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>Data &amp; AI</h2>
+      </div>
+      <p class="service-lead"><strong>Put your data to work with AI.</strong> Once your data is clean and trustworthy, AI can do real work on top of it: forecasting demand, flagging risks, sorting tickets, or answering questions in plain language. We build practical AI that solves a specific problem, not science projects.</p>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Demand Forecast &#183; model output</span></div>
+        <img src="/assets/demo-forecast.svg" width="1200" height="620" alt="Sample demand forecast chart showing actual versus predicted weekly demand with a confidence band and a reorder recommendation" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What you get</h4>
+      <ul class="ticks">
+        <li>Predictions and forecasts that inform real decisions</li>
+        <li>Automation of slow, repetitive, manual work</li>
+        <li>AI assistants and search that answer questions over your own data</li>
+      </ul>
+      <p class="tech-note"><span>Under the hood</span> forecasting and ML models with measurable accuracy · LLM apps, retrieval-augmented generation (RAG), and AI assistants on your private data · the latest Claude models from Anthropic, plus open-source options where they fit · evaluation, guardrails, and monitoring so results stay reliable.</p>
+      <p class="service-cta"><a href="/contact">Talk to us about data &amp; AI &rarr;</a></p>
+    </section>
+
+    <aside class="guarantee-strip">
+      <strong>Every project is backed by our 50% money-back guarantee.</strong>
+      <a href="/engagement">See how it works &rarr;</a>
+    </aside>
+
+    <h2>How we engage</h2>
+    <p class="service-lead">Every engagement has a defined shape, cost, and deliverable. It always starts with a free conversation, with no commitment and no sales deck.</p>
     <div class="engagements">
       <div class="engagement">
-        <div class="meta">01 · Audit</div>
-        <h3>1&ndash;2 weeks · fixed price</h3>
-        <p>A written assessment of your current platform with prioritized, actionable recommendations.</p>
+        <div class="meta">01 · Consult</div>
+        <h3>Free &middot; 30 minutes</h3>
+        <p>We learn your goals and your data, then give you an honest recommendation and the shortest path to a result.</p>
       </div>
       <div class="engagement">
         <div class="meta">02 · Build</div>
-        <h3>4&ndash;12 weeks · outcome-scoped</h3>
-        <p>A defined deliverable — migration, platform, pipeline, or product — shipped in tested increments.</p>
+        <h3>Outcome-scoped &middot; fixed price</h3>
+        <p>A defined deliverable (a pipeline, dashboard, database, or AI feature), shipped in small, tested increments.</p>
       </div>
       <div class="engagement">
-        <div class="meta">03 · Embedded</div>
-        <h3>Ongoing · per-seat</h3>
-        <p>Senior engineers working alongside your team for sustained delivery and mentorship.</p>
+        <div class="meta">03 · Partner</div>
+        <h3>Ongoing &middot; flexible</h3>
+        <p>Senior engineers working alongside your team for sustained delivery, support, and mentorship.</p>
       </div>
+    </div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>How much does a project cost?</summary>
+        <p>It depends on scope, but you&rsquo;ll never be surprised. Most work is quoted as a fixed price for a defined deliverable, agreed before anything starts. The first conversation is free, and we&rsquo;ll give you a clear estimate and the smallest version worth doing.</p>
+      </details>
+      <details class="faq-item">
+        <summary>We don&rsquo;t really have a data setup yet. Can you still help?</summary>
+        <p>Yes, and that&rsquo;s often the best time to start. We can build your foundation from scratch and keep it simple, so you&rsquo;re not paying for complexity you don&rsquo;t need. No existing pipelines, warehouse, or data team required.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with the tools we already use?</summary>
+        <p>Almost always. We&rsquo;re vendor-neutral and build on the cloud and tools you already have where it makes sense, rather than forcing a migration. If a change would genuinely save you money or effort, we&rsquo;ll show you the trade-offs and let you decide.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long until we see results?</summary>
+        <p>Weeks, not months. We ship in small, tested increments, so you see something working early and give feedback as we go, instead of waiting for one big reveal at the end.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Who owns the code and data when we&rsquo;re done?</summary>
+        <p>You do, completely. Code, documentation, and infrastructure live in your own accounts. There&rsquo;s no lock-in and no black box: another team could pick up where we left off at any time.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is our data kept secure?</summary>
+        <p>Security is built in from day one, not bolted on later: least-privilege access, encryption, secrets management, and audit-friendly patterns. Your data stays in your environment, under your control.</p>
+      </details>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container">
-      <h2>Not sure where to start?</h2>
-      <p>Book an audit. We&rsquo;ll tell you what&rsquo;s working, what isn&rsquo;t, and the shortest path to data you can trust.</p>
-      <a class="btn primary" href="/contact">Request an audit</a>
+      <h2>Not sure which service you need?</h2>
+      <p>That&rsquo;s exactly what the free consultation is for. Tell us what&rsquo;s slow, manual, or unclear, and we&rsquo;ll tell you the shortest path to fixing it.</p>
+      <a class="btn primary" href="/contact">Book a free consultation</a>
     </div>
   </section>
 
 </main>
 
-<footer cl
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>Graceful data. Powerful results.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
+        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
+        </p>
+      </div>
+    </div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+
+</body>
+</html>
