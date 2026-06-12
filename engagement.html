@@ -6,9 +6,11 @@
   <title>How We Work | Yuna Labs</title>
   <meta name="description" content="Fixed project pricing, milestone-based payments, and a 50% money-back guarantee. The standard terms behind every Yuna Labs engagement, in plain language." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/engagement" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/engagement" />
   <meta property="og:title" content="How Yuna Labs works with clients" />
   <meta property="og:description" content="No hourly billing, no surprise invoices, and a 50% money-back guarantee. Clear engagement terms in plain language." />
   <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
@@ -16,10 +18,13 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -27,19 +32,19 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="engagement.html">How we work</a>
-      <a href="contact.html" class="cta">Free consultation</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/engagement" aria-current="page">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
@@ -186,7 +191,7 @@
     <div class="container">
       <h2>Clear terms, real guarantee. Let&rsquo;s talk.</h2>
       <p>Book a free consultation and we&rsquo;ll walk you through exactly how a project would work for your team: scope, milestones, and price, all upfront.</p>
-      <a class="btn primary" href="contact.html">Book a free consultation</a>
+      <a class="btn primary" href="/contact">Book a free consultation</a>
     </div>
   </section>
 
@@ -208,32 +213,19 @@
       <div>
         <h5>Links</h5>
         <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="engagement.html">How we work</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-</script>
+<script src="/js/main.js" defer></script>
 
 </body>
 </html>

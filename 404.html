@@ -7,10 +7,13 @@
   <meta name="description" content="The page you were looking for couldn't be found. Head back home or get in touch with Yuna Labs." />
   <meta name="robots" content="noindex,follow" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -18,19 +21,19 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="engagement.html">How we work</a>
-      <a href="contact.html" class="cta">Free consultation</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
@@ -42,13 +45,13 @@
     <h1 style="max-width:18ch;">This page wandered off.</h1>
     <p class="lead" style="margin-left:auto; margin-right:auto;">The page you&rsquo;re looking for doesn&rsquo;t exist or may have moved. Let&rsquo;s get you back on track.</p>
     <div class="hero-ctas" style="justify-content:center; margin-top:var(--s-4);">
-      <a class="btn primary" href="index.html">Back to home</a>
-      <a class="btn" href="contact.html">Contact us</a>
+      <a class="btn primary" href="/">Back to home</a>
+      <a class="btn" href="/contact">Contact us</a>
     </div>
     <p style="margin-top:var(--s-10); color:var(--muted);">Or jump to
-      <a href="services.html">Services</a> ·
-      <a href="engagement.html">How we work</a> ·
-      <a href="about.html">About</a>
+      <a href="/services">Services</a> ·
+      <a href="/engagement">How we work</a> ·
+      <a href="/about">About</a>
     </p>
   </section>
 
@@ -70,32 +73,19 @@
       <div>
         <h5>Links</h5>
         <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="engagement.html">How we work</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-</script>
+<script src="/js/main.js" defer></script>
 
 </body>
 </html>

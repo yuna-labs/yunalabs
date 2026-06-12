@@ -370,6 +370,10 @@ hr.rule {
   font-size: .95rem;
 }
 .site-nav a:hover { color: var(--brand-700); }
+.site-nav a[aria-current="page"]:not(.cta) {
+  color: var(--brand-700);
+  font-weight: 600;
+}
 .site-nav a.cta {
   padding: 9px 16px;
   border-radius: 10px;

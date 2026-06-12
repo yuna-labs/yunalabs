@@ -6,9 +6,11 @@
   <title>Contact | Yuna Labs</title>
   <meta name="description" content="Tell us about your project, your team, or what&rsquo;s not working. Yuna Labs replies within two business days." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/contact" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/contact" />
   <meta property="og:title" content="Contact Yuna Labs" />
   <meta property="og:description" content="Start a conversation about your data platform. We reply within two business days." />
   <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
@@ -16,10 +18,13 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -27,19 +32,19 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="engagement.html">How we work</a>
-      <a href="contact.html" class="cta">Free consultation</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" aria-current="page" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
@@ -50,29 +55,29 @@
 
   <div class="contact-layout">
     <div class="contact-card">
-      <form id="contact-form" class="contact-form" novalidate>
+      <form id="contact-form" class="contact-form">
         <div class="row">
           <div>
             <label for="name">Your name</label>
-            <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required />
+            <input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" maxlength="200" required />
           </div>
           <div>
             <label for="email">Your email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+            <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" maxlength="320" required />
           </div>
         </div>
 
         <div class="row">
           <div style="flex:1 1 100%">
             <label for="company">Company <span style="color:var(--subtle); font-weight:400;">(optional)</span></label>
-            <input id="company" name="company" type="text" placeholder="Company name" autocomplete="organization" />
+            <input id="company" name="company" type="text" placeholder="Company name" autocomplete="organization" maxlength="200" />
           </div>
         </div>
 
         <div class="row">
           <div style="flex:1 1 100%">
             <label for="message">How can we help?</label>
-            <textarea id="message" name="message" placeholder="A few lines about what you&rsquo;re trying to do, what&rsquo;s slow or unclear today, or what you&rsquo;d like to build. No technical detail required." required></textarea>
+            <textarea id="message" name="message" placeholder="A few lines about what you&rsquo;re trying to do, what&rsquo;s slow or unclear today, or what you&rsquo;d like to build. No technical detail required." maxlength="5000" required></textarea>
           </div>
         </div>
 
@@ -114,74 +119,20 @@
       <div>
         <h5>Links</h5>
         <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="engagement.html">How we work</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-
-  const form       = document.getElementById('contact-form');
-  const statusEl   = document.getElementById('status');
-  const submitBtn  = document.getElementById('submitBtn');
-  const formFields = form.querySelectorAll('input:not([type="submit"]), textarea');
-
-  function setStatus(text, cls) {
-    statusEl.textContent = text || '';
-    statusEl.className   = 'status ' + (cls || '');
-  }
-  function setDisabled(state) {
-    submitBtn.disabled = state;
-    formFields.forEach(field => field.disabled = state);
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const payload = Object.fromEntries(new FormData(form).entries());
-    setStatus('Sending…');
-    setDisabled(true);
-
-    try {
-      const res  = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await res.json().catch(() => ({}));
-
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Failed to send');
-      }
-
-      setStatus('Thanks! Your message was sent. We&rsquo;ll be in touch within two business days.', 'ok');
-      form.reset();
-      setDisabled(false);
-    } catch (err) {
-      console.error(err);
-      setStatus('Sorry, something went wrong. Please try again, or email info@yuna-labs.com.', 'err');
-      setDisabled(false);
-    }
-  });
-</script>
+<script src="/js/main.js" defer></script>
+<script src="/js/contact.js" defer></script>
 
 </body>
 </html>

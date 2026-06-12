@@ -6,9 +6,11 @@
   <title>About | Yuna Labs</title>
   <meta name="description" content="Yuna Labs is a data and AI engineering studio that turns scattered data into decisions, built with real engineering rigor and explained without the jargon." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/about" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/about" />
   <meta property="og:title" content="About Yuna Labs" />
   <meta property="og:description" content="A data and AI engineering studio. Trustworthy data, built to last, explained in plain language." />
   <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
@@ -16,10 +18,13 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -27,19 +32,19 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="engagement.html">How we work</a>
-      <a href="contact.html" class="cta">Free consultation</a>
+      <a href="/">Home</a>
+      <a href="/about" aria-current="page">About</a>
+      <a href="/services">Services</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
@@ -55,7 +60,7 @@
     <p>We think that data should be engineered with the same care as production software: connected, tested, documented, and observable, so every number can be defended and every change can be reviewed and rolled back safely. Get that foundation right, and good analytics, clear dashboards, and genuinely useful AI follow naturally.</p>
 
     <div class="banner-img">
-      <img src="assets/about-trust.svg" alt="Before and after: scattered, conflicting data across spreadsheets and tools becomes one connected, tested source of truth" loading="lazy" decoding="async" />
+      <img src="/assets/about-trust.svg" width="1160" height="460" alt="Before and after: scattered, conflicting data across spreadsheets and tools becomes one connected, tested source of truth" loading="lazy" decoding="async" />
     </div>
 
     <h2>What we believe</h2>
@@ -80,7 +85,7 @@
 
     <h2>Who you&rsquo;ll work with</h2>
     <p>When you hire Yuna Labs, you work directly with the people building your project, with no account managers, no handoffs, and no junior staff learning on your dime. You&rsquo;ll always know exactly who&rsquo;s doing the work and why.</p>
-    <p>We&rsquo;re a focused studio, so we only take on work we&rsquo;re confident we can deliver, and we back it with a <a href="engagement.html">50% money-back guarantee</a>. If we don&rsquo;t deliver what we agreed, you&rsquo;re never stuck with us.</p>
+    <p>We&rsquo;re a focused studio, so we only take on work we&rsquo;re confident we can deliver, and we back it with a <a href="/engagement">50% money-back guarantee</a>. If we don&rsquo;t deliver what we agreed, you&rsquo;re never stuck with us.</p>
 
     <h2>How we work with you</h2>
     <ul class="ticks">
@@ -97,7 +102,7 @@
     <div class="container">
       <h2>Want a second opinion on your data?</h2>
       <p>Book a free consultation. We&rsquo;ll talk through what&rsquo;s working, what isn&rsquo;t, and the shortest path forward. No pitch deck at the end.</p>
-      <a class="btn primary" href="contact.html">Book a free consultation</a>
+      <a class="btn primary" href="/contact">Book a free consultation</a>
     </div>
   </section>
 
@@ -119,32 +124,19 @@
       <div>
         <h5>Links</h5>
         <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="engagement.html">How we work</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-</script>
+<script src="/js/main.js" defer></script>
 
 </body>
 </html>

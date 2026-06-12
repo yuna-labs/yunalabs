@@ -6,9 +6,11 @@
   <title>Services | Yuna Labs</title>
   <meta name="description" content="Data engineering, analytics, dashboards, database design, and AI. Plain-language services that turn scattered data into decisions, with the engineering rigor to back them up." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/services" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/services" />
   <meta property="og:title" content="Yuna Labs: Services" />
   <meta property="og:description" content="Data engineering, analytics, dashboards, database design, and AI for modern teams." />
   <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
@@ -16,10 +18,13 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
   <script type="application/ld+json">
   {
@@ -66,19 +71,19 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/Yuna_Labs_BirdOnly.png" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
       <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="engagement.html">How we work</a>
-      <a href="contact.html" class="cta">Free consultation</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services" aria-current="page">Services</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
     </nav>
   </div>
 </header>
@@ -88,7 +93,7 @@
   <section class="container page">
     <span class="kicker">Services</span>
     <h1>From scattered data to confident decisions.</h1>
-    <p class="lead">Five services that work on their own or connect end to end. Each one explains the plain-English benefit first, then the engineering behind it for the technical folks on your team. Not sure which you need? <a href="contact.html">Book a free consultation</a> and we&rsquo;ll point you to the shortest path.</p>
+    <p class="lead">Five services that work on their own or connect end to end. Each one explains the plain-English benefit first, then the engineering behind it for the technical folks on your team. Not sure which you need? <a href="/contact">Book a free consultation</a> and we&rsquo;ll point you to the shortest path.</p>
 
     <nav class="service-chips" aria-label="Jump to a service">
       <a href="#data-engineering">Data Engineering</a>
@@ -99,20 +104,20 @@
     </nav>
 
     <div class="banner-img">
-      <img src="assets/services-architecture.svg" alt="Platform architecture: ingest, store, and serve layers with modern tools" loading="lazy" decoding="async" />
+      <img src="/assets/services-architecture.svg" width="720" height="320" alt="Platform architecture: ingest, store, and serve layers with modern tools" loading="lazy" decoding="async" />
     </div>
 
     <!-- 1. Data Engineering -->
     <section id="data-engineering" class="service">
       <div class="service-head">
-        <img class="service-icon" src="assets/icon-analytics.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img class="service-icon" src="/assets/icon-analytics.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         <h2>Data Engineering</h2>
       </div>
       <p class="service-lead"><strong>Get all your data into one reliable place.</strong> Your information probably lives in a dozen tools: your CRM, your billing system, spreadsheets, ad platforms. We connect them so the data flows automatically into a single source of truth, clean and up to date, without anyone copying and pasting.</p>
 
       <figure class="demo-figure">
         <div class="demo-chrome"><i></i><i></i><i></i><span>Data platform &#183; overview</span></div>
-        <img src="assets/demo-data-platform.svg" alt="Sample data platform diagram consolidating ERP, production, QC, inventory, and D2C sources into a tested warehouse that powers dashboards" loading="lazy" decoding="async" />
+        <img src="/assets/demo-data-platform.svg" width="1200" height="620" alt="Sample data platform diagram consolidating ERP, production, QC, inventory, and D2C sources into a tested warehouse that powers dashboards" loading="lazy" decoding="async" />
       </figure>
 
       <h4 class="ticks-label">What you get</h4>
@@ -122,20 +127,20 @@
         <li>Clear ownership and alerts when something upstream breaks</li>
       </ul>
       <p class="tech-note"><span>Under the hood</span> ELT/ETL pipelines with Fivetran, Airbyte, or custom connectors · orchestration on Dagster or Airflow · modern warehouses and lakehouses (Snowflake, BigQuery, Databricks, Redshift) · freshness, schema, and volume tests on every run.</p>
-      <p class="service-cta"><a href="contact.html">Talk to us about data engineering &rarr;</a></p>
+      <p class="service-cta"><a href="/contact">Talk to us about data engineering &rarr;</a></p>
     </section>
 
     <!-- 2. Analytics -->
     <section id="analytics" class="service">
       <div class="service-head">
-        <img class="service-icon" src="assets/icon-analytics-insight.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img class="service-icon" src="/assets/icon-analytics-insight.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         <h2>Analytics</h2>
       </div>
       <p class="service-lead"><strong>Turn raw data into clear answers.</strong> &ldquo;Revenue,&rdquo; &ldquo;active customer,&rdquo; &ldquo;churn&rdquo; should each mean one thing across your whole company. We define your key metrics once, the right way, and document them so every report agrees and every number can be traced back to where it came from.</p>
 
       <figure class="demo-figure">
         <div class="demo-chrome"><i></i><i></i><i></i><span>Metrics layer &#183; single source of truth</span></div>
-        <img src="assets/demo-metrics.svg" alt="Diagram: conflicting revenue numbers from finance, sales, and marketing resolved into one defined metric used across every report" loading="lazy" decoding="async" />
+        <img src="/assets/demo-metrics.svg" width="1200" height="440" alt="Diagram: conflicting revenue numbers from finance, sales, and marketing resolved into one defined metric used across every report" loading="lazy" decoding="async" />
       </figure>
 
       <h4 class="ticks-label">What you get</h4>
@@ -145,13 +150,13 @@
         <li>Confidence to make decisions on numbers you can defend</li>
       </ul>
       <p class="tech-note"><span>Under the hood</span> dbt modeling with tests, documentation, and contracts · semantic / metrics layers (dbt Semantic Layer, Cube, LookML) · reproducible, version-controlled transformations · data-quality monitoring with Elementary, Monte Carlo, or open-source tooling.</p>
-      <p class="service-cta"><a href="contact.html">Talk to us about analytics &rarr;</a></p>
+      <p class="service-cta"><a href="/contact">Talk to us about analytics &rarr;</a></p>
     </section>
 
     <!-- 3. Dashboards & Reporting -->
     <section id="dashboards" class="service">
       <div class="service-head">
-        <img class="service-icon" src="assets/icon-insights.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img class="service-icon" src="/assets/icon-insights.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         <h2>Dashboards &amp; Reporting</h2>
       </div>
       <p class="service-lead"><strong>See your business at a glance.</strong> We build clean, fast dashboards that put the right number in front of the right person, on the web, on mobile, or straight to their inbox. No training course required; if you can read a chart, you can use it.</p>
@@ -200,20 +205,20 @@
         <li>Self-serve answers, so fewer &ldquo;can you pull this number?&rdquo; requests</li>
       </ul>
       <p class="tech-note"><span>Under the hood</span> Looker, Power BI, Tableau, Metabase, or Superset · embedded analytics in your own product · KPI design and visualization best practices · row-level security and access controls.</p>
-      <p class="service-cta"><a href="contact.html">Talk to us about dashboards &rarr;</a></p>
+      <p class="service-cta"><a href="/contact">Talk to us about dashboards &rarr;</a></p>
     </section>
 
     <!-- 4. Database Design & Architecture -->
     <section id="database" class="service">
       <div class="service-head">
-        <img class="service-icon" src="assets/icon-database.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img class="service-icon" src="/assets/icon-database.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         <h2>Database Design &amp; Architecture</h2>
       </div>
       <p class="service-lead"><strong>A strong foundation for everything else.</strong> A well-designed database keeps your apps fast and your data organized as you grow; a poorly designed one quietly becomes the thing that breaks at the worst time. We design (or rescue) databases that stay quick, secure, and easy to build on.</p>
 
       <figure class="demo-figure">
         <div class="demo-chrome"><i></i><i></i><i></i><span>Database schema &#183; entity relationships</span></div>
-        <img src="assets/demo-erd.svg" alt="Entity relationship diagram with clients, products, orders, production runs, batches, and QC results tables linked by primary and foreign keys" loading="lazy" decoding="async" />
+        <img src="/assets/demo-erd.svg" width="1200" height="600" alt="Entity relationship diagram with clients, products, orders, production runs, batches, and QC results tables linked by primary and foreign keys" loading="lazy" decoding="async" />
       </figure>
 
       <h4 class="ticks-label">What you get</h4>
@@ -223,20 +228,20 @@
         <li>Security and reliability built in, not bolted on later</li>
       </ul>
       <p class="tech-note"><span>Under the hood</span> relational and analytical data modeling (3NF, dimensional / star schema, data vault) · PostgreSQL, MySQL, SQL Server, and cloud-native stores · indexing, partitioning, and query tuning · migrations, scaling strategy, and infrastructure-as-code with Terraform.</p>
-      <p class="service-cta"><a href="contact.html">Talk to us about database design &rarr;</a></p>
+      <p class="service-cta"><a href="/contact">Talk to us about database design &rarr;</a></p>
     </section>
 
     <!-- 5. Data & AI -->
     <section id="ai" class="service">
       <div class="service-head">
-        <img class="service-icon" src="assets/icon-ai.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <img class="service-icon" src="/assets/icon-ai.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
         <h2>Data &amp; AI</h2>
       </div>
       <p class="service-lead"><strong>Put your data to work with AI.</strong> Once your data is clean and trustworthy, AI can do real work on top of it: forecasting demand, flagging risks, sorting tickets, or answering questions in plain language. We build practical AI that solves a specific problem, not science projects.</p>
 
       <figure class="demo-figure">
         <div class="demo-chrome"><i></i><i></i><i></i><span>Demand Forecast &#183; model output</span></div>
-        <img src="assets/demo-forecast.svg" alt="Sample demand forecast chart showing actual versus predicted weekly demand with a confidence band and a reorder recommendation" loading="lazy" decoding="async" />
+        <img src="/assets/demo-forecast.svg" width="1200" height="620" alt="Sample demand forecast chart showing actual versus predicted weekly demand with a confidence band and a reorder recommendation" loading="lazy" decoding="async" />
       </figure>
 
       <h4 class="ticks-label">What you get</h4>
@@ -246,12 +251,12 @@
         <li>AI assistants and search that answer questions over your own data</li>
       </ul>
       <p class="tech-note"><span>Under the hood</span> forecasting and ML models with measurable accuracy · LLM apps, retrieval-augmented generation (RAG), and AI assistants on your private data · the latest Claude models from Anthropic, plus open-source options where they fit · evaluation, guardrails, and monitoring so results stay reliable.</p>
-      <p class="service-cta"><a href="contact.html">Talk to us about data &amp; AI &rarr;</a></p>
+      <p class="service-cta"><a href="/contact">Talk to us about data &amp; AI &rarr;</a></p>
     </section>
 
     <aside class="guarantee-strip">
       <strong>Every project is backed by our 50% money-back guarantee.</strong>
-      <a href="engagement.html">See how it works &rarr;</a>
+      <a href="/engagement">See how it works &rarr;</a>
     </aside>
 
     <h2>How we engage</h2>
@@ -306,7 +311,7 @@
     <div class="container">
       <h2>Not sure which service you need?</h2>
       <p>That&rsquo;s exactly what the free consultation is for. Tell us what&rsquo;s slow, manual, or unclear, and we&rsquo;ll tell you the shortest path to fixing it.</p>
-      <a class="btn primary" href="contact.html">Book a free consultation</a>
+      <a class="btn primary" href="/contact">Book a free consultation</a>
     </div>
   </section>
 
@@ -328,107 +333,19 @@
       <div>
         <h5>Links</h5>
         <p>
-          <a href="index.html">Home</a><br/>
-          <a href="about.html">About</a><br/>
-          <a href="services.html">Services</a><br/>
-          <a href="engagement.html">How we work</a><br/>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
         </p>
       </div>
     </div>
-    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="privacy.html">Privacy</a></div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  (function () {
-    var btn = document.querySelector('.nav-toggle');
-    var nav = document.getElementById('site-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  })();
-
-  // Interactive OEE dashboard
-  (function () {
-    var dash = document.getElementById('oeeDash');
-    if (!dash) return;
-    var DATA = {
-      all: { oee: '78.4%', delta: '▲ 2.1 pts vs prior', dir: 'up', avail: '88.2%', perf: '90.6%', qual: '98.1%',
-        lines: [
-          { n: 'Blending', v: 84, fpy: '99.1%', dt: 90, s: 'ok' },
-          { n: 'Encapsulation L1', v: 81, fpy: '98.4%', dt: 120, s: 'ok' },
-          { n: 'Packaging', v: 79, fpy: '97.9%', dt: 150, s: 'watch' },
-          { n: 'Tableting L2', v: 76, fpy: '98.0%', dt: 210, s: 'watch' },
-          { n: 'Softgel L3', v: 72, fpy: '96.5%', dt: 260, s: 'bad' }
-        ] },
-      s1: { oee: '82.1%', delta: '▲ 3.7 pts vs plant avg', dir: 'up', avail: '90.4%', perf: '92.1%', qual: '98.5%',
-        lines: [
-          { n: 'Blending', v: 88, fpy: '99.4%', dt: 60, s: 'ok' },
-          { n: 'Encapsulation L1', v: 85, fpy: '98.8%', dt: 80, s: 'ok' },
-          { n: 'Packaging', v: 82, fpy: '98.2%', dt: 110, s: 'ok' },
-          { n: 'Tableting L2', v: 79, fpy: '98.3%', dt: 150, s: 'watch' },
-          { n: 'Softgel L3', v: 74, fpy: '97.0%', dt: 190, s: 'watch' }
-        ] },
-      s2: { oee: '77.0%', delta: '▼ 1.4 pts vs plant avg', dir: 'down', avail: '87.3%', perf: '90.1%', qual: '98.0%',
-        lines: [
-          { n: 'Blending', v: 83, fpy: '99.0%', dt: 100, s: 'ok' },
-          { n: 'Encapsulation L1', v: 80, fpy: '98.3%', dt: 130, s: 'ok' },
-          { n: 'Packaging', v: 78, fpy: '97.8%', dt: 160, s: 'watch' },
-          { n: 'Tableting L2', v: 75, fpy: '97.9%', dt: 220, s: 'watch' },
-          { n: 'Softgel L3', v: 71, fpy: '96.4%', dt: 270, s: 'bad' }
-        ] },
-      s3: { oee: '74.8%', delta: '▼ 3.6 pts vs plant avg', dir: 'down', avail: '86.0%', perf: '89.2%', qual: '97.6%',
-        lines: [
-          { n: 'Blending', v: 80, fpy: '98.7%', dt: 120, s: 'ok' },
-          { n: 'Encapsulation L1', v: 78, fpy: '98.0%', dt: 150, s: 'watch' },
-          { n: 'Packaging', v: 76, fpy: '97.5%', dt: 190, s: 'watch' },
-          { n: 'Tableting L2', v: 73, fpy: '97.6%', dt: 270, s: 'bad' },
-          { n: 'Softgel L3', v: 68, fpy: '95.9%', dt: 330, s: 'bad' }
-        ] }
-    };
-    var bars = dash.querySelector('#dashBars');
-    var rows = dash.querySelector('#dashRows');
-    function fillFor(v) { return v >= 80 ? 'linear-gradient(90deg,#1f9b9b,#006c70)' : '#d39a3a'; }
-    function statusMeta(s) { return s === 'ok' ? ['#1b873f', 'On track'] : s === 'watch' ? ['#c5851a', 'Watch'] : ['#c0392b', 'Below']; }
-    function setText(k, t) { var el = dash.querySelector('[data-kpi="' + k + '"]'); if (el) el.textContent = t; }
-    function render(shift) {
-      var d = DATA[shift];
-      setText('oee', d.oee); setText('avail', d.avail); setText('perf', d.perf); setText('qual', d.qual);
-      var deltaEl = dash.querySelector('[data-kpi="delta"]');
-      deltaEl.textContent = d.delta;
-      deltaEl.className = 'k-d' + (d.dir === 'down' ? ' down' : '');
-      var bh = '<div class="dash-target"></div>';
-      d.lines.forEach(function (l) {
-        bh += '<div class="dash-bar-row"><span class="bl">' + l.n + '</span>' +
-          '<div class="dash-track"><div class="dash-fill" style="width:' + l.v + '%;background:' + fillFor(l.v) + '"></div></div>' +
-          '<span class="dash-bv">' + l.v + '%</span>' +
-          '<span class="dash-tip">' + l.n + ': ' + l.v + '% OEE</span></div>';
-      });
-      bars.innerHTML = bh;
-      var t = '';
-      d.lines.forEach(function (l) {
-        var m = statusMeta(l.s);
-        t += '<tr><td>' + l.n + '</td><td class="num">' + l.v + '%</td><td class="num">' + l.fpy + '</td><td class="num">' + l.dt + '</td>' +
-          '<td><span class="dash-st" style="color:' + m[0] + '"><span class="dash-dot" style="background:' + m[0] + '"></span>' + m[1] + '</span></td></tr>';
-      });
-      rows.innerHTML = t;
-    }
-    dash.querySelectorAll('.dash-tab').forEach(function (b) {
-      b.addEventListener('click', function () {
-        dash.querySelectorAll('.dash-tab').forEach(function (x) { x.classList.remove('is-active'); });
-        b.classList.add('is-active');
-        render(b.getAttribute('data-shift'));
-      });
-    });
-    render('all');
-  })();
-</script>
+<script src="/js/main.js" defer></script>
 
 </body>
 </html>
