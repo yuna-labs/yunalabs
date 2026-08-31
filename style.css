@@ -1355,3 +1355,67 @@ hr.rule {
 @media (max-width: 720px) {
   .project-stats { grid-template-columns: 1fr; }
 }
+
+/* Project carousel: one case study at a time with prev/next controls */
+.project-carousel.is-carousel .service { display: none; border-top: 0; padding-top: var(--s-4); }
+.project-carousel.is-carousel .service.is-active { display: block; animation: projectFade .35s ease; }
+@keyframes projectFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+.project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin: var(--s-8) 0 0;
+  scroll-margin-top: 90px;
+}
+.project-nav.pn-bottom { margin: 0 0 var(--s-6); }
+.pn-btn {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  color: var(--brand-700);
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.pn-btn:hover {
+  background: var(--brand-700);
+  border-color: var(--brand-700);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.pn-info { min-width: 0; text-align: center; }
+.pn-count {
+  display: block;
+  color: var(--subtle);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pn-title {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 600;
+  color: var(--brand-900);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .pn-title { white-space: normal; font-size: .9rem; }
+}
+.service-chips a.is-active {
+  background: var(--brand-700);
+  color: #fff;
+  border-color: var(--brand-700);
+}
