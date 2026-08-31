@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Yuna Labs</title>
+  <meta name="description" content="Case studies from Yuna Labs: a real-time healthcare data platform on Google Cloud, a patient intake CRM with instant insurance verification, and AI-powered document intake with Vertex AI." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://yuna-labs.com/projects" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yuna Labs" />
+  <meta property="og:url" content="https://yuna-labs.com/projects" />
+  <meta property="og:title" content="Yuna Labs: Projects" />
+  <meta property="og:description" content="Real-time healthcare data platforms, patient intake systems with instant insurance verification, and AI document processing. See how we build." />
+  <meta property="og:image" content="https://yuna-labs.com/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/assets/Yuna_Labs_BirdOnly.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Yuna Labs Projects",
+    "url": "https://yuna-labs.com/projects",
+    "description": "Case studies from Yuna Labs: a real-time healthcare data platform on Google Cloud, a patient intake CRM with instant insurance verification, and AI-powered document intake with Vertex AI.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "A real-time clinical data platform, built from zero", "url": "https://yuna-labs.com/projects#health-platform" },
+        { "@type": "ListItem", "position": 2, "name": "An intake CRM that verifies insurance while the patient is still on the phone", "url": "https://yuna-labs.com/projects#intake-crm" },
+        { "@type": "ListItem", "position": 3, "name": "AI document intake that reads, matches, and files", "url": "https://yuna-labs.com/projects#document-ai" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="/assets/Yuna_Labs_BirdOnly.png" width="399" height="375" alt="Yuna Labs logo" class="logo" loading="eager" decoding="async" />
+      <span class="brand-name">Yuna Labs<small>Data · Analytics · AI</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/projects" aria-current="page">Projects</a>
+      <a href="/engagement">How we work</a>
+      <a href="/contact" class="cta">Free consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <section class="container page">
+    <span class="kicker">Projects</span>
+    <h1>Work we&rsquo;re proud of.</h1>
+    <p class="lead">Three case studies from our healthcare work: a real-time data platform built on Google Cloud, a patient intake CRM with instant insurance verification, and an AI pipeline that reads intake documents so staff don&rsquo;t have to. Client details are anonymized to protect confidentiality, but the problems, the engineering, and the results are real. Sound like a problem you have? <a href="/contact">Book a free consultation</a>.</p>
+
+    <nav class="service-chips" aria-label="Jump to a project">
+      <a href="#health-platform">Real-Time Health Data Platform</a>
+      <a href="#intake-crm">Intake CRM &amp; Scheduling</a>
+      <a href="#document-ai">AI Document Intake</a>
+    </nav>
+
+    <!-- ============ Project 1: Real-time healthcare data platform on GCP ============ -->
+    <section id="health-platform" class="service">
+      <div class="project-tags">
+        <span>Home Healthcare</span><span>Data Engineering</span><span>Google Cloud</span><span>Real-Time Analytics</span>
+      </div>
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-platform.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>A real-time clinical data platform, built from zero</h2>
+      </div>
+      <p class="service-lead"><strong>The problem:</strong> a home healthcare company&rsquo;s most important data was scattered across systems that had never spoken to each other. Financials lived in QuickBooks. Clinical records were split across two EMRs, Epic and AdvancedMD. And the most time-sensitive data of all&nbsp;&mdash; readings from the devices in patients&rsquo; homes: dialysis machines, weight scales, blood pressure cuffs&nbsp;&mdash; was effectively locked inside those devices. A reading that should have changed a care decision could go unseen for days. The company had no cloud infrastructure of its own and no unified picture of any single patient.</p>
+
+      <div class="project-stats">
+        <div class="project-stat"><strong>Days &rarr; minutes</strong><span>from device reading to a doctor&rsquo;s dashboard</span></div>
+        <div class="project-stat"><strong>6 systems, 1 record</strong><span>financial, clinical &amp; device data per patient</span></div>
+        <div class="project-stat"><strong>Built from zero</strong><span>entire GCP platform, 100% infrastructure as code</span></div>
+      </div>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Healthcare data platform &#183; live</span></div>
+        <img src="/assets/demo-health-platform.svg" width="1200" height="620" alt="Healthcare data platform diagram: QuickBooks, Epic and AdvancedMD EMRs, and home health devices streaming into a Google Cloud pipeline that powers live dashboards for physicians and care coordinators" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What we built</h4>
+      <ul class="ticks">
+        <li>The company&rsquo;s <strong>entire Google Cloud infrastructure, stood up from scratch</strong> and defined as code, with security, networking, and access control designed for PHI from day one</li>
+        <li>An <strong>end-to-end patient data model</strong> that unifies financial, clinical, and device data into one record per patient</li>
+        <li><strong>Live, streaming pipelines</strong> for device telemetry alongside automated ingestion from QuickBooks and both EMRs, so every source lands in one warehouse, continuously</li>
+        <li><strong>Real-time reports and analytics</strong> for the people downstream: physicians see vitals and trends per patient, care coordinators get worklists and out-of-range alerts</li>
+      </ul>
+
+      <p><strong>How we did it.</strong> Device readings stream through Pub/Sub and Dataflow into BigQuery the moment they&rsquo;re taken, while EMR and financial data flow in through automated connectors on tight schedules. On top of the warehouse sits a tested, documented data model that resolves each patient to a single identity across billing, clinical, and device systems, so a doctor looking at a dashboard sees one coherent story, not three conflicting ones. Everything&nbsp;&mdash; projects, IAM, networking, pipelines&nbsp;&mdash; is managed with Terraform, so the whole platform is reproducible and auditable.</p>
+
+      <h4 class="ticks-label">Challenges we solved along the way</h4>
+      <ul class="ticks">
+        <li><strong>Unreliable home connectivity.</strong> Devices in patients&rsquo; homes drop offline and send late or duplicate readings. We made ingestion idempotent and built late-arrival handling, so the data heals itself instead of double-counting or losing readings.</li>
+        <li><strong>One patient, three identities.</strong> The same person appeared differently in Epic, AdvancedMD, and QuickBooks. We built patient-identity resolution into the model so every downstream report is truly per-patient.</li>
+        <li><strong>PHI everywhere.</strong> Nearly every table touched protected health information. Encryption, least-privilege access, and audit logging were designed in from the first commit, not retrofitted.</li>
+      </ul>
+
+      <p class="tech-note"><span>Stack</span> Google Cloud (Pub/Sub, Dataflow, BigQuery, Cloud Run) · Terraform · HL7/FHIR &amp; API integrations for Epic and AdvancedMD · QuickBooks API · tested, documented data models · live dashboards.</p>
+      <!-- TODO: add real numbers here if available (e.g. number of patients/devices, latency, hours saved) -->
+      <p class="project-outcome">The outcome: doctors and care coordinators now see device readings minutes after they happen instead of days later, and the whole company&nbsp;&mdash; clinical and financial&nbsp;&mdash; runs on one live source of truth that didn&rsquo;t exist before we started.</p>
+      <p class="service-cta"><a href="/contact">Drowning in disconnected systems? Let&rsquo;s talk &rarr;</a></p>
+    </section>
+
+    <!-- ============ Project 2: Intake CRM + scheduling with real-time eligibility ============ -->
+    <section id="intake-crm" class="service">
+      <div class="project-tags">
+        <span>Patient Intake</span><span>Product Engineering</span><span>CRM &amp; Scheduling</span><span>Availity · X12</span>
+      </div>
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-insights.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>An intake CRM that verifies insurance while the patient is still on the phone</h2>
+      </div>
+      <p class="service-lead"><strong>The problem:</strong> patient intake ran on phone calls, paper, and memory. Demographics and insurance details were captured by hand and verified later&nbsp;&mdash; sometimes days later&nbsp;&mdash; through payer portals and hold music. When coverage problems surfaced, they surfaced at the worst possible time: after the visit, as a denied claim. Scheduling lived apart from intake, and leadership had no live view of how many patients were in the pipeline or where they were getting stuck.</p>
+
+      <div class="project-stats">
+        <div class="project-stat"><strong>Days &rarr; seconds</strong><span>insurance verified during the first phone call</span></div>
+        <div class="project-stat"><strong>Caught pre-visit</strong><span>coverage issues surface at intake, not at billing</span></div>
+        <div class="project-stat"><strong>One live queue</strong><span>intake, verification &amp; scheduling in a single flow</span></div>
+      </div>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>Intake CRM &#183; eligibility &amp; scheduling</span></div>
+        <img src="/assets/demo-intake-crm.svg" width="1200" height="560" alt="Patient intake CRM flow: intake call captured in the CRM, insurance verified in real time through Availity X12 270/271, visit scheduled, and live dashboards updated" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What we built</h4>
+      <ul class="ticks">
+        <li>A <strong>custom scheduling app and CRM</strong> purpose-built for patient intake: demographics, insurance, referrals, and care needs captured once, in one place, with PHI and PII handled properly</li>
+        <li><strong>Real-time insurance verification through Availity</strong> using the X12 270/271 eligibility transaction&nbsp;&mdash; coverage confirmed in seconds, while the patient is still on the line</li>
+        <li><strong>Integrated scheduling</strong>, so a verified patient goes straight onto the right provider&rsquo;s calendar in the same workflow</li>
+        <li><strong>Live dashboards</strong> over the intake funnel, schedules, and utilization that update as intake happens, not at the end of the week</li>
+      </ul>
+
+      <p><strong>How we did it.</strong> The moment insurance details are captured, the system fires an X12 270 eligibility request through Availity and translates the 271 response&nbsp;&mdash; a format built for clearinghouses, not humans&nbsp;&mdash; into a plain-language answer on screen: active or not, plan details, copays, and flags that need attention. Staff never leave the intake screen, and nothing gets scheduled on unverifiable coverage. Underneath, the application enforces role-based access to PHI, encrypts sensitive fields, and writes an audit trail for every change.</p>
+
+      <h4 class="ticks-label">Challenges we solved along the way</h4>
+      <ul class="ticks">
+        <li><strong>Payers don&rsquo;t agree on what a 271 looks like.</strong> Every insurer fills the same transaction differently. We built a normalization layer that turns messy, payer-specific responses into one consistent coverage answer staff can trust.</li>
+        <li><strong>Real-time can&rsquo;t mean fragile.</strong> When a payer or the clearinghouse responds slowly, intake keeps moving&nbsp;&mdash; the check completes in the background and flags the record rather than freezing the call.</li>
+        <li><strong>PHI-safe by design.</strong> Building a CRM that holds insurance, demographic, and health information meant treating access control and auditability as product features, not afterthoughts.</li>
+      </ul>
+
+      <p class="tech-note"><span>Stack</span> Custom web application (CRM + scheduling) · Availity clearinghouse integration · X12 270/271 real-time eligibility · role-based access control &amp; field-level encryption · audit logging · live analytics dashboards.</p>
+      <!-- TODO: add real numbers here if available (e.g. intake time before/after, denial reduction, patients processed) -->
+      <p class="project-outcome">The outcome: insurance is verified in seconds during the first phone call instead of days later, coverage problems get caught before the visit instead of at billing, and the intake team works from one live queue with leadership watching the pipeline in real time.</p>
+      <p class="service-cta"><a href="/contact">Losing time (or claims) to manual intake? Let&rsquo;s talk &rarr;</a></p>
+    </section>
+
+    <!-- ============ Project 3: Vertex AI document intake ============ -->
+    <section id="document-ai" class="service">
+      <div class="project-tags">
+        <span>Healthcare</span><span>AI &amp; Automation</span><span>Google Vertex AI</span><span>Document Intelligence</span>
+      </div>
+      <div class="service-head">
+        <img class="service-icon" src="/assets/icon-ai.svg" width="64" height="64" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        <h2>AI document intake that reads, matches, and files&nbsp;&mdash; so staff don&rsquo;t retype</h2>
+      </div>
+      <p class="service-lead"><strong>The problem:</strong> every new patient arrived with a stack of documents&nbsp;&mdash; insurance cards photographed on phones, faxed lab results, referrals, and pages of doctor notes pulled from the EMR. Staff read each one, retyped the details into the database, and filed it against what they hoped was the right patient. It was slow, it pulled skilled people into data entry, and a single mistyped member ID could turn into a denied claim weeks later. The narrative doctor notes were the worst of it: long, dense, and too time-consuming to properly read at intake.</p>
+
+      <div class="project-stats">
+        <div class="project-stat"><strong>Retyping &rarr; reviewing</strong><span>staff approve extractions instead of doing data entry</span></div>
+        <div class="project-stat"><strong>Filed in minutes</strong><span>classified, extracted &amp; matched to the right patient</span></div>
+        <div class="project-stat"><strong>Pages &rarr; a summary</strong><span>doctor notes condensed, grounded in the source</span></div>
+      </div>
+
+      <figure class="demo-figure">
+        <div class="demo-chrome"><i></i><i></i><i></i><span>AI document intake &#183; Vertex AI</span></div>
+        <img src="/assets/demo-doc-ai.svg" width="1200" height="560" alt="AI document intake pipeline: insurance cards, labs, and doctor notes processed by Google Vertex AI, matched to the right patient, and applied to the record with human review" loading="lazy" decoding="async" />
+      </figure>
+
+      <h4 class="ticks-label">What we built</h4>
+      <ul class="ticks">
+        <li>An <strong>AI document pipeline on Google Vertex AI</strong> that classifies each incoming document, then extracts the structured fields that matter: member IDs and plan details from insurance cards, values from lab reports</li>
+        <li><strong>Automatic summarization of doctor notes</strong> from the EMR, turning pages of narrative into a concise clinical summary attached to the record</li>
+        <li><strong>Patient matching</strong> that correctly identifies who each document belongs to in the database&nbsp;&mdash; across misspellings, nicknames, and partial information&nbsp;&mdash; before anything is filed</li>
+        <li><strong>Automatic record updates with a human in the loop</strong>: high-confidence extractions apply directly; anything uncertain lands in a review-and-approve queue instead of guessing</li>
+      </ul>
+
+      <p><strong>How we did it.</strong> Documents flow through a staged pipeline: classify the document type, run OCR and field extraction tuned to each type, validate the results against business rules, then match the document to a patient using name, date of birth, and member ID with confidence scoring. Only a confident match updates the record; a borderline one is routed to a person with the evidence laid out side by side. Summaries are grounded strictly in the source document, and the system never silently overwrites verified data&nbsp;&mdash; every automated change is logged and reversible.</p>
+
+      <h4 class="ticks-label">Challenges we solved along the way</h4>
+      <ul class="ticks">
+        <li><strong>Real-world image quality.</strong> Insurance cards arrive blurry, cropped, and photographed at angles. Preprocessing plus confidence thresholds meant the system knows when it read something well&nbsp;&mdash; and asks a human when it didn&rsquo;t.</li>
+        <li><strong>The wrong patient is worse than no answer.</strong> In healthcare, misfiled data is a safety issue. We tuned matching to be deliberately conservative: uncertain matches always stop for review rather than guessing.</li>
+        <li><strong>Making AI summaries trustworthy.</strong> Clinical staff won&rsquo;t use summaries they can&rsquo;t verify. Ours cite and stay grounded in the source note, so a reader can always check the summary against the original.</li>
+      </ul>
+
+      <p class="tech-note"><span>Stack</span> Google Vertex AI (document processing, OCR &amp; LLM summarization) · confidence-scored patient matching · human-in-the-loop review queue · EMR integration · full audit trail of every automated change.</p>
+      <!-- TODO: add real numbers here if available (e.g. docs processed per week, minutes per document before/after, error rate) -->
+      <p class="project-outcome">The outcome: intake documents are read, matched, and filed in minutes with no retyping, the right data lands on the right patient record, and clinicians open a concise summary instead of pages of notes&nbsp;&mdash; with people reviewing the judgment calls instead of doing the typing.</p>
+      <p class="service-cta"><a href="/contact">Buried in documents your team retypes by hand? Let&rsquo;s talk &rarr;</a></p>
+    </section>
+
+    <aside class="guarantee-strip">
+      <strong>Every project is backed by our 50% money-back guarantee.</strong>
+      <a href="/engagement">See how it works &rarr;</a>
+    </aside>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Want results like these?</h2>
+      <p>Tell us what&rsquo;s slow, manual, or unclear in your data. We&rsquo;ll talk through it in a free 30-minute consultation and point you to the shortest path to a result.</p>
+      <a class="btn primary" href="/contact">Book a free consultation</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Yuna Labs</h4>
+        <p>Graceful data. Powerful results.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>30 N Gould St, Ste N<br/>Sheridan, WY 82801, USA</p>
+        <p><a href="tel:+19707958340">+1 (970) 795-8340</a></p>
+        <p><a href="mailto:info@yuna-labs.com">info@yuna-labs.com</a></p>
+      </div>
+      <div>
+        <h5>Links</h5>
+        <p>
+          <a href="/">Home</a><br/>
+          <a href="/about">About</a><br/>
+          <a href="/services">Services</a><br/>
+          <a href="/projects">Projects</a><br/>
+          <a href="/engagement">How we work</a><br/>
+          <a href="/contact">Contact</a>
+        </p>
+      </div>
+    </div>
+    <div class="tiny">&copy; <span id="yr">2026</span> Yuna Labs. All rights reserved. &middot; <a href="/privacy">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+
+</body>
+</html>

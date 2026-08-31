@@ -189,7 +189,7 @@ html { scroll-behavior: smooth; }
 }
 .demo-chrome i { width: 10px; height: 10px; border-radius: 50%; background: #c4d8d8; }
 .demo-chrome span { margin-left: 8px; font-size: .8rem; color: var(--subtle); font-weight: 500; }
-.demo-figure > img { width: 100%; display: block; }
+.demo-figure > img { width: 100%; height: auto; display: block; }
 .demo-figure figcaption {
   padding: 11px 16px;
   font-size: .82rem;
@@ -1300,4 +1300,58 @@ hr.rule {
     text-align: center;
     border-radius: 10px;
   }
+}
+
+/* =========================================================
+   Projects
+   ========================================================= */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin: 0 0 var(--s-4);
+}
+.project-tags span {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--brand-700);
+  background: var(--brand-50);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.project-outcome {
+  font-weight: 600;
+  color: var(--brand-700);
+  border-left: 3px solid var(--brand-500);
+  padding-left: var(--s-4);
+}
+.project-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-4);
+  margin: var(--s-6) 0;
+}
+.project-stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-500);
+  border-radius: var(--radius-sm);
+  padding: var(--s-4) var(--s-4);
+}
+.project-stat strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  color: var(--brand-700);
+  margin-bottom: 2px;
+}
+.project-stat span {
+  color: var(--subtle);
+  font-size: .85rem;
+}
+@media (max-width: 720px) {
+  .project-stats { grid-template-columns: 1fr; }
 }
