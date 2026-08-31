@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="AI document intake pipeline: insurance cards, labs, and doctor notes processed by Google Vertex AI, matched to the right patient, and applied to the record with human review">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .colhd{fill:#5e7474;font-size:11px;font-weight:700;letter-spacing:.12em;}
+      .name{fill:#011212;font-size:13px;font-weight:600;}
+      .sub{fill:#6a8080;font-size:10.5px;}
+      .tick{fill:#90a6a6;font-size:11px;}
+      .metric{fill:#0a2424;font-size:12.5px;font-weight:600;}
+      .field{fill:#3d5a5a;font-size:11px;}
+    </style>
+    <marker id="arr3" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9bb0b0"/></marker>
+    <linearGradient id="ai" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#006c70"/><stop offset="100%" stop-color="#013a3a"/></linearGradient>
+  </defs>
+
+  <rect width="1200" height="560" fill="#eef6f6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="68" fill="#ffffff"/>
+  <line x1="0" y1="68" x2="1200" y2="68" stroke="#d4e6e6"/>
+  <circle cx="36" cy="34" r="9" fill="#004242"/>
+  <path d="M31 34 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="30" style="fill:#011212;font-size:20px;font-weight:700;">AI Document Intake</text>
+  <text x="56" y="50" style="fill:#5e7474;font-size:12px;">Documents read, matched &amp; filed &#8212; with a human in the loop</text>
+  <g>
+    <rect x="1004" y="20" width="172" height="28" rx="14" fill="#e8f6ee" stroke="#bfe3cd"/>
+    <circle cx="1022" cy="34" r="4" fill="#1b873f"/><text x="1034" y="38" style="fill:#1b873f;font-size:12px;font-weight:600;">Google Vertex AI</text>
+  </g>
+
+  <!-- Column headers -->
+  <text x="42" y="108" class="colhd">DOCUMENTS IN</text>
+  <text x="392" y="108" class="colhd">VERTEX AI PIPELINE</text>
+  <text x="700" y="108" class="colhd">PATIENT MATCH</text>
+  <text x="936" y="108" class="colhd">RECORD UPDATED</text>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.4" marker-end="url(#arr3)">
+    <path d="M300 168 C 330 168, 330 250, 360 250"/>
+    <path d="M300 258 C 330 258, 330 250, 360 250"/>
+    <path d="M300 348 C 330 348, 330 250, 360 250"/>
+  </g>
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.6" marker-end="url(#arr3)">
+    <path d="M636 250 L672 250"/>
+    <path d="M900 250 L932 250"/>
+  </g>
+
+  <!-- DOCUMENTS -->
+  <g>
+    <g>
+      <rect x="42" y="122" width="258" height="72" rx="10" fill="#fff" stroke="#d4e6e6"/>
+      <rect x="58" y="138" width="52" height="38" rx="5" fill="#f0f7f7" stroke="#cfe3e3"/>
+      <rect x="64" y="146" width="28" height="6" rx="3" fill="#8ebcbc"/>
+      <rect x="64" y="158" width="40" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="166" width="34" height="4" rx="2" fill="#d4e6e6"/>
+      <text x="126" y="152" class="name">Insurance cards</text>
+      <text x="126" y="170" class="sub">Photos &amp; scans, any quality</text>
+    </g>
+    <g>
+      <rect x="42" y="212" width="258" height="72" rx="10" fill="#fff" stroke="#d4e6e6"/>
+      <rect x="58" y="226" width="42" height="46" rx="5" fill="#f0f7f7" stroke="#cfe3e3"/>
+      <rect x="64" y="234" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="242" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="250" width="22" height="4" rx="2" fill="#8ebcbc"/>
+      <rect x="64" y="258" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <text x="116" y="244" class="name">Lab results</text>
+      <text x="116" y="262" class="sub">Faxes, PDFs, referrals</text>
+    </g>
+    <g>
+      <rect x="42" y="302" width="258" height="72" rx="10" fill="#fff" stroke="#d4e6e6"/>
+      <rect x="58" y="316" width="42" height="46" rx="5" fill="#f0f7f7" stroke="#cfe3e3"/>
+      <rect x="64" y="324" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="332" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="340" width="30" height="4" rx="2" fill="#d4e6e6"/>
+      <rect x="64" y="348" width="26" height="4" rx="2" fill="#d4e6e6"/>
+      <text x="116" y="334" class="name">Doctor notes</text>
+      <text x="116" y="352" class="sub">Long EMR narratives</text>
+    </g>
+  </g>
+
+  <!-- VERTEX AI PIPELINE -->
+  <g>
+    <rect x="362" y="160" width="274" height="180" rx="12" fill="url(#ai)"/>
+    <text x="499" y="192" text-anchor="middle" style="fill:#ffffff;font-size:13.5px;font-weight:700;letter-spacing:.04em;">VERTEX AI</text>
+    <g>
+      <rect x="386" y="208" width="226" height="30" rx="8" fill="#0a5557"/>
+      <text x="499" y="228" text-anchor="middle" style="fill:#d7efef;font-size:11.5px;font-weight:600;">1 &#183; Classify document type</text>
+      <rect x="386" y="246" width="226" height="30" rx="8" fill="#0a5557"/>
+      <text x="499" y="266" text-anchor="middle" style="fill:#d7efef;font-size:11.5px;font-weight:600;">2 &#183; Extract fields &#183; OCR</text>
+      <rect x="386" y="284" width="226" height="30" rx="8" fill="#0a5557"/>
+      <text x="499" y="304" text-anchor="middle" style="fill:#d7efef;font-size:11.5px;font-weight:600;">3 &#183; Summarize notes</text>
+    </g>
+  </g>
+
+  <!-- PATIENT MATCH -->
+  <g>
+    <rect x="674" y="160" width="226" height="180" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="692" y="190" class="name">Find the right patient</text>
+    <text x="692" y="207" class="sub">Name &#183; DOB &#183; member ID</text>
+    <rect x="692" y="222" width="190" height="44" rx="8" fill="#e8f6ee" stroke="#bfe3cd"/>
+    <circle cx="710" cy="244" r="5" fill="#1b873f"/>
+    <text x="724" y="240" style="fill:#1b873f;font-size:12px;font-weight:700;">Match &#183; MRN &#8226;&#8226;&#8226;&#8226;4821</text>
+    <text x="724" y="257" class="sub">High confidence &#8594; applied</text>
+    <rect x="692" y="276" width="190" height="44" rx="8" fill="#fdf6ec" stroke="#eeddc0"/>
+    <circle cx="710" cy="298" r="5" fill="#c5851a"/>
+    <text x="724" y="294" style="fill:#8a5c10;font-size:12px;font-weight:700;">Uncertain match</text>
+    <text x="724" y="311" class="sub">&#8594; routed to human review</text>
+  </g>
+
+  <!-- RECORD UPDATED -->
+  <g>
+    <rect x="934" y="160" width="226" height="180" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="952" y="190" class="name">Patient record</text>
+    <text x="952" y="207" class="sub">Updated automatically</text>
+    <g>
+      <circle cx="960" cy="230" r="6" fill="#1b873f"/><path d="M957 230 l2 2 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="974" y="234" class="field">Insurance &amp; member ID</text>
+      <circle cx="960" cy="256" r="6" fill="#1b873f"/><path d="M957 256 l2 2 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="974" y="260" class="field">Lab values filed</text>
+      <circle cx="960" cy="282" r="6" fill="#1b873f"/><path d="M957 282 l2 2 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="974" y="286" class="field">Note summary attached</text>
+    </g>
+    <rect x="952" y="302" width="150" height="24" rx="12" fill="#eef6f6" stroke="#cfe3e3"/>
+    <text x="966" y="318" style="fill:#5e7474;font-size:11px;">Review &amp; approve queue</text>
+  </g>
+
+  <!-- Trust bar -->
+  <g>
+    <rect x="40" y="462" width="1120" height="64" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <g><circle cx="74" cy="494" r="5" fill="#1b873f"/><text x="88" y="491" class="metric">Human in the loop</text><text x="88" y="508" class="tick">low confidence &#8594; review</text></g>
+    <line x1="290" y1="478" x2="290" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="320" cy="494" r="5" fill="#1b873f"/><text x="334" y="491" class="metric">No blind overwrites</text><text x="334" y="508" class="tick">verified data is protected</text></g>
+    <line x1="560" y1="478" x2="560" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="590" cy="494" r="5" fill="#1b873f"/><text x="604" y="491" class="metric">PHI stays put</text><text x="604" y="508" class="tick">processed in your cloud</text></g>
+    <line x1="810" y1="478" x2="810" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="840" cy="494" r="5" fill="#1b873f"/><text x="854" y="491" class="metric">Every action logged</text><text x="854" y="508" class="tick">full audit trail</text></g>
+  </g>
+</svg>

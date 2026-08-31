@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="Patient intake CRM flow: intake call captured in the CRM, insurance verified in real time through Availity X12 270/271, visit scheduled, and live dashboards updated">
+  <defs>
+    <style>
+      text{font-family:'Space Grotesk','Segoe UI',system-ui,Arial,sans-serif;}
+      .colhd{fill:#5e7474;font-size:11px;font-weight:700;letter-spacing:.12em;}
+      .name{fill:#011212;font-size:13px;font-weight:600;}
+      .sub{fill:#6a8080;font-size:10.5px;}
+      .tick{fill:#90a6a6;font-size:11px;}
+      .metric{fill:#0a2424;font-size:12.5px;font-weight:600;}
+      .field{fill:#3d5a5a;font-size:11px;}
+    </style>
+    <marker id="arr2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#9bb0b0"/></marker>
+  </defs>
+
+  <rect width="1200" height="560" fill="#eef6f6"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="68" fill="#ffffff"/>
+  <line x1="0" y1="68" x2="1200" y2="68" stroke="#d4e6e6"/>
+  <circle cx="36" cy="34" r="9" fill="#004242"/>
+  <path d="M31 34 l3 3 6 -7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="30" style="fill:#011212;font-size:20px;font-weight:700;">Intake CRM &amp; Scheduling</text>
+  <text x="56" y="50" style="fill:#5e7474;font-size:12px;">From first phone call to verified, scheduled patient</text>
+  <g>
+    <rect x="962" y="20" width="214" height="28" rx="14" fill="#e8f6ee" stroke="#bfe3cd"/>
+    <circle cx="980" cy="34" r="4" fill="#1b873f"/><text x="992" y="38" style="fill:#1b873f;font-size:12px;font-weight:600;">Eligibility verified in seconds</text>
+  </g>
+
+  <!-- Flow connectors -->
+  <g fill="none" stroke="#9bb0b0" stroke-width="1.6" marker-end="url(#arr2)">
+    <path d="M282 230 L318 230"/>
+    <path d="M560 230 L596 230"/>
+    <path d="M838 230 L874 230"/>
+  </g>
+
+  <!-- STEP 1: Intake call -->
+  <text x="42" y="108" class="colhd">1 &#183; INTAKE CALL</text>
+  <g>
+    <rect x="42" y="122" width="240" height="216" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <rect x="42" y="122" width="240" height="40" rx="12" fill="#f0f7f7"/>
+    <rect x="42" y="150" width="240" height="12" fill="#f0f7f7"/>
+    <text x="60" y="147" class="name">New patient</text>
+    <text x="60" y="188" class="field">Name &amp; demographics</text>
+    <rect x="60" y="196" width="180" height="8" rx="4" fill="#e2eeee"/>
+    <text x="60" y="226" class="field">Insurance &amp; member ID</text>
+    <rect x="60" y="234" width="150" height="8" rx="4" fill="#e2eeee"/>
+    <text x="60" y="264" class="field">Referral &amp; care needs</text>
+    <rect x="60" y="272" width="165" height="8" rx="4" fill="#e2eeee"/>
+    <rect x="60" y="296" width="130" height="24" rx="12" fill="#eef6f6" stroke="#cfe3e3"/>
+    <text x="74" y="312" style="fill:#5e7474;font-size:11px;">PHI captured securely</text>
+  </g>
+
+  <!-- STEP 2: Eligibility via Availity -->
+  <text x="318" y="108" class="colhd">2 &#183; INSURANCE VERIFIED</text>
+  <g>
+    <rect x="318" y="122" width="242" height="216" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="336" y="150" class="name">Availity clearinghouse</text>
+    <text x="336" y="167" class="sub">Real-time eligibility &#183; X12</text>
+    <!-- 270 request / 271 response -->
+    <g fill="none" stroke="#007F80" stroke-width="1.6" marker-end="url(#arr2)">
+      <path d="M352 196 L520 196"/>
+    </g>
+    <g fill="none" stroke="#006C70" stroke-width="1.6" marker-end="url(#arr2)">
+      <path d="M520 232 L352 232"/>
+    </g>
+    <text x="360" y="189" style="fill:#007F80;font-size:11px;font-weight:600;">270 &#183; eligibility request</text>
+    <text x="360" y="252" style="fill:#006C70;font-size:11px;font-weight:600;">271 &#183; coverage response</text>
+    <rect x="336" y="272" width="206" height="48" rx="10" fill="#e8f6ee" stroke="#bfe3cd"/>
+    <circle cx="356" cy="296" r="5" fill="#1b873f"/>
+    <text x="370" y="292" style="fill:#1b873f;font-size:12.5px;font-weight:700;">Coverage: Active</text>
+    <text x="370" y="309" class="sub">Plan, copay &amp; auth in plain language</text>
+  </g>
+
+  <!-- STEP 3: Scheduled -->
+  <text x="596" y="108" class="colhd">3 &#183; SCHEDULED</text>
+  <g>
+    <rect x="596" y="122" width="242" height="216" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="614" y="150" class="name">Visit booked</text>
+    <text x="614" y="167" class="sub">Matched to provider &amp; availability</text>
+    <!-- mini calendar -->
+    <g>
+      <rect x="614" y="182" width="206" height="138" rx="8" fill="#f7fbfb" stroke="#e0ecec"/>
+      <line x1="614" y1="210" x2="820" y2="210" stroke="#e0ecec"/>
+      <text x="626" y="201" class="sub">Week of intake</text>
+      <g fill="#e2eeee">
+        <rect x="626" y="222" width="56" height="18" rx="4"/>
+        <rect x="692" y="222" width="56" height="18" rx="4"/>
+        <rect x="758" y="222" width="50" height="18" rx="4"/>
+        <rect x="626" y="248" width="56" height="18" rx="4"/>
+        <rect x="758" y="248" width="50" height="18" rx="4"/>
+        <rect x="626" y="274" width="56" height="18" rx="4"/>
+        <rect x="692" y="274" width="56" height="18" rx="4"/>
+      </g>
+      <rect x="692" y="248" width="56" height="18" rx="4" fill="#007F80"/>
+      <text x="700" y="261" style="fill:#ffffff;font-size:10px;font-weight:600;">Booked</text>
+    </g>
+  </g>
+
+  <!-- STEP 4: Live dashboards -->
+  <text x="874" y="108" class="colhd">4 &#183; LIVE DASHBOARDS</text>
+  <g>
+    <rect x="874" y="122" width="284" height="216" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <text x="892" y="150" class="name">Intake &amp; operations, live</text>
+    <text x="892" y="167" class="sub">Pipeline, schedules &amp; utilization</text>
+    <!-- mini bars -->
+    <g>
+      <rect x="892" y="184" width="248" height="100" rx="8" fill="#f7fbfb" stroke="#e0ecec"/>
+      <g fill="#8ebcbc">
+        <rect x="912" y="240" width="22" height="32" rx="3"/>
+        <rect x="946" y="228" width="22" height="44" rx="3"/>
+        <rect x="980" y="248" width="22" height="24" rx="3"/>
+        <rect x="1014" y="216" width="22" height="56" rx="3"/>
+        <rect x="1048" y="234" width="22" height="38" rx="3"/>
+      </g>
+      <rect x="1082" y="206" width="22" height="66" rx="3" fill="#007F80"/>
+      <line x1="904" y1="272" x2="1128" y2="272" stroke="#d4e6e6"/>
+    </g>
+    <rect x="892" y="296" width="196 " height="24" rx="12" fill="#eef6f6" stroke="#cfe3e3"/>
+    <text x="906" y="312" style="fill:#5e7474;font-size:11px;">Updates as intake happens</text>
+  </g>
+
+  <!-- Trust bar -->
+  <g>
+    <rect x="40" y="462" width="1120" height="64" rx="12" fill="#fff" stroke="#d4e6e6"/>
+    <g><circle cx="74" cy="494" r="5" fill="#1b873f"/><text x="88" y="491" class="metric">X12 270/271</text><text x="88" y="508" class="tick">real-time eligibility</text></g>
+    <line x1="270" y1="478" x2="270" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="300" cy="494" r="5" fill="#1b873f"/><text x="314" y="491" class="metric">PHI &amp; PII protected</text><text x="314" y="508" class="tick">encrypted &#183; role-based access</text></g>
+    <line x1="540" y1="478" x2="540" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="570" cy="494" r="5" fill="#1b873f"/><text x="584" y="491" class="metric">Full audit trail</text><text x="584" y="508" class="tick">every change tracked</text></g>
+    <line x1="790" y1="478" x2="790" y2="510" stroke="#e0ecec"/>
+    <g><circle cx="820" cy="494" r="5" fill="#1b873f"/><text x="834" y="491" class="metric">One live queue</text><text x="834" y="508" class="tick">no spreadsheets, no faxes</text></g>
+  </g>
+</svg>
